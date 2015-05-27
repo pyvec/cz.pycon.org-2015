@@ -129,7 +129,7 @@ created and gulp doesn't exit on errors
       Debug = true
 
 **publish** -- Publish static assets to S3
-(deploy to <http://onestopsource.io>).
+(deploy to <http://cz.pycon.org>).
 
 Task is configured to be used in CircleCI which stores AWS credentials in
 ~/.aws/credentials. On local machine load from `aws.json`.
