@@ -1,6 +1,5 @@
 {
   "name": "cz.pycon.org",
-  "version": "2015.0",
   "description": "PyCon CZ 2015 homepage",
   "main": "index.js",
   "scripts": {
