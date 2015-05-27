@@ -1,0 +1,20 @@
+dependencies:
+  pre:
+    - gem install scss-lint
+  override:
+    - npm install -g gulp
+    - cd static && npm install
+
+test:
+  override:
+    - cd static && gulp ci
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - cd static && gulp publish --production
+  staging:
+    branch: dev
+    commands:
+      - cd static && gulp publish

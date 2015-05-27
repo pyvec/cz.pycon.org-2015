@@ -1,7 +1,47 @@
 PyCon CZ 2015 -- early adopters version
 =======================================
 
-Tracking repository and website for PyCon CZ 2015
+[![Circle CI](https://circleci.com/gh/OneStopSource/cz.pycon.org-2015.svg?style=svg)](https://circleci.com/gh/OneStopSource/cz.pycon.org-2015)
+
+Static homepage for first Czech PyCon.
+
+Contribute
+----------
+
+1. Setup development environment:
+
+    ```
+    npm install -g gulp bower
+    
+    cd static
+    npm install
+    bower install
+    ```
+
+2. Run *watcher* (it opens browser at http://localhost:3000):
+
+    ```
+    cd static && gulp
+    ```
+
+3. Commit changes and submit pull-request
+
+Publish to AWS S3 (authorization required)
+------------------------------------------
+
+1. Copy `aws.json.example` to `aws.json` and provide credentials for your
+   AWS IAM role.
+
+2. Build all static assets and publish them to S3:
+
+    ```
+    gulp publish
+    ```
+
+License
+-------
+
+MIT
 
 Planning
 ========

@@ -1,0 +1,10 @@
+# AWS IAM credentials
+static/aws.json
+static/build/
+
+node_modules/
+.idea/
+
+# Cache
+static/.awspublish-*
+static/rev-manifest.json
