@@ -36,7 +36,7 @@
 - [ ] Update website
 
 ## Website
-- [ ] Setup static website #2 
+- [ ] Setup static website #2, #4
 - [ ] Ask python.org for CNAME record cz.pycon.org
 - [ ] Setup dynamic website (talks, attendees, sponsors)
 
