@@ -33,13 +33,11 @@ If a participant engages in behavior that violates this code of conduct, the con
 Contact Information
 -------------------
 
-If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff. Conference staff will be wearing "PyCon Staff" t-shirts.
+If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff. Conference staff will be wearing "Staff" t-shirts.
 
 If the matter is especially urgent, please call/contact any of these individuals:
 
 - Tomáš Ehrlich at +608 619 219 889
-- TODO: Add more organizers
-
 
 Conference staff will be happy to help participants contact venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
 
