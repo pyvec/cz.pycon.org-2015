@@ -1,6 +1,8 @@
 PyCon CZ 2015 -- early adopters version
 =======================================
 
+[![Join the chat at https://gitter.im/pyvec/cz.pycon.org-2015](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pyvec/cz.pycon.org-2015?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Circle CI](https://circleci.com/gh/OneStopSource/cz.pycon.org-2015.svg?style=svg)](https://circleci.com/gh/OneStopSource/cz.pycon.org-2015)
 
 Static homepage for first Czech PyCon.
