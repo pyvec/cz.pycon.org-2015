@@ -36,14 +36,20 @@
 - [ ] Update website
 
 ## Website
-- [ ] Setup static website #2, #4
-- [ ] Ask python.org for CNAME record cz.pycon.org
+- [x] Setup static website #2, #4
+- [x] Ask python.org for CNAME record cz.pycon.org, #3
 - [ ] Setup dynamic website (talks, attendees, sponsors)
 
 ## Venue
 - [ ] Talks @tricoder42
 - [ ] Sprints
 - [ ] DjangoGirls?
+
+## Talks
+- [x] Methodology: Call for papers, #9
+- [ ] Call for papers (public)
+- [ ] Invite speakers
+- [ ] Process and select submitted talks
 
 ## Branding
 - [ ] Logo
