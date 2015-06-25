@@ -5,3 +5,39 @@ body {
   height: 100%;
   text-align: center;
 }
+
+@for $i from 1 through 3 {
+  .tri#{$i} {
+    //color: nth($tricolor, $i);
+  }
+}
+
+.jumbotron {
+  margin-bottom: 0;
+
+  h1 {
+    text-outline: 1px solid $jumbotron-color;
+  }
+
+  .python-logo {
+    $logo-size: 200px;
+    width: $logo-size;
+    height: $logo-size;
+  }
+}
+
+.lead {
+  margin: 0;
+}
+
+.claim {
+  padding: $jumbotron-padding;
+  color: $jumbotron-color;
+  background: $claim-bg;
+
+  font-size: $jumbotron-font-size;
+}
+
+.soon {
+  padding: $jumbotron-padding;
+}

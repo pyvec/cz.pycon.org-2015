@@ -1,7 +1,7 @@
 doctype
 html(lang="en")
   head
-    title PyCon CZ 2015<
+    title PyConf CZ 2015
 
     meta(charset='utf-8')
     meta(name="viewport" content="width=device-width, initial-scale=1")
@@ -24,18 +24,32 @@ html(lang="en")
 
     .jumbotron
       .container
-        h1 PyCon CZ 2015
-        p.lead.
-          The very first PyCon in Czech republic. Join us for one day of talks
-          about Python or Python related topics.
+        img.python-logo(src="/static/images/psf/python-notext.png")
+        h1 #[span.tri1 PyConf] #[span.tri2 C]#[span.tri3 Z] 2015
 
         .row
           .col-md-3.col-md-offset-3
             p.event-location Brno, Czech Republic
           .col-md-3
-            p.event-date 20.-21. November 2015
+            p.event-date 20-21. November 2015
 
-    .container
-      p.lead More info comming soon, ETA end of June 2015
+    .claim
+      .container
+        p.lead.
+          The very first Python conference in Czech republic.
+          Join us for one day of talks about Python and Python related topics.
+
+    .soon
+      .container
+        p.lead More info coming soon, ETA end of June 2015
+
+    footer
+      a(href="https://github.com/tricoder42/cz.pycon.org-2015/blob/feature/code-of-conduct/code-of-conduct.md").
+        Code of conduct
+
+      p.psf-trademark.
+        #[a(href="https://www.python.org/psf/trademarks/pycon/") PyCon™]
+        is a trademark for worldwide conference activities claimed by
+        #[a(href="https://www.python.org/psf-landing/") Python software foundation].
 
    //script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")

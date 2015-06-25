@@ -25,13 +25,14 @@ and static files are inside `static` directory.
       all: BuildRoot + '/**'
       html: BuildRoot
       css: BuildRoot + '/static/css'
+      files: BuildRoot + '/static/images'
       manifest: 'rev-manifest.json'
 
     Source =
       jade: 'jade/**/*.jade'
       scss: 'scss/**/*.scss'
       scss_main: 'scss/pyconcz.scss'
-      files: 'files/**'
+      files: 'images/**'
 
 Dependencies
 ------------
@@ -139,10 +140,11 @@ Task is configured to be used in CircleCI which stores AWS credentials in
         params: {}
         region: 'eu-west-1'
 
-      if argv.production
-        bucket = 'cz.python.org'
-      else
-        bucket = 'dev.cz.python.org'
+      credentials = JSON.parse fs.readFileSync './aws.json'
+      awsConfig.accessKeyId = credentials.accessKeyId
+      awsConfig.secretAccessKey = credentials.secretAccessKey
+
+      bucket = 'pycon.onestopsource.io'
       awsConfig.params.Bucket = bucket
 
       publisher = awspublish.create awsConfig
@@ -206,7 +208,7 @@ gulp-sass, gulp-autprefixer or gulp-sourcemaps (dunno which one). See
 
     gulp.task 'files', ->
       gulp.src Source.files
-      .pipe gulp.dest BuildRoot
+      .pipe gulp.dest Destination.files
 
 
 **clean** -- Clean the build dir
