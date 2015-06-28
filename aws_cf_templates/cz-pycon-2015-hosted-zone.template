@@ -1,0 +1,70 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Deploy hosted zone for cz-pycon-2015, v0.1 2015-06-28",
+
+    "Parameters": {
+        "DomainName": {
+            "Type": "String",
+            "Description": "The name of the domain. For resource record types that include a domain name, specify a fully qualified domain name",
+            "Default": "pycon.cz"
+        },
+        "DNSRecordType": {
+            "Type": "String",
+            "Description": "The type of record to add",
+            "Default": "A",
+            "AllowedValues": [
+                "A"
+            ]
+        },
+        "S3BucketHostedZoneId": {
+            "Type": "String",
+            "Description": "The hosted zone ID. For Amazon S3, use the hosted zone ID for your bucket's website endpoint",
+            "Default": "Z1BKCTXD74EZPE"
+        }
+    },
+
+    "Resources": {
+        "czPycon2015HostedZone": {
+            "Type" : "AWS::Route53::HostedZone",
+            "Properties": {
+                "Name": { "Ref": "DomainName" },
+                "HostedZoneConfig": {
+                    "Comment": "AWS Route53 Hosted Zone for given domain"
+                },
+                "HostedZoneTags": [
+                    {
+                        "Key": "project",
+                        "Value": "cz-pycon-2015"
+                    }
+                ]
+            }
+        },
+
+        "czPycon2015DNSRecord": {
+            "Type" : "AWS::Route53::RecordSet",
+            "DependsOn": [ "czPycon2015HostedZone" ],
+            "Properties": {
+                "HostedZoneName": { "Fn::Join": [ "", [{ "Ref": "DomainName" }, "."]] },
+                "Comment": "A record for given domain",
+                "Name": { "Fn::Join": [ "", [{ "Ref": "DomainName" }, "."]] },
+                "Type": { "Ref": "DNSRecordType" },
+                "AliasTarget": {
+                    "DNSName": { "Fn::Join": [ "", [ "s3-website-", { "Ref": "AWS::Region" }, ".amazonaws.com" ]] },
+                    "HostedZoneId": { "Ref": "S3BucketHostedZoneId" }
+                }
+            }
+        }
+    },
+
+    "Outputs": {
+        "HostedZoneId": {
+            "Value": { "Ref": "czPycon2015HostedZone" },
+            "Description": "Hosted zone ID"
+        },
+        "DomainName": {
+            "Value": { "Ref": "czPycon2015DNSRecord" },
+            "Description": "The value of the domain name of the record set"
+        }
+    }
+
+}
