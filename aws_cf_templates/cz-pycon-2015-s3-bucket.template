@@ -10,7 +10,8 @@
       },
       "RedirectHostName": {
           "Type": "String",
-          "Description": "Name of the host where requests are redirected"
+          "Description": "Name of the host where requests are redirected",
+          "Default": "cz.pycon.org"
       },
       "RedirectProtocol": {
           "Type": "String",
@@ -27,7 +28,7 @@
         "czPycon2015S3Bucket": {
             "Type" : "AWS::S3::Bucket",
             "Properties": {
-                "BucketName": "pycon.cz",
+                "BucketName": { "Ref": "BucketName" },
                 "AccessControl": "PublicRead",
                 "Tags": [
                     {
