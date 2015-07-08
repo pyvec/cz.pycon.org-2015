@@ -1,11 +1,20 @@
+[![Circle CI](https://circleci.com/gh/OneStopSource/cz.pycon.org-2015.svg?style=svg)](https://circleci.com/gh/OneStopSource/cz.pycon.org-2015)
+
 PyCon CZ 2015 -- early adopters version
 =======================================
 
-[![Join the chat at https://gitter.im/pyvec/cz.pycon.org-2015](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pyvec/cz.pycon.org-2015?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Welcome! It's really going to happen this year. The Czech PyCon, local python conference for anyone interested in Python programming language.
 
-[![Circle CI](https://circleci.com/gh/OneStopSource/cz.pycon.org-2015.svg?style=svg)](https://circleci.com/gh/OneStopSource/cz.pycon.org-2015)
+Join us
+-------
 
-Static homepage for first Czech PyCon.
+PyCons are community events. Everybody is welcome, anyone can contribute. You can join us on following channels:
+
+- Google Group -- [pycon-cs@googlegroups.com](https://groups.google.com/forum/#!forum/pycon-cs)
+- [Trello](https://trello.com/czechpycon2015)
+- [Slack](pyconcz.slack.com) -- request invite at tomas.ehrlich@gmail.com
+
+Google Group mailing list is available for everyone. Trello is read-only for public and Slack is private. Send email to tomas.ehrlich@gmail.com if you want access them.
 
 Contribute
 ----------
