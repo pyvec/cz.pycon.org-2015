@@ -1,21 +1,15 @@
 @import 'bootstrap';
 @import 'pycon/sponsors';
+@import 'pycon/map';
+@import 'pycon/speakers';
 
 html,
 body {
+  position: relative;
   height: 100%;
   text-align: center;
-  position: relative;
 }
 
-body.account-settings .account-settings,
-body.account-password .account-password,
-body.account-delete .account-delete {
-  z-index: 2; // Place active items above their siblings for proper border styling
-  border-color: $list-group-active-border;
-  color: $list-group-active-color;
-  background-color: $list-group-active-bg;
-}
 
 @for $i from 1 through 3 {
   .tri#{$i} {
@@ -55,64 +49,4 @@ h2 {
   font-size: $jumbotron-font-size;
 }
 
-.soon {
-  padding: $jumbotron-padding;
-}
-
-.map {
-  position: relative;
-
-  address {
-    position: absolute;
-    top: 30px;
-    left: 120px;
-    display: block;
-    width: 250px;
-    height: 80%;
-    padding: 60px 20px;
-    background: rgba(255, 255, 255, 0.8);
-    font-size: 1.8em;
-    text-align: left;
-    text-shadow: 1px 1px $text-shadow-color;
-
-    .strong {
-      margin-bottom: 25px;
-      font-weight: 500;
-    }
-  }
-
-  #map {
-    display: block;
-    height: $map-height;
-  }
-}
-
-$images-size: 150px;
-
-.speakers {
-
-  .row {
-
-    img {
-      width: $images-size;
-      height: $images-size;
-      border: 1px solid $text-shadow-color;
-      border-radius: $images-size/2;
-
-    }
-
-    .name {
-      padding: 20px 0 0;
-      font-weight: 500;
-      font-size: 1.6em;
-    }
-
-    .description {
-      width: 80%;
-      margin: 0 auto;
-      font-size: 1.2em;
-      text-align: center;
-    }
-  }
-}
 
