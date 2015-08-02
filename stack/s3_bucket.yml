@@ -10,12 +10,27 @@
     file: path=cf_templates state=directory
     changed_when: false
 
-  - name: Check S3 bucket(s)
+  - name: Check S3 bucket(s) for pycon.cz
     cloudformation:
       stack_name: "cz-pycon-2015-s3-bucket"
       state: "present"
       region: "{{ default_region }}"
-      template: "cf_templates/cz-pycon-2015-s3-bucket.template"
+      template: "cf_templates/s3-pycon-cz-redirect.template"
+      tags:
+        project: "cz-pycon-2015"
+    environment:
+      AWS_PROFILE: "cz-pycon-2015"
+    register: s3
+
+  - name: Show S3 info
+    debug: var=s3
+
+  - name: Check S3 bucket(s) for cz.pycon.org
+    cloudformation:
+      stack_name: "cz-pycon-2015-s3-cz-pycon-org"
+      state: "present"
+      region: "{{ default_region }}"
+      template: "cf_templates/s3-cz-pycon-org.template"
       tags:
         project: "cz-pycon-2015"
     environment:

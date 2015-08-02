@@ -1,0 +1,45 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Deploy s3 bucket for cz.pycon.org domain",
+
+    "Parameters": {
+      "BucketName": {
+          "Type": "String",
+          "Description": "A name for the bucket",
+          "Default": "cz.pycon.org"
+      }
+    },
+
+    "Resources": {
+        "czPycon2015S3Bucket": {
+            "Type" : "AWS::S3::Bucket",
+            "Properties": {
+                "BucketName": { "Ref": "BucketName" },
+                "AccessControl": "PublicRead",
+                "Tags": [
+                    {
+                        "Key": "project",
+                        "Value": "cz-pycon-2015"
+                    }
+                ],
+                "WebsiteConfiguration": {
+                    "ErrorDocument": "error.html",
+                    "IndexDocument": "index.html"
+                }
+            }
+        }
+    },
+
+    "Outputs": {
+        "BucketDNSName": {
+            "Value": { "Fn::GetAtt": ["czPycon2015S3Bucket", "DomainName" ] },
+            "Description": "DNS name of the specified bucket"
+        },
+        "WebsiteURL": {
+            "Value": { "Fn::GetAtt": ["czPycon2015S3Bucket", "WebsiteURL" ] },
+            "Description": "Amazon S3 website endpoint for the specified bucket"
+        }
+    }
+
+}
+
