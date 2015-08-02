@@ -5,7 +5,7 @@ doctype html
 html(lang='en-us')
   head
     include ./components/head
-  body.home(id='', data-spy='scroll', data-target='#navbar-example')
+  body.home(data-spy='scroll', data-target='#main-navbar')
     include components/navbar
 
     section#section-home.home
@@ -49,8 +49,6 @@ html(lang='en-us')
           lng: lng,
           title: 'PyCon CZ 2015'
         });
-
-        $('body').scrollspy({target: '#navbar-example'})
       });
 
     script.
