@@ -1,15 +1,28 @@
 @import 'bootstrap';
+@import 'pycon/sponsors';
+@import 'pycon/map';
+@import 'pycon/speakers';
+@import 'pycon/timeline';
 
 html,
 body {
+  position: relative;
   height: 100%;
+}
+
+body {
+  padding-top: $navbar-height;
   text-align: center;
 }
 
-@for $i from 1 through 3 {
-  .tri#{$i} {
-    //color: nth($tricolor, $i);
-  }
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 50px;
+  font-weight: 500;
+  font-size: 2.8em;
 }
 
 .jumbotron {
@@ -38,6 +51,4 @@ body {
   font-size: $jumbotron-font-size;
 }
 
-.soon {
-  padding: $jumbotron-padding;
-}
+

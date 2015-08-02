@@ -1,55 +1,35 @@
-doctype
-html(lang="en")
+- var contactEmail = "tomas.ehrlich@gmail.com"
+
+doctype html
+html(lang='en-us')
   head
-    title PyConf CZ 2015
+    include ./components/head
+  body.home(data-spy='scroll', data-target='#main-navbar', data-offset="60")
+    include components/navbar
 
-    meta(charset='utf-8')
-    meta(name="viewport" content="width=device-width, initial-scale=1")
+    section#section-home.home
+      include ./pages/home
+    section#section-speakers.speakers
+      include ./pages/speakers
+    section#section-schedule.timeline
+      include ./pages/timeline
+    section#section-sponsors.sponsors
+      include ./pages/sponsors
+    section#section-contact.map
+      include ./pages/map
 
-    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
-    link(rel="stylesheet", href="/static/css/pyconcz.css")
+    include components/footer
 
-    if !debug
-      script.
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.4.min.js')
+    script(type='text/javascript', src='https://maps.google.com/maps/api/js?sensor=true')
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.12/gmaps.js')
+    script(type='text/javascript', src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+    script(type='text/javascript', src='/static/js/main.min.js')
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-62652331-2', 'auto');
-        ga('send', 'pageview');
-
-  body
-    a(name="top")
-
-    .jumbotron
-      .container
-        img.python-logo(src="/static/images/psf/python-notext.png")
-        h1 #[span.tri1 PyConf] #[span.tri2 C]#[span.tri3 Z] 2015
-
-        .row
-          .col-md-3.col-md-offset-3
-            p.event-location Brno, Czech Republic
-          .col-md-3
-            p.event-date 20-21. November 2015
-
-    .claim
-      .container
-        p.lead.
-          The very first Python conference in Czech republic.
-          Join us for one day of talks about Python and Python related topics.
-
-    .soon
-      .container
-        p.lead More info coming soon, ETA end of June 2015
-
-    footer
-      a(href="https://github.com/tricoder42/cz.pycon.org-2015/blob/feature/code-of-conduct/code-of-conduct.md").
-        Code of conduct
-
-      p.psf-trademark.
-        #[a(href="https://www.python.org/psf/trademarks/pycon/") PyCon™]
-        is a trademark for worldwide conference activities claimed by
-        #[a(href="https://www.python.org/psf-landing/") Python software foundation].
-
-   //script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
+      ga('create', 'UA-62652331-2', 'auto');
+      ga('send', 'pageview');

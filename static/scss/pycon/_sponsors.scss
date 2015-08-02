@@ -1,0 +1,64 @@
+$gold-height: 300px;
+$silver-height: 200px;
+$bronze-height: 100px;
+
+$sponsor-placeholder-bg: #ddd;
+$sponsor-margin: 10px;
+
+.gold,
+.silver,
+.bronze {
+  @include make-row();
+}
+
+.sponsor-placeholder {
+  margin-bottom: $grid-gutter-width / 2;
+
+  .gold & {
+    @include make-sm-column(12);
+    height: $gold-height;
+  }
+
+  .silver & {
+    @include make-sm-column(6);
+    height: $silver-height;
+  }
+
+  .bronze & {
+    @include make-sm-column(4);
+    height: $bronze-height;
+  }
+}
+
+.sponsor {
+  display: block;
+  position: relative;
+  height: 100%;
+  background-color: $sponsor-placeholder-bg;
+}
+
+.s-link {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;;
+  transform: translate(-50%, -50%);
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.cfs {
+  .gold & {
+    font-size: 40px;
+  }
+
+  .silver & {
+    font-size: 30px;
+  }
+
+  .bronze & {
+    font-size: 20px;
+  }
+}
