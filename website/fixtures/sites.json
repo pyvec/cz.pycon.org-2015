@@ -3,16 +3,16 @@
         "pk": 1,
         "model": "sites.site",
         "fields": {
-            "domain": "localhost:8000",
-            "name": "example.com [localhost]"
+            "domain": "lan.cz.pycon.org:8000",
+            "name": "local cz.pycon.org"
         }
     },
     {
         "pk": 2,
         "model": "sites.site",
         "fields": {
-            "domain": "example.com",
-            "name": "example.com"
+            "domain": "cz.pycon.org",
+            "name": "cz.pycon.org"
         }
     }
 ]
