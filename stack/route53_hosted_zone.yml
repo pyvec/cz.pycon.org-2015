@@ -1,0 +1,26 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+
+  vars:
+    default_region: "eu-west-1"
+
+  tasks:
+  - name: Check cloudfront templates directory
+    file: path=cf_templates state=directory
+    changed_when: false
+
+  - name: Check Route53 hosted zone and records
+    cloudformation:
+      stack_name: "cz-pycon-2015-route53-hosted-zone"
+      state: "present"
+      region: "{{ default_region }}"
+      template: "cf_templates/cz-pycon-2015-route53-hosted-zone.template"
+      tags:
+        project: "cz-pycon-2015"
+    environment:
+      AWS_PROFILE: "cz-pycon-2015"
+    register: route53
+
+  - name: Show Route53 info
+    debug: var=route53

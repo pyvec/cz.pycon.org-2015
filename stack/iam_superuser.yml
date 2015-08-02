@@ -11,6 +11,7 @@
 
   - name: Create template source
     shell: python iam_superuser.py > cf_templates/iam_superuser.json
+    changed_when: false
 
   - name: Check user
     cloudformation:

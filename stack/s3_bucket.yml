@@ -1,0 +1,26 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+
+  vars:
+    default_region: "eu-west-1"
+
+  tasks:
+  - name: Check cloudfront templates directory
+    file: path=cf_templates state=directory
+    changed_when: false
+
+  - name: Check S3 bucket(s)
+    cloudformation:
+      stack_name: "cz-pycon-2015-s3-bucket"
+      state: "present"
+      region: "{{ default_region }}"
+      template: "cf_templates/cz-pycon-2015-s3-bucket.template"
+      tags:
+        project: "cz-pycon-2015"
+    environment:
+      AWS_PROFILE: "cz-pycon-2015"
+    register: s3
+
+  - name: Show S3 info
+    debug: var=s3
