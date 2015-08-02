@@ -41,17 +41,26 @@
         },
 
         "czPycon2015DNSRecord": {
-            "Type" : "AWS::Route53::RecordSet",
+            "Type" : "AWS::Route53::RecordSetGroup",
             "DependsOn": [ "czPycon2015HostedZone" ],
             "Properties": {
                 "HostedZoneName": { "Fn::Join": [ "", [{ "Ref": "DomainName" }, "."]] },
-                "Comment": "A record for given domain",
-                "Name": { "Fn::Join": [ "", [{ "Ref": "DomainName" }, "."]] },
-                "Type": { "Ref": "DNSRecordType" },
-                "AliasTarget": {
-                    "DNSName": { "Fn::Join": [ "", [ "s3-website-", { "Ref": "AWS::Region" }, ".amazonaws.com" ]] },
-                    "HostedZoneId": { "Ref": "S3BucketHostedZoneId" }
-                }
+                "RecordSets": [
+                    {
+                        "Type": { "Ref": "DNSRecordType" },
+                        "Name": { "Fn::Join": [ "", [{ "Ref": "DomainName" }, "."]] },
+                        "AliasTarget": {
+                            "DNSName": { "Fn::Join": [ "", [ "s3-website-", { "Ref": "AWS::Region" }, ".amazonaws.com" ]] },
+                            "HostedZoneId": { "Ref": "S3BucketHostedZoneId" }
+                        }
+                    }, {
+                        "Type": "CNAME",
+                        "Name": "tickets.pycon.cz.",
+                        "ResourceRecords": [
+                            "ti.to"
+                        ]
+                    }
+                ]
             }
         }
     },

@@ -12,10 +12,10 @@
 
   - name: Check Route53 hosted zone and records
     cloudformation:
-      stack_name: "cz-pycon-2015-route53-hosted-zone"
+      stack_name: "route53-pycon-cz"
       state: "present"
       region: "{{ default_region }}"
-      template: "cf_templates/cz-pycon-2015-route53-hosted-zone.template"
+      template: "cf_templates/route53-pycon-cz.template"
       tags:
         project: "cz-pycon-2015"
     environment:
