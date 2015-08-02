@@ -27,12 +27,14 @@ and static files are inside `static` directory.
       css: BuildRoot + '/static/css'
       files: BuildRoot + '/static/images'
       manifest: 'rev-manifest.json'
+      coffee: BuildRoot + '/static/js/'
 
     Source =
       jade: 'jade/index.jade'
       scss: 'scss/**/*.scss'
       scss_main: 'scss/pyconcz.scss'
       files: 'images/**'
+      coffee: 'coffee/**/*.coffee'
 
 Dependencies
 ------------
@@ -52,16 +54,19 @@ Languages and compilers:
     jade = require 'gulp-jade'
     sass = require 'gulp-sass'
     autoprefixer = require 'gulp-autoprefixer'
+    coffee = require 'gulp-coffee'
 
 Optimization and compression:
 
     minifyCss = require 'gulp-minify-css'
+    minifyCoffee = require 'gulp-minify'
     lazypipe = require 'lazypipe'
     bytediff = require 'gulp-bytediff'
     sourcemaps = require 'gulp-sourcemaps'
     rev    = require 'gulp-rev'
     collect = require 'gulp-rev-collector'
     imageop = require 'gulp-image-optimization'
+    concat = require 'gulp-concat'
 
 Style checkers:
 
@@ -114,7 +119,7 @@ Tasks
 The **default** task builds all static assets, runs local server at :3000
 and watches for changes. Use **build** task for one-time build.
 
-    gulp.task 'build', ['html', 'css', 'files']
+    gulp.task 'build', ['html', 'coffee', 'css', 'files']
     gulp.task 'default', ['serve']
 
 **release** -- Clean build directory, build all assets and generate them unique
@@ -183,6 +188,20 @@ files to cache (for speedup of consecutive upload) and report changes.
       .pipe defaultPlumber()
       .pipe jade options
       .pipe gulp.dest Destination.html
+      .pipe reload stream: true
+
+**coffee** -- Compile coffee files.
+
+    gulp.task 'coffee', ->
+      options =
+        bare: true
+
+      gulp.src Source.coffee
+      .pipe defaultPlumber()
+      .pipe coffee options
+      #.pipe minifyCoffee
+      .pipe concat 'main.min.js'
+      .pipe gulp.dest Destination.coffee
       .pipe reload stream: true
 
 **css** -- Compile [Sass][] files to CSS. Include source maps in debug mode.
@@ -261,6 +280,7 @@ gulp-sass, gulp-autprefixer or gulp-sourcemaps (dunno which one). See
 
       gulp.watch 'jade/**/*.jade', ['html']
       gulp.watch Source.scss, ['css', 'lint:scss']
+      gulp.watch Source.coffee, ['coffee', 'lint:coffee']
       gulp.watch Source.files, ['files']
 
 **ci** -- Check for any problems: Try to build all assets, run tests and check
@@ -293,7 +313,8 @@ gem)
 
     gulp.task 'lint:coffee', ->
       gulp.src [
-        'gulpfile.litcoffee'
+        'gulpfile.litcoffee',
+        Source.coffee
       ]
       .pipe coffeelint()
       .pipe coffeelint.reporter()
