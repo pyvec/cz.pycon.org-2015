@@ -255,8 +255,8 @@ gulp-sass, gulp-autprefixer or gulp-sourcemaps (dunno which one). See
 
     gulp.task 'serve', ['debug-mode', 'build'], ->
       browserSync.init
-        server:
-          baseDir: BuildRoot
+        proxy: 'localhost:8000'
+        open: false
 
       gulp.watch Source.jade, ['html']
       gulp.watch Source.scss, ['css', 'lint:scss']
