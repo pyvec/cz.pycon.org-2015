@@ -4,14 +4,7 @@
 doctype html
 html(lang='en-us')
   head
-    meta(charset='utf-8')
-    title
-      | PyConf CZ 2015
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(href='/static/css/pyconcz.css', rel='stylesheet')
-    // HTML5 shim, for IE6-8 support of HTML elements
-    //if lt IE 9
-      script(src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js')
+    include ./components/head
   body.home(id='', data-spy='scroll', data-target='#navbar-example')
     div
       header
@@ -47,13 +40,7 @@ html(lang='en-us')
       section#section-speakers.speakers
         include ./pages/speakers
       section#section-map.map
-        #map
-        address.xs-hide
-          p.strong VUT FIT
-          p Building D
-          p Božetěchova 1/2
-          p 612 66 Brno
-          p Czech Republic
+        include ./pages/map
       hr
       footer
         .container
