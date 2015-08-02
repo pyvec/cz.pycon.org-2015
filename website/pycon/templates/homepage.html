@@ -7,7 +7,16 @@
 
 {% block body_class %}home{% endblock %}
 
+{% block body_extra_attributes %}data-spy="scroll" data-target="#navbar-example"{% endblock %}
+
 {% block body_base %}
+  <div id="navbar-example">
+    <ul class="nav navbar-nav">
+      <li class=""><a href="#section-sponsors">section-sponsors</a></li>
+      <li class=""><a href="#section-speakers">speakers</a></li>
+    </ul>
+  </div>
+
   <div class="jumbotron" xmlns="http://www.w3.org/1999/html">
     <div class="container"><img src="{% static 'images/psf/python-notext.png' %}" class="python-logo">
 
@@ -25,7 +34,7 @@
     </p></div>
   </div>
 
-  <section class="sponsors">
+  <section class="sponsors" id="section-sponsors">
     <h2>Our sponsors</h2>
 
     <div class="container">
