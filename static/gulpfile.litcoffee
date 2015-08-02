@@ -144,7 +144,7 @@ Task is configured to be used in CircleCI which stores AWS credentials in
       awsConfig.accessKeyId = credentials.accessKeyId
       awsConfig.secretAccessKey = credentials.secretAccessKey
 
-      bucket = 'pycon.onestopsource.io'
+      bucket = 'cz.pycon.org'
       awsConfig.params.Bucket = bucket
 
       publisher = awspublish.create awsConfig
