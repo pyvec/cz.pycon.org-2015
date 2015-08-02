@@ -24,8 +24,8 @@ and static files are inside `static` directory.
     Destination =
       all: BuildRoot + '/**'
       html: BuildRoot
-      css: BuildRoot + '/css'
-      files: BuildRoot + '/images'
+      css: BuildRoot + '/static/css'
+      files: BuildRoot + '/static/images'
       manifest: 'rev-manifest.json'
 
     Source =
@@ -255,7 +255,8 @@ gulp-sass, gulp-autprefixer or gulp-sourcemaps (dunno which one). See
 
     gulp.task 'serve', ['debug-mode', 'build'], ->
       browserSync.init
-        proxy: 'localhost:8000'
+        server:
+          baseDir: './build/'
         open: false
 
       gulp.watch Source.jade, ['html']
