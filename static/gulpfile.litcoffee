@@ -259,7 +259,7 @@ gulp-sass, gulp-autprefixer or gulp-sourcemaps (dunno which one). See
           baseDir: './build/'
         open: false
 
-      gulp.watch Source.jade, ['html']
+      gulp.watch 'jade/**/*.jade', ['html']
       gulp.watch Source.scss, ['css', 'lint:scss']
       gulp.watch Source.files, ['files']
 
