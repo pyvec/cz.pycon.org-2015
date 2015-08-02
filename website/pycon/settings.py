@@ -1,6 +1,5 @@
 import os
 
-
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 BASE_DIR = PACKAGE_ROOT
@@ -9,10 +8,14 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "dev.db",
-    }
+	'default': {
+		'ENGINE': 'django.db.backends.postgresql_psycopg2',
+		'NAME': 'pycondev',
+		'USER': 'pycondev',
+		'PASSWORD': 'pycondev',
+		'HOST': 'pycondev.c2jduhqtgvog.eu-west-1.rds.amazonaws.com',
+		'PORT': '5432',
+	}
 }
 
 ALLOWED_HOSTS = []
@@ -64,14 +67,14 @@ STATIC_URL = "/site_media/static/"
 
 # Additional locations of static files
 STATICFILES_DIRS = [
-    os.path.join(PACKAGE_ROOT, "static"),
+	os.path.join(PACKAGE_ROOT, "static"),
 ]
 
 # List of finder classes that know how to find static files in
 # various locations.
 STATICFILES_FINDERS = [
-    "django.contrib.staticfiles.finders.FileSystemFinder",
-    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+	"django.contrib.staticfiles.finders.FileSystemFinder",
+	"django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 
 # Make this unique, and don't share it with anybody.
@@ -79,32 +82,31 @@ SECRET_KEY = "b37_l=cear31i)7@!&+2*#28qr-b2mn_&^&!1bt&z+gj9#f!fw"
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = [
-    "django.template.loaders.filesystem.Loader",
-    "django.template.loaders.app_directories.Loader",
+	"django.template.loaders.filesystem.Loader",
+	"django.template.loaders.app_directories.Loader",
 ]
 
 TEMPLATE_CONTEXT_PROCESSORS = [
-    "django.contrib.auth.context_processors.auth",
-    "django.core.context_processors.debug",
-    "django.core.context_processors.i18n",
-    "django.core.context_processors.media",
-    "django.core.context_processors.static",
-    "django.core.context_processors.tz",
-    "django.core.context_processors.request",
-    "django.contrib.messages.context_processors.messages",
-    "account.context_processors.account",
-    "pinax_theme_bootstrap.context_processors.theme",
+	"django.contrib.auth.context_processors.auth",
+	"django.core.context_processors.debug",
+	"django.core.context_processors.i18n",
+	"django.core.context_processors.media",
+	"django.core.context_processors.static",
+	"django.core.context_processors.tz",
+	"django.core.context_processors.request",
+	"django.contrib.messages.context_processors.messages",
+	"account.context_processors.account",
+	"pinax_theme_bootstrap.context_processors.theme",
 ]
 
-
 MIDDLEWARE_CLASSES = [
-    "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
-    "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "django.contrib.auth.middleware.SessionAuthenticationMiddleware",
-    "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+	"django.contrib.sessions.middleware.SessionMiddleware",
+	"django.middleware.common.CommonMiddleware",
+	"django.middleware.csrf.CsrfViewMiddleware",
+	"django.contrib.auth.middleware.AuthenticationMiddleware",
+	"django.contrib.auth.middleware.SessionAuthenticationMiddleware",
+	"django.contrib.messages.middleware.MessageMiddleware",
+	"django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
 ROOT_URLCONF = "pycon.urls"
@@ -113,29 +115,42 @@ ROOT_URLCONF = "pycon.urls"
 WSGI_APPLICATION = "pycon.wsgi.application"
 
 TEMPLATE_DIRS = [
-    os.path.join(PACKAGE_ROOT, "templates"),
+	os.path.join(PACKAGE_ROOT, "templates"),
 ]
 
 INSTALLED_APPS = [
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.messages",
-    "django.contrib.sessions",
-    "django.contrib.sites",
-    "django.contrib.staticfiles",
+	"django.contrib.admin",
+	"django.contrib.auth",
+	"django.contrib.contenttypes",
+	"django.contrib.messages",
+	"django.contrib.sessions",
+	"django.contrib.sites",
+	"django.contrib.staticfiles",
 
-    # theme
-    "bootstrapform",
-    "pinax_theme_bootstrap",
+	"timezones",
+	"django_markup",
+	"taggit",
 
-    # external
-    "account",
-    "metron",
-    "pinax.eventlog",
+	# theme
+	"bootstrapform",
+	"pinax_theme_bootstrap",
 
-    # project
-    "pycon",
+	"symposion.conference",
+	"symposion.cms",
+	"symposion.boxes",
+	"symposion.speakers",
+	"symposion.proposals",
+	"symposion.reviews",
+	"symposion.teams",
+	"symposion.schedule",
+
+	# external
+	"account",
+	"metron",
+	"pinax.eventlog",
+
+	# project
+	"pycon",
 ]
 
 # A sample logging configuration. The only tangible logging
@@ -144,31 +159,31 @@ INSTALLED_APPS = [
 # See http://docs.djangoproject.com/en/dev/topics/logging for
 # more details on how to customize your logging configuration.
 LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "filters": {
-        "require_debug_false": {
-            "()": "django.utils.log.RequireDebugFalse"
-        }
-    },
-    "handlers": {
-        "mail_admins": {
-            "level": "ERROR",
-            "filters": ["require_debug_false"],
-            "class": "django.utils.log.AdminEmailHandler"
-        }
-    },
-    "loggers": {
-        "django.request": {
-            "handlers": ["mail_admins"],
-            "level": "ERROR",
-            "propagate": True,
-        },
-    }
+	"version": 1,
+	"disable_existing_loggers": False,
+	"filters": {
+		"require_debug_false": {
+			"()": "django.utils.log.RequireDebugFalse"
+		}
+	},
+	"handlers": {
+		"mail_admins": {
+			"level": "ERROR",
+			"filters": ["require_debug_false"],
+			"class": "django.utils.log.AdminEmailHandler"
+		}
+	},
+	"loggers": {
+		"django.request": {
+			"handlers": ["mail_admins"],
+			"level": "ERROR",
+			"propagate": True,
+		},
+	}
 }
 
 FIXTURE_DIRS = [
-    os.path.join(PROJECT_ROOT, "fixtures"),
+	os.path.join(PROJECT_ROOT, "fixtures"),
 ]
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
@@ -182,5 +197,13 @@ ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 2
 ACCOUNT_USE_AUTH_AUTHENTICATE = True
 
 AUTHENTICATION_BACKENDS = [
-    "account.auth_backends.UsernameAuthenticationBackend",
+	"account.auth_backends.UsernameAuthenticationBackend",
 ]
+
+MARKEDIT_DEFAULT_SETTINGS = {
+	'preview': 'below',
+	'toolbar': {
+		'backgroundMode': 'dark',
+	}
+}
+MARKITUP_FILTER = ('markdown.markdown', {'safe_mode': True})
