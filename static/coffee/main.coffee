@@ -24,7 +24,7 @@ init = () ->
         target = $(@hash)
         target = if target.length then target else $('[name=' + @hash.slice(1) + ']')
         if target.length
-          $('html,body').animate {scrollTop: target.offset().top - 60}, 1000
+          $('html,body').animate {scrollTop: target.offset().top - 60}, 300
           return false
       return
     return
