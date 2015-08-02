@@ -8,7 +8,7 @@
 {% block body_class %}home{% endblock %}
 
 {% block body_base %}
-  <div class="jumbotron">
+  <div class="jumbotron" xmlns="http://www.w3.org/1999/html">
     <div class="container"><img src="{% static 'images/psf/python-notext.png' %}" class="python-logo">
 
       <h1><span class="tri1">PyCon</span> <span class="tri2">C</span><span class="tri3">Z</span> 2015</h1>
@@ -27,4 +27,17 @@
   <div class="soon">
     <div class="container"><p class="lead">More info coming soon, ETA end of June 2015</p></div>
   </div>
+
+  <section class="map" id="section-map">
+    <div id="map"></div>
+
+    <address class="xs-hide">
+      <p class="strong">VUT FIT</p>
+      <p>Building D</p>
+      <p>Božetěchova 1/2</p>
+      <p>612 66 Brno</p>
+      <p>Czech Republic</p>
+    </address>
+  </section>
+
 {% endblock %}

@@ -9,10 +9,10 @@ body {
 body.account-settings .account-settings,
 body.account-password .account-password,
 body.account-delete .account-delete {
-    z-index: 2; // Place active items above their siblings for proper border styling
-    color: $list-group-active-color;
-    background-color: $list-group-active-bg;
-    border-color: $list-group-active-border;
+  z-index: 2; // Place active items above their siblings for proper border styling
+  border-color: $list-group-active-border;
+  color: $list-group-active-color;
+  background-color: $list-group-active-bg;
 }
 
 @for $i from 1 through 3 {
@@ -49,4 +49,32 @@ body.account-delete .account-delete {
 
 .soon {
   padding: $jumbotron-padding;
+}
+
+.map {
+  position: relative;
+
+  address {
+    position: absolute;
+    top: 30px;
+    left: 120px;
+    display: block;
+    width: 250px;
+    height: 80%;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 1.8em;
+    text-align: left;
+    text-shadow: 1px 1px $text-shadow-color;
+
+    .strong {
+      margin-bottom: 25px;
+      font-weight: 500;
+    }
+  }
+
+  #map {
+    display: block;
+    height: $map-height;
+  }
 }
