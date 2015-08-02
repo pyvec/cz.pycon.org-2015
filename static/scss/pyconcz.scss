@@ -8,14 +8,15 @@ html,
 body {
   position: relative;
   height: 100%;
+}
+
+body {
+  padding-top: $navbar-height;
   text-align: center;
 }
 
-
-@for $i from 1 through 3 {
-  .tri#{$i} {
-    //color: nth($tricolor, $i);
-  }
+section {
+  margin-bottom: 20px;
 }
 
 h2 {

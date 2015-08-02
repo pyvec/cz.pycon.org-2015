@@ -2,17 +2,21 @@
   position: relative;
 
   address {
-    position: absolute;
-    top: 30px;
-    left: 120px;
     display: block;
-    width: 250px;
-    height: 80%;
-    padding: 60px 20px;
     background: rgba(255, 255, 255, 0.8);
     font-size: 1.8em;
     text-align: left;
-    text-shadow: 1px 1px $text-shadow-color;
+    padding: 0 $padding-base-horizontal;
+
+    @media (min-width: $screen-sm) {
+      position: absolute;
+      top: 110px;
+      left: 120px;
+      z-index: 1000;
+      width: 250px;
+      padding: 60px 20px;
+      text-shadow: 1px 1px $text-shadow-color;
+    }
 
     .strong {
       margin-bottom: 25px;
