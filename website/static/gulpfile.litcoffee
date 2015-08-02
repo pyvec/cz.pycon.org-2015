@@ -13,7 +13,7 @@ cz.pycon.org 2015 gulp file
 
 Configuration:
 
-    Debug = false
+    Debug = true
     DisableScssLint = false  # scss linter requires ruby gem
 
 Build destinations -- whole website is static build from jade templates
@@ -24,8 +24,8 @@ and static files are inside `static` directory.
     Destination =
       all: BuildRoot + '/**'
       html: BuildRoot
-      css: BuildRoot + '/static/css'
-      files: BuildRoot + '/static/images'
+      css: BuildRoot + '/css'
+      files: BuildRoot + '/images'
       manifest: 'rev-manifest.json'
 
     Source =

@@ -1,6 +1,6 @@
 # AWS IAM credentials
 static/aws.json
-static/build/
+website/static/build/
 
 node_modules/
 .idea/
