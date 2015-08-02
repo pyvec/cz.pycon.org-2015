@@ -29,7 +29,7 @@ and static files are inside `static` directory.
       manifest: 'rev-manifest.json'
 
     Source =
-      jade: 'jade/**/*.jade'
+      jade: 'jade/index.jade'
       scss: 'scss/**/*.scss'
       scss_main: 'scss/pyconcz.scss'
       files: 'images/**'

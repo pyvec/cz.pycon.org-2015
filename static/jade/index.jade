@@ -1,3 +1,6 @@
+- var contactEmail = "tomas.ehrlich@gmail.com"
+
+
 doctype html
 html(lang='en-us')
   head
@@ -5,41 +8,19 @@ html(lang='en-us')
     title
       | PyConf CZ 2015
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(href='/static/pinax/css/theme.css', rel='stylesheet')
     link(href='/static/css/pyconcz.css', rel='stylesheet')
     // HTML5 shim, for IE6-8 support of HTML elements
     //if lt IE 9
-      script(src='/static/pinax/js/html5shiv.js')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js')
   body.home(id='', data-spy='scroll', data-target='#navbar-example')
     div
       header
-        .navbar.navbar-default.navbar-fixed-top
-          .container
-            .navbar-header
-              button.navbar-toggle(data-toggle='collapse', data-target='.navbar-collapse')
-                span.fa.fa-bars
-              a.navbar-brand(href='/') PyConf CZ 2015
-            .collapse.navbar-collapse.navbar-responsive-collapse
-              ul.nav.navbar-nav.pull-right
-                p.navbar-text
-                  i.fa.fa-user
-                  |  admin
-                li
-                  a(href='/account/settings/')
-                    i.fa.fa-cog
-                    |  Settings
-                li
-                  a#account_logout(href='/account/logout/')
-                    i.fa.fa-power-off
-                    |  Log out
-              form#accountLogOutForm(style='display: none;', action='/account/logout/', method='POST')
-                input(type='hidden', name='csrfmiddlewaretoken', value='FgQXk0MxfqM1Ce6CjxDrRHakg8c74M8j')
-      #navbar-example
-        ul.nav.navbar-nav
-          li
-            a(href='#section-sponsors') section-sponsors
-          li
-            a(href='#section-speakers') speakers
+        .navbar.navbar-default.navbar-fixed-top#navbar-example
+          ul.nav.navbar-nav
+            li
+              a(href='#section-sponsors') section-sponsors
+            li
+              a(href='#section-speakers') speakers
       .jumbotron(xmlns='http://www.w3.org/1999/html')
         .container
           img.python-logo(src='/static/images/psf/python-notext.png')
@@ -59,61 +40,12 @@ html(lang='en-us')
             | The very first Python conference in Czech republic.
             | Join us for one day of talks about Python and Python related topics.
       section#section-sponsors.sponsors
-        h2 Our sponsors
-        .container
-          .gold
-            .sponsor-placeholder
-              .sponsor
-                a.s-link.cfs(href='mailto:tomas.ehrlich@gmail.com')
-                  | Become our the most exclusive Gold sponsor!
-          .silver
-            .sponsor-placeholder
-              .sponsor
-                a.s-link.cfs(href='mailto:tomas.ehrlich@gmail.com')
-                  | Show yourself as a Silver sponsor!
-            .sponsor-placeholder
-              .sponsor
-                a.s-link(href='')
-          .bronze
-            .sponsor-placeholder
-              .sponsor
-                a.s-link.cfs(href='mailto:tomas.ehrlich@gmail.com')
-                  | Support us as a Bronze sponsor!
-            .sponsor-placeholder
-              .sponsor
-                a.s-link(href='')
-            .sponsor-placeholder
-              .sponsor
-                a.s-link(href='')
-            .sponsor-placeholder
-              .sponsor
-                a.s-link(href='')
-            .sponsor-placeholder
-              .sponsor
-                a.s-link(href='')
-            .sponsor-placeholder
-              .sponsor
-                a.s-link(href='')
+        include ./pages/sponsors
       .soon
         .container
           p.lead More info coming soon, ETA end of June 2015
       section#section-speakers.speakers
-        h2.text-center Speakers
-        .row
-          .col-md-4
-            img(src='https://pbs.twimg.com/profile_images/598803746722816000/htcvwi8Z.jpg', alt='')
-            p.name Mikey Ariel
-            p.description Tech writer @ #RedHat. #writethedocs documentarian
-          .col-md-4
-            img(src='https://pbs.twimg.com/profile_images/58051305/rusty-mugshot.png', alt='')
-            p.name Russell Keith-Magee
-            p.description Django Core Developer
-          .col-md-4
-            img(src='http://www.waterfordwine.com/wordpress/wp-content/uploads/2012/01/uncle-sam-wants-you.jpg', alt='')
-            p.name Your name
-            p.description
-              a(href='mailto:tomas.ehrlich@gmail.com')
-                | Write us!
+        include ./pages/speakers
       section#section-map.map
         #map
         address.xs-hide
@@ -134,9 +66,7 @@ html(lang='en-us')
               |     is a trademark for worldwide conference activities claimed by
               a(href='https://www.python.org/psf-landing/') Python software foundation
               | .
-    script(src='/static/jquery/js/jquery-2.1.4.min.js')
-    script(src='/static/js/bootstrap.min.js')
-    script(src='/static/pinax/js/theme.js')
+
     script(type='text/javascript', src='http://code.jquery.com/jquery-1.9.1.min.js')
     script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?sensor=false')
     script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.12/gmaps.js')
