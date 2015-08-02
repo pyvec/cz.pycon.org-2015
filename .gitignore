@@ -1,5 +1,5 @@
 # Build files
-stack/cf_templates/
+# stack/cf_templates/
 
 # AWS IAM credentials
 static/aws.json

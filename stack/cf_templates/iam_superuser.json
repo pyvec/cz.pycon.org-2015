@@ -1,0 +1,35 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Create a superadmin user with all required privileges for this project. ",
+    "Outputs": {
+        "AccessKey": {
+            "Description": "AWSAccessKeyId of superuser",
+            "Value": {
+                "Ref": "Troposphere"
+            }
+        },
+        "SecretKey": {
+            "Description": "AWSSecretKey of superuser",
+            "Value": {
+                "Fn::GetAtt": [
+                    "Troposphere",
+                    "SecretAccessKey"
+                ]
+            }
+        }
+    },
+    "Resources": {
+        "Troposphere": {
+            "Properties": {
+                "Status": "Active",
+                "UserName": {
+                    "Ref": "czpycon2015"
+                }
+            },
+            "Type": "AWS::IAM::AccessKey"
+        },
+        "czpycon2015": {
+            "Type": "AWS::IAM::User"
+        }
+    }
+}
