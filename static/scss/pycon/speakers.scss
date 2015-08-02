@@ -1,25 +1,36 @@
 .speakers {
+  img,
+  .placeholder {
+    width: $images-size;
+    height: $images-size;
+    border: 1px solid $text-shadow-color;
+    border-radius: $images-size/2;
+  }
 
-  .row {
+  .name {
+    padding: 20px 0 0;
+    font-weight: 500;
+    font-size: 1.6em;
+  }
 
-    img {
-      width: $images-size;
-      height: $images-size;
-      border: 1px solid $text-shadow-color;
-      border-radius: $images-size/2;
-    }
+  .description {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    text-align: center;
+  }
 
-    .name {
-      padding: 20px 0 0;
-      font-weight: 500;
-      font-size: 1.6em;
-    }
+  .placeholder {
+    position: relative;
+    display: inline-block;
 
-    .description {
-      width: 80%;
-      margin: 0 auto;
-      font-size: 1.2em;
-      text-align: center;
+    span {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 100px;
     }
   }
 }
