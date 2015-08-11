@@ -20,9 +20,12 @@ init = () ->
 
   $ ->
     $('a[href*=#]:not([href=#])').click ->
-      if location.pathname.replace(/^\//, '') == @pathname.replace(/^\//, '') and location.hostname == @hostname
+      p_name = location.pathname
+      l_cond = p_name.replace(/^\//, '') == @pathname.replace(/^\//, '')
+      if l_cond and location.hostname == @hostname
         target = $(@hash)
-        target = if target.length then target else $('[name=' + @hash.slice(1) + ']')
+        if not target.length
+          target = $('[name=' + @hash.slice(1) + ']')
         if target.length
           $('html,body').animate {scrollTop: target.offset().top - 60}, 300
           return false
