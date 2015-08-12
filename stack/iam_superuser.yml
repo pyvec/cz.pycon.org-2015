@@ -1,0 +1,30 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+
+  vars:
+    default_region: "eu-west-1"
+
+  tasks:
+  - name: Check cloudfront templates directory
+    file: path=cf_templates state=directory
+
+  - name: Create template source
+    shell: python iam_superuser.py > cf_templates/iam_superuser.json
+    changed_when: false
+
+  - name: Check user
+    cloudformation:
+      stack_name: "cz-pycon-2015-superuser"
+      state: "present"
+      region: "{{ default_region }}"
+      template: "cf_templates/iam_superuser.json"
+      tags:
+        project: "cz-pycon-2015"
+    environment:
+      AWS_PROFILE: "default"
+    register: superuser
+
+  - name: Show AWS credentials for new user
+    debug: var=superuser
+    when: superuser.changed
