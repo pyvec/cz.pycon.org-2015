@@ -30,7 +30,7 @@ and static files are inside `static` directory.
       coffee: BuildRoot + '/static/js/'
 
     Source =
-      jade: 'jade/index.jade'
+      jade: ['jade/index.jade', 'jade/real_pages/**/*.jade']
       scss: 'scss/**/*.scss'
       scss_main: 'scss/pyconcz.scss'
       files: 'images/**'
