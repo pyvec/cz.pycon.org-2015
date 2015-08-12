@@ -1,0 +1,128 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Deploy admin roles and policies for cz-pycon-2015, v0.1 2015-06-25",
+
+    "Parameters": {
+      "czPycon2015AdminUserARN": {
+          "Type": "String",
+          "Description": "Admin user ARN"
+      }
+    },
+
+    "Resources": {
+        "czPycon2015AdminInstanceRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "ec2.amazonaws.com"
+                                ]
+                            },
+                            "Action": [
+                                "sts:AssumeRole"
+                            ]
+                        }
+                    ]
+                },
+                "Path": "/"
+            }
+        },
+
+        "czPycon2015AdminUserRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "AWS": { "Ref": "czPycon2015AdminUserARN" }
+                            },
+                            "Action": [
+                                "sts:AssumeRole"
+                            ]
+                        }
+                    ]
+                },
+                "Path": "/"
+            }
+        },
+
+        "czPycon2015AdminInstanceProfile": {
+            "Type": "AWS::IAM::InstanceProfile",
+            "Properties": {
+                "Path": "/",
+                "Roles": [
+                    {
+                        "Ref": "czPycon2015AdminInstanceRole"
+                    }
+                ]
+            }
+        },
+
+        "czPycon2015AdminPolicy": {
+            "Type" : "AWS::IAM::Policy",
+            "Properties": {
+                "PolicyName": "czPycon2015AdminPolicy",
+                "Roles": [
+                    {
+                        "Ref": "czPycon2015AdminInstanceRole"
+                    },
+                    {
+                        "Ref": "czPycon2015AdminUserRole"
+                    }
+                ],
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Action": [
+                                "ec2:*",
+                                "s3:*",
+                                "elasticloadbalancing:*"
+                            ],
+                            "Condition": {
+                                "StringEquals": {
+                                    "ec2:ResourceTag/project": "cz-pycon-2015"
+                                }
+                            },
+                            "Resource": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    },
+
+    "Outputs": {
+        "czPycon2015AdminInstanceProfile": {
+            "Value": {
+                "Ref": "czPycon2015AdminInstanceProfile"
+            }
+        },
+        "czPycon2015AdminPolicy": {
+            "Value": {
+                "Ref": "czPycon2015AdminPolicy"
+            }
+        },
+        "czPycon2015AdminInstanceRole": {
+            "Value": {
+                "Ref": "czPycon2015AdminInstanceRole"
+            }
+        },
+        "czPycon2015AdminUserRole": {
+            "Value": {
+                "Ref": "czPycon2015AdminUserRole"
+            }
+        }
+    }
+}
