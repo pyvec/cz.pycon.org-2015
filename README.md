@@ -1,4 +1,4 @@
-[![Circle CI](https://circleci.com/gh/OneStopSource/cz.pycon.org-2015.svg?style=svg)](https://circleci.com/gh/OneStopSource/cz.pycon.org-2015)
+[![Circle CI](https://circleci.com/gh/pyvec/cz.pycon.org-2015.svg?style=svg)](https://circleci.com/gh/pyvec/cz.pycon.org-2015)
 
 PyCon CZ 2015 -- early adopters version
 =======================================
