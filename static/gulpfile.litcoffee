@@ -145,11 +145,18 @@ Task is configured to be used in CircleCI which stores AWS credentials in
         params: {}
         region: 'eu-west-1'
 
-      credentials = JSON.parse fs.readFileSync './aws.json'
-      awsConfig.accessKeyId = credentials.accessKeyId
-      awsConfig.secretAccessKey = credentials.secretAccessKey
+      if !process.env.CIRCLECI
+        # Read AWS credentials from file in development only. CircleCI has
+        # it's own credentials set via ENV variables.
+        credentials = JSON.parse fs.readFileSync './aws.json'
 
-      bucket = 'cz.pycon.org'
+        awsConfig.accessKeyId = credentials.accessKeyId
+        awsConfig.secretAccessKey = credentials.secretAccessKey
+
+      if argv.production
+        bucket = 'cz.pycon.org'
+      else
+        bucket = 'dev.pycon.cz'
       awsConfig.params.Bucket = bucket
 
       publisher = awspublish.create awsConfig

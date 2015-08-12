@@ -23,7 +23,7 @@ Contribute
 
     ```
     npm install -g gulp bower
-    
+
     cd static
     npm install
     bower install
@@ -40,14 +40,20 @@ Contribute
 Publish to AWS S3 (authorization required)
 ------------------------------------------
 
+`master` branch is published automatically to [][cz.pycon.org] and `dev` branch
+to [][dev.pycon.cz] in CircleCI. If you want to do it manually, you need to:
+
 1. Copy `aws.json.example` to `aws.json` and provide credentials for your
    AWS IAM role.
 
-2. Build all static assets and publish them to S3:
+2. Build all static assets and publish them to S3 (domain [][dev.pycon.cz]):
 
     ```
     gulp publish
     ```
+
+Running `gulp publish --production` will publish static assets to
+[][cz.pycon.org].
 
 License
 -------
@@ -84,4 +90,3 @@ Location
 - Brno, VUT FIT
 - Prague, ?
 - ?
-
