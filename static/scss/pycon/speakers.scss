@@ -1,0 +1,36 @@
+.speakers {
+  img,
+  .placeholder {
+    width: $images-size;
+    height: $images-size;
+    border: 1px solid $text-shadow-color;
+    border-radius: $images-size/2;
+  }
+
+  .name {
+    padding: 20px 0 0;
+    font-weight: 500;
+    font-size: 1.6em;
+  }
+
+  .description {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .placeholder {
+    position: relative;
+    display: inline-block;
+
+    span {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 100px;
+    }
+  }
+}
