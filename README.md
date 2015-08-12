@@ -12,7 +12,7 @@ PyCons are community events. Everybody is welcome, anyone can contribute. You ca
 
 - Google Group -- [pycon-cs@googlegroups.com](https://groups.google.com/forum/#!forum/pycon-cs)
 - [Trello](https://trello.com/czechpycon2015)
-- [Slack](pyconcz.slack.com) -- request invite at tomas.ehrlich@gmail.com
+- [Slack](https://pyconcz.slack.com) -- request invite at tomas.ehrlich@gmail.com
 
 Google Group mailing list is available for everyone. Trello is read-only for public and Slack is private. Send email to tomas.ehrlich@gmail.com if you want access them.
 
