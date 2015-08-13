@@ -3,6 +3,7 @@
 @import 'pycon/map';
 @import 'pycon/speakers';
 @import 'pycon/timeline';
+@import 'pycon/tickets';
 
 html,
 body {
@@ -16,6 +17,8 @@ body {
 }
 
 section {
+  position: relative;
+  width: 100%;
   margin-bottom: 20px;
 }
 
