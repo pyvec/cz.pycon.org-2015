@@ -55,6 +55,7 @@ Languages and compilers:
     sass = require 'gulp-sass'
     autoprefixer = require 'gulp-autoprefixer'
     coffee = require 'gulp-coffee'
+    marked = require('marked')
 
 Optimization and compression:
 
@@ -188,6 +189,7 @@ files to cache (for speedup of consecutive upload) and report changes.
     gulp.task 'html', ->
       options =
         pretty: false
+        markdown: marked
         locals:
           debug: Debug
 
