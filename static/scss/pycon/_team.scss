@@ -1,5 +1,9 @@
 .team {
-  margin-bottom: 100px;
+
+  .row {
+    margin-bottom: 100px;
+  }
+
   img,
   .placeholder {
     width: $images-size;
