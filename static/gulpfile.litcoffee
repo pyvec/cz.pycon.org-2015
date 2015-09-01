@@ -194,7 +194,7 @@ files to cache (for speedup of consecutive upload) and report changes.
           debug: Debug
 
       gulp.src Source.jade
-      .pipe defaultPlumber()
+      #.pipe defaultPlumber()
       .pipe jade options
       .pipe gulp.dest Destination.html
       .pipe reload stream: true
