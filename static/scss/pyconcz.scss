@@ -54,7 +54,7 @@ h2 {
 }
 
 .lead {
-  margin: 0;
+  text-align: left;
 }
 
 .claim {
@@ -63,4 +63,8 @@ h2 {
   background: $claim-bg;
 
   font-size: $jumbotron-font-size;
+
+  .lead {
+    margin: 0;
+  }
 }

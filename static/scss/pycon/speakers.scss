@@ -1,5 +1,6 @@
 .speakers {
   margin-bottom: 100px;
+
   img,
   .placeholder {
     width: $images-size;
@@ -33,5 +34,9 @@
       transform: translate(-50%, -50%);
       font-size: 100px;
     }
+  }
+
+  .cfp {
+    margin-top: 50px;
   }
 }
