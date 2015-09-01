@@ -9,6 +9,7 @@ $sponsor-margin: 10px;
 .silver,
 .bronze {
   @include make-row();
+  display: none;
 }
 
 .sponsor-placeholder {
