@@ -41,7 +41,7 @@ h2 {
 
   .python-logo {
     $logo-size: 200px;
-    width: $logo-size;
+    width: auto;
     height: $logo-size;
   }
 }
@@ -57,5 +57,3 @@ h2 {
 
   font-size: $jumbotron-font-size;
 }
-
-
