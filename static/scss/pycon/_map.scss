@@ -10,7 +10,7 @@
 
     @media (min-width: $screen-sm) {
       position: absolute;
-      top: 110px;
+      bottom: 0px;
       left: 120px;
       z-index: 1000;
       width: 250px;
@@ -21,6 +21,10 @@
     .strong {
       margin-bottom: 25px;
       font-weight: 500;
+    }
+
+    p {
+      font-size: 25px;
     }
   }
 

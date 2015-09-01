@@ -30,7 +30,7 @@ and static files are inside `static` directory.
       coffee: BuildRoot + '/static/js/'
 
     Source =
-      jade: 'jade/index.jade'
+      jade: ['jade/index.jade', 'jade/real_pages/**/*.jade']
       scss: 'scss/**/*.scss'
       scss_main: 'scss/pyconcz.scss'
       files: 'images/**'
@@ -55,6 +55,7 @@ Languages and compilers:
     sass = require 'gulp-sass'
     autoprefixer = require 'gulp-autoprefixer'
     coffee = require 'gulp-coffee'
+    marked = require('marked')
 
 Optimization and compression:
 
@@ -188,11 +189,12 @@ files to cache (for speedup of consecutive upload) and report changes.
     gulp.task 'html', ->
       options =
         pretty: false
+        markdown: marked
         locals:
           debug: Debug
 
       gulp.src Source.jade
-      .pipe defaultPlumber()
+      #.pipe defaultPlumber()
       .pipe jade options
       .pipe gulp.dest Destination.html
       .pipe reload stream: true

@@ -4,6 +4,10 @@
 @import 'pycon/speakers';
 @import 'pycon/timeline';
 @import 'pycon/tickets';
+@import 'pycon/team';
+@import 'pycon/coc';
+@import 'pycon/getting_here';
+@import 'pycon/sponsorship';
 
 html,
 body {
@@ -31,19 +35,27 @@ h2 {
 .jumbotron {
   margin-bottom: 0;
 
-  h1 {
-    text-outline: 1px solid $jumbotron-color;
+  h1 .label {
+    display: none;
   }
 
   .python-logo {
     $logo-size: 200px;
-    width: $logo-size;
+    width: auto;
     height: $logo-size;
+  }
+
+  .event-date,
+  .event-location {
+    margin-top: 1em;
+    font-weight: bold;
+    font-size: 22px;
   }
 }
 
 .lead {
-  margin: 0;
+  font-size: 1.3em;
+  text-align: left;
 }
 
 .claim {
@@ -52,6 +64,9 @@ h2 {
   background: $claim-bg;
 
   font-size: $jumbotron-font-size;
+
+  .lead {
+    margin: 0;
+    text-align: center;
+  }
 }
-
-
