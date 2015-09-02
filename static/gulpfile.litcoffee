@@ -25,7 +25,7 @@ and static files are inside `static` directory.
       all: BuildRoot + '/**'
       html: BuildRoot
       css: BuildRoot + '/static/css'
-      files: BuildRoot + '/static'
+      files: BuildRoot
       manifest: 'rev-manifest.json'
       coffee: BuildRoot + '/static/js/'
 
