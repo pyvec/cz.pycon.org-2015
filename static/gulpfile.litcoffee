@@ -25,7 +25,7 @@ and static files are inside `static` directory.
       all: BuildRoot + '/**'
       html: BuildRoot
       css: BuildRoot + '/static/css'
-      files: BuildRoot + '/static/images'
+      files: BuildRoot + '/static'
       manifest: 'rev-manifest.json'
       coffee: BuildRoot + '/static/js/'
 
@@ -33,7 +33,7 @@ and static files are inside `static` directory.
       jade: ['jade/index.jade', 'jade/real_pages/**/*.jade']
       scss: 'scss/**/*.scss'
       scss_main: 'scss/pyconcz.scss'
-      files: 'images/**'
+      files: 'files/**'
       coffee: 'coffee/**/*.coffee'
 
 Dependencies
