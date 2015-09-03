@@ -4,7 +4,7 @@ html(lang='en-us')
     include ../components/head
   body.home(data-spy='scroll', data-target='#main-navbar', data-offset="60")
     include ../components/navbar
-    .team
+    .team.container
       h2.text-center Team
       .row
         .col-md-3
@@ -14,7 +14,7 @@ html(lang='en-us')
           p.description C3PO &amp; Sponsors
 
         .col-md-3
-          img(src='https://pbs.twimg.com/profile_images/1225634759/gravatar150.png', alt='')
+          img(src='https://djangogirls.org/uploads/event/coaches/ja.jpg', alt='')
           p.name
             #[a(href="https://twitter.com/honzajavorek", target="_blank") Honza Javorek]
           p.description Media &amp; Promotion
@@ -42,7 +42,7 @@ html(lang='en-us')
           img(src='https://scontent-vie1-1.xx.fbcdn.net/hphotos-xat1/t31.0-8/11536487_10206028010931663_6339000516200778558_o.jpg', alt='')
           p.name
             #[a(href="https://www.facebook.com/martin.matuszek", target="_blank") Martin Matuszek]
-          p.description Swag &amp; collectables
+          p.description Swag &amp; Collectables
 
         .col-md-3
           img(src='https://scontent-vie1-1.xx.fbcdn.net/hphotos-xpt1/t31.0-8/10463609_10205508922336237_4028946742293895321_o.jpg', alt='')
@@ -55,6 +55,16 @@ html(lang='en-us')
           p.name
             #[a(href="https://twitter.com/honzakral", target="_blank") Honza Král]
           p.description Speakers
+      .row
+        .col-md-3
+          img(src='https://media.licdn.com/media/p/4/000/153/2ef/39d4001.jpg', alt='')
+          p.name
+            #[a(href="https://twitter.com/EnCuKou", target="_blank") Peter Viktorin]
+          p.description Sprints &amp; Workshops
+
+       .row.text-center.offer-hand
+         #[a(href="mailto:info@pycon.cz?subject=Please, add me to your Slack!", target="_blank") Wanna become part of our team or just offer a hand?]
+
 
 include ../components/footer
     include ../components/js

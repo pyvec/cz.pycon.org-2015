@@ -2,7 +2,7 @@ lng = 16.596936
 lat = 49.226245
 
 
-init = () ->
+init = ->
   map = new GMaps {
     div: '#map'
     zoom: 17
@@ -16,7 +16,6 @@ init = () ->
     lng: lng,
     title: 'PyCon CZ 2015'
   }
-
 
   $ ->
     $('a[href*=#]:not([href=#])').click ->
@@ -33,4 +32,12 @@ init = () ->
     return
 
 
-$ init
+$ ->
+  init()
+  hash_param =  window.location.hash
+  if hash_param?
+    target = $(hash_param)
+    if not target.length
+      target = $('[name=' + hash_param.slice(1) + ']')
+    if target.length
+      $('html,body').animate {scrollTop: target.offset().top - 60}, 0

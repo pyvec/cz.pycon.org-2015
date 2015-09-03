@@ -660,3 +660,17 @@
     }
   }
 }
+
+
+.right {
+  float: right;
+  list-style-type: none;
+
+  li {
+    font-size: 1.4em;
+    display: inline-block;
+  }
+  li:hover {
+    background-color: #fff;
+  }
+}

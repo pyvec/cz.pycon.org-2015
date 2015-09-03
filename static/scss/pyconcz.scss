@@ -8,6 +8,14 @@
 @import 'pycon/coc';
 @import 'pycon/getting_here';
 @import 'pycon/sponsorship';
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:700);
+
+@font-face {
+  font-family: 'Amatic';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Amatic SC Bold'), local('AmaticSC-Bold'), url(https://fonts.gstatic.com/s/amaticsc/v7/IDnkRTPGcrSVo50UyYNK75S3E-kSBmtLoNJPDtbj2Pk.ttf) format('truetype');
+}
 
 html,
 body {
@@ -34,28 +42,34 @@ h2 {
 
 .jumbotron {
   margin-bottom: 0;
+  font-family: "Amatic SC", "Helvetica Neue", "Helvetica", sans-serif;
 
   h1 .label {
     display: none;
   }
 
   .python-logo {
-    $logo-size: 200px;
+    $logo-size: 300px;
     width: auto;
     height: $logo-size;
   }
 
   .event-date,
   .event-location {
-    margin-top: 1em;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 60px;
   }
 }
 
 .lead {
   font-size: 1.3em;
   text-align: left;
+}
+
+.home {
+  .lead {
+    text-align: center;
+  }
 }
 
 .claim {
@@ -69,4 +83,9 @@ h2 {
     margin: 0;
     text-align: center;
   }
+}
+
+footer {
+  padding: 20px 0;
+  line-height: 2;
 }
