@@ -3,7 +3,7 @@
 PyCon CZ 2015 -- early adopters version
 =======================================
 
-Welcome! It's really going to happen this year. The Czech PyCon, local python conference for anyone interested in Python programming language.
+Welcome! It's really going to happen this year. The Czech PyCon, local Python conference for anyone interested in Python programming language.
 
 Join us
 -------
