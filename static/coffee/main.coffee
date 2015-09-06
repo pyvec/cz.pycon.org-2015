@@ -1,7 +1,6 @@
 lng = 16.596936
 lat = 49.226245
 
-
 init = ->
   map = new GMaps {
     div: '#map'
@@ -9,6 +8,7 @@ init = ->
     lat: lat
     lng: lng
     scrollwheel: false
+    draggable: false
   }
 
   map.addMarker {
