@@ -1,28 +1,62 @@
-h2.text-center Speakers
-
 .container
-  .row  
-    .col-md-6
-      img(src='https://pbs.twimg.com/profile_images/58051305/rusty-mugshot.png', alt='')
-      p.name Russell Keith-Magee
-      p.description Django Core Developer
-    .col-md-6
-      //img(src='http://www.waterfordwine.com/wordpress/wp-content/uploads/2012/01/uncle-sam-wants-you.jpg', alt='')
-      .placeholder #[span ?]
-      p.name Call For Proposals
-      p.description
-        a(href='http://goo.gl/forms/8Tc22glxxc', target='_blank')
-          | Submit a Proposal
+  h2 Speakers
+
+  .row
+    .col-md-12
+      .cfp-notice
+        p.lead
+          | We are still looking for speakers! You can 
+          a.cfp-link(href='http://goo.gl/forms/8Tc22glxxc', target='_blank') submit your talk
+          |  until 
+          strong 28th September
+          | .
+          
+      p.lead.
+        Two very special speakers accepted our invitation for keynotes:
+        Amber Brown and Russell Keith-Magee. We're really excited to have
+        them both aboard!
+
+  .keynote-speaker
+    .keynote-avatar
+      img(src='/static/images/speakers/amber_brown.jpg', alt='Avatar of Amber Brown')
+    .keynote-description
+      h3.name Amber Brown
+      p.short-description Twisted project Core Developer
+      p.description.
+        Amber, better known as HawkOwl, is a core developer and release manager
+        of the Twisted project. In her spare time she writes web applications,
+        works on Twisted, and organizes events such as GovHack and Django Girls.
+  
+  .keynote-speaker
+    .keynote-avatar
+      img(src='/static/images/speakers/russell_keith_magee.png', alt='Photo of Russel Keith-Magee')
+      
+    .keynote-description
+      h3.name Russell Keith-Magee
+      p.short-description Django Core Developer
+      p.description.
+        Dr Russell Keith-Magee is a 9 year veteran of the Django core team,
+        and President of the Django Software Foundation. He's also the founder
+        of the BeeWare project, developing GUI tools to support the development
+        of Python software. When he's not contributing to open source, he's the
+        CTO of TradesCloud, a company providing integrated job management
+        software for tradespeople.
 
   .row.cfp
     .col-md-8.col-md-push-2
-      h3 Wanna get on stage?
+      h3 What about #[u you]? Wanna get on stage?
       p.lead.
         PyCon CZ is community-driven event focused on Python programming language.
         We would like to gather the most interesting talks from various fields.
         
-      p.lead.
-        If you think you have something awesome to say,
-        #[a(href='http://goo.gl/forms/8Tc22glxxc', target='_blank') submit your talk].
-        
-  
+      p.lead
+        | If you think you have something awesome to say, 
+        a.cfp-link(href='http://goo.gl/forms/8Tc22glxxc', target='_blank') submit your talk
+        | .
+      
+      p.lead
+        | Call for speakers closes on 
+        strong 28th September
+        |  and all talks will be announced one week after - on 
+        strong 5th October
+        | . Stay tuned!
