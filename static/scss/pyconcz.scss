@@ -41,7 +41,7 @@ h2 {
 }
 
 .container {
-    @media (min-width: $screen-sm) {
+    @media (min-width: $screen-md) {
       width: 80%;
       margin: 0 auto;
     }
@@ -50,6 +50,7 @@ h2 {
 .jumbotron {
   margin-bottom: 0;
   font-family: "Amatic SC", "Helvetica Neue", "Helvetica", sans-serif;
+  text-align: center;
 
   h1 .label {
     display: none;
