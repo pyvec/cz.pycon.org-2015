@@ -15,6 +15,14 @@
   }
 
   // speakers
+  .speaker-link {
+    font-size: 0.8em;
+    color: $speakers-social-link-color;
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
 
   // common
   img,
