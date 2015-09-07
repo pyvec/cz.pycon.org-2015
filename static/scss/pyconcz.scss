@@ -25,7 +25,6 @@ body {
 
 body {
   padding-top: $navbar-height;
-  text-align: center;
 }
 
 section {
@@ -38,11 +37,20 @@ h2 {
   margin-bottom: 50px;
   font-weight: 500;
   font-size: 2.8em;
+  text-align: center;
+}
+
+.container {
+    @media (min-width: $screen-md) {
+      width: 80%;
+      margin: 0 auto;
+    }
 }
 
 .jumbotron {
   margin-bottom: 0;
   font-family: "Amatic SC", "Helvetica Neue", "Helvetica", sans-serif;
+  text-align: center;
 
   h1 .label {
     display: none;
@@ -68,12 +76,6 @@ h2 {
 .lead {
   font-size: 1.3em;
   text-align: left;
-}
-
-.home {
-  .lead {
-    text-align: center;
-  }
 }
 
 .claim {

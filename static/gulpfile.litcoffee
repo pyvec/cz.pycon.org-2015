@@ -81,7 +81,7 @@ Style checkers:
 
 Utils:
 
-    clean = require 'gulp-rimraf'
+    del = require 'del'
     runSequence = require 'run-sequence'
     plumber = require 'gulp-plumber'
 
@@ -111,6 +111,7 @@ but keep running in **debug-mode**.
     defaultPlumber = ->
       plumber
         errorHandler: (err) ->
+          console.log err.toString()
           this.emit 'end'
           process.exit(1) if !Debug
 
@@ -127,7 +128,7 @@ and watches for changes. Use **build** task for one-time build.
 filenames so they can be cached indefinitely.
 
     gulp.task 'release', (callback) ->
-      runSequence 'clean', 'build', 'revision', 'collect', 'images', callback
+      runSequence 'clean', 'build', 'revision', 'collect', callback
 
 **debug-mode** -- Enables debug mode: Minification is disabled, source maps are
 created and gulp doesn't exit on errors
@@ -194,7 +195,7 @@ files to cache (for speedup of consecutive upload) and report changes.
           debug: Debug
 
       gulp.src Source.jade
-      #.pipe defaultPlumber()
+      .pipe defaultPlumber()
       .pipe jade options
       .pipe gulp.dest Destination.html
       .pipe reload stream: true
@@ -241,9 +242,8 @@ gulp-sass, gulp-autprefixer or gulp-sourcemaps (dunno which one). See
 
 **clean** -- Clean the build dir
 
-    gulp.task 'clean', ->
-      gulp.src [BuildRoot, Destination.manifest]
-      .pipe clean read: false
+    gulp.task 'clean', (callback) ->
+      del [BuildRoot, Destination.manifest], callback
 
 **revision** - Create revisions for all assets by appending hash to filename.
 
@@ -272,6 +272,7 @@ gulp-sass, gulp-autprefixer or gulp-sourcemaps (dunno which one). See
 
     gulp.task 'images', ->
       gulp.src BuildRoot + '/**/*.{jpeg,gif,jpg,png}'
+      .pipe defaultPlumber()
       .pipe imageop {
         optimizationLevel: 4
         progressive: true
