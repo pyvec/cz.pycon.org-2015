@@ -50,14 +50,18 @@ h2 {
 
   .python-logo {
     $logo-size: 300px;
-    width: auto;
-    height: $logo-size;
+    max-height: $logo-size;
+    margin: 0 auto;
   }
 
   .event-date,
   .event-location {
     font-weight: bold;
-    font-size: 60px;
+    font-size: 40px;
+
+    @media (min-width: $screen-xs) {
+      font-size: 60px;
+    }
   }
 }
 
