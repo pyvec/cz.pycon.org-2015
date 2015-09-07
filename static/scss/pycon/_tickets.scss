@@ -3,10 +3,20 @@
     font-weight: bold;
   }
 
+  .btn-tickets {
+    @extend .btn;
+    @extend .btn-success;
+    @extend .btn-lg;
+  }
+
+  .tickets-join {
+    text-align: center;
+  }
+
   form {
     width: 90%;
     margin: 0 auto;
   }
 
-  
+
 }
