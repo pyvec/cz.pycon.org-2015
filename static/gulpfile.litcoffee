@@ -19,10 +19,12 @@ Configuration:
 Build destinations -- whole website is static build from jade templates
 and static files are inside `static` directory.
 
-    BuildRoot = 'build'
+    BuildRoot = 'build/2015'
+    Version = '2015'
 
     Destination =
       all: BuildRoot + '/**'
+      awsRoot: 'build/**'
       html: BuildRoot
       css: BuildRoot + '/static/css'
       files: BuildRoot
@@ -68,6 +70,7 @@ Optimization and compression:
     collect = require 'gulp-rev-collector'
     imageop = require 'gulp-image-optimization'
     concat = require 'gulp-concat'
+    rename = require 'gulp-rename'
 
 Style checkers:
 
@@ -163,23 +166,30 @@ Task is configured to be used in CircleCI which stores AWS credentials in
 
       publisher = awspublish.create awsConfig
 
+      VersionDir = (path) -> Version + '/' + path
+      rawRoutes =
+        "static":
+          cacheTime: 630720000
+          gzip: true
+        "index\.html":
+          cacheTime: 0
+          gzip: true
+
+      routes = {}
+      for item, value of rawRoutes
+        routes[VersionDir(item)] = value
+      routes["^.+$"] = "$&"
+
       headers =
         cache:
           cacheTime: 600
-        routes:
-          "static":
-            cacheTime: 630720000
-            gzip: true
-          "index\.html":
-            cacheTime: 0
-            gzip: true
-          "^.+$": "$&"
+        routes: routes
 
 The task itself begins here. Publish files using `header` config, save uploaded
 files to cache (for speedup of consecutive upload) and report changes.
 
       gutil.log gutil.colors.yellow "Publishing website at " + bucket
-      gulp.src Destination.all
+      gulp.src Destination.awsRoot
       .pipe awspublishRouter headers
       .pipe publisher.publish()
       .pipe publisher.cache()
