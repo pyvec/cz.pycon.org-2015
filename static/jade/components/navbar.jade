@@ -1,3 +1,5 @@
+- Version = "/2015/"
+
 div
   header
     .navbar.navbar-default.navbar-fixed-top
@@ -7,22 +9,22 @@ div
           .icon-bar
           .icon-bar
           .icon-bar
-        a.navbar-brand(href="/") PyCon CZ
+        a.navbar-brand(href=Version) PyCon CZ
 
       .collapse.navbar-collapse#main-navbar
         ul.nav.navbar-nav
           li
-            a(href='/#speakers') Speakers
+            a(href=Version + '#speakers') Speakers
           li
-            a(href='/#schedule') Schedule
+            a(href=Version + '#schedule') Schedule
           li
-            a(href='/#tickets') Tickets
+            a(href=Version + '#tickets') Tickets
           li
-            a(href='/#sponsors') Sponsors
+            a(href=Version + '#sponsors') Sponsors
           li
-            a(href='/team.html') Team
+            a(href=Version + 'team.html') Team
           li
-            a(href='/#venue') Venue
+            a(href=Version + '#venue') Venue
         ul.right.nav
           li
             a(href='https://twitter.com/pyconcz', target='_blank')
