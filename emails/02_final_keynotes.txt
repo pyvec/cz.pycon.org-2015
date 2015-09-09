@@ -1,6 +1,6 @@
 Keynote speakers confirmed
 
-In last two days we received valuable feedback from you and updated our website
+In the past two days we received valuable feedback from you and updated our website
 accordingly. New information was added, other information was
 clarified. Thank you all for your patience!
 
@@ -11,9 +11,9 @@ of the Django web framework. We are very excited to have them both aboard!
 
 The rest of the speakers will be announced at the beginning of October because
 the Call for Papers is still open. Have you already submitted your talk?
-If not, you can do it at following link http://cz.pycon.org/#speakers
+If not, you can do it at the following link: http://cz.pycon.org/#speakers
 
-PyCon CZ is a community-driven conference. Do you have an idea how to improve
+PyCon CZ is a community-driven conference. Do you have ideas how to improve
 our site? Submit a pull request (https://github.com/pyvec/cz.pycon.org-2015)!
 Would you like to hear a talk about a specific topic? Contact us on
 twitter (@pyconcz), facebook (http://bit.ly/fb-pyconcz-2015) or by email. We are
