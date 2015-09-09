@@ -1,0 +1,23 @@
+Keynote speakers confirmed
+
+In the past two days we received valuable feedback from you and updated our website
+accordingly. New information was added, other information was
+clarified. Thank you all for your patience!
+
+The most important news: Our second keynote speaker, Amber Brown, is confirmed.
+She is the core developer and release manager of the Twisted project. As you
+already know, the other keynote speaker is Russell Keith-Magee, core developer
+of the Django web framework. We are very excited to have them both aboard!
+
+The rest of the speakers will be announced at the beginning of October because
+the Call for Papers is still open. Have you already submitted your talk?
+If not, you can do it at the following link: http://cz.pycon.org/#speakers
+
+PyCon CZ is a community-driven conference. Do you have ideas how to improve
+our site? Submit a pull request (https://github.com/pyvec/cz.pycon.org-2015)!
+Would you like to hear a talk about a specific topic? Contact us on
+twitter (@pyconcz), facebook (http://bit.ly/fb-pyconcz-2015) or by email. We are
+here for you and we care about your opinion.
+
+Cheers,
+   Tomáš Ehrlich and PyCon CZ team
