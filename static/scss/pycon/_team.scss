@@ -2,6 +2,9 @@
 
   .row {
     margin-bottom: 100px;
+    .col-md-3 {
+      text-align: center;
+    }
   }
 
   img,
@@ -16,6 +19,7 @@
     padding: 20px 0 0;
     font-weight: 500;
     font-size: 1.6em;
+    text-align: center;
   }
 
   .description {
