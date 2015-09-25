@@ -29,11 +29,13 @@ h2{
 
   .silver & {
     @include make-sm-column(6);
+    @include make-md-column-offset(3);
     height: $silver-height;
   }
 
   .bronze & {
     @include make-sm-column(4);
+    @include make-md-column-offset(4);
     height: $bronze-height;
   }
 }
