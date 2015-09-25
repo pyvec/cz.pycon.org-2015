@@ -1,6 +1,6 @@
 $gold-height: 200px;
-$silver-height: 200px;
-$bronze-height: 100px;
+$silver-height: 150px;
+$bronze-height: 75px;
 
 $sponsor-placeholder-bg: #ddd;
 $sponsor-margin: 10px;
@@ -13,14 +13,21 @@ $sponsor-margin: 10px;
 
 }
 
-h2{
+h3 {
   text-align: center;
   @include make-row();
   margin-top: 40px;
 }
 
-.sponsor-placeholder {
+.sponsor {
+  display: block;
+  position: relative;
   margin-bottom: $grid-gutter-width / 2;
+
+  img {
+    width: auto;
+    height: 100%;
+  }
 
   .gold & {
     @include make-sm-column(12);
@@ -28,23 +35,21 @@ h2{
   }
 
   .silver & {
-    @include make-sm-column(6);
-    @include make-md-column-offset(3);
+    // @include make-sm-column(6);
+    // @include make-md-column-offset(3);
     height: $silver-height;
   }
 
   .bronze & {
-    @include make-sm-column(4);
-    @include make-md-column-offset(4);
+    // @include make-sm-column(4);
+    // @include make-md-column-offset(4);
     height: $bronze-height;
   }
-}
 
-.sponsor {
-  display: block;
-  position: relative;
-  height: 100%;
-  background-color: $sponsor-placeholder-bg;
+  // sponsor logos customizations
+  &.imper {
+    margin: 10px;
+  }
 }
 
 .s-link {
