@@ -19,7 +19,7 @@ Configuration:
 Build destinations -- whole website is static build from jade templates
 and static files are inside `static` directory.
 
-    BuildRoot = 'build'
+    BuildRoot = 'build/2015'
 
     Destination =
       all: BuildRoot + '/**'
