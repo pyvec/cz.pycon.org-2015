@@ -1,6 +1,13 @@
 // Default bootstrap variables
 @import "bootstrap/variables";
 
+$brand-primary: #1e5493;
+$brand-secondary: #d52034;
+$brand-silent: #d1d1d1;
+$text-color: #646464;
+
+$navbar-height: 60px;
+
 // Theme overrides
 
 $jumbotron-bg: #fff;
@@ -9,9 +16,6 @@ $jumbotron-color: #000;
 $claim-bg: #ddd;
 
 $speakers-social-link-color: #aaa;
-
-$tricolor-red: #A72624;
-$tricolor: #fff #A72624 #5ba4c0;
 
 //map
 $map-height: 400px;

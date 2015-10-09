@@ -18,7 +18,7 @@
 
   margin: 0;
   padding: 0;
-  
+
   // asymetric padding to make navbar items in visual middle
   // (two-lines items shift visualy whole menu a bit up)
   padding-top: 12px;
@@ -26,7 +26,6 @@
   text-align: center;
 
   li {
-    position: relative;
     display: inline-block;
     margin: 0 $item-padding/2;
 

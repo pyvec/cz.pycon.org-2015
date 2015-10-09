@@ -1,0 +1,43 @@
+.pycon {
+  position: relative;
+  left: -30px;
+  margin-top: 80px;
+  margin-bottom: 50px;
+
+  font-family: Amatic, "Helvetica Neue";
+  line-height: 1;
+  text-align: center;
+
+  .pycon-logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 250px;
+    height: 250px;
+  }
+
+  h1 {
+    display: inline-block;
+    margin: 0;
+    font-size: 96px;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .year {
+    display: block;
+    color: $brand-primary;
+  }
+}
+
+.pycon-info {
+  position: relative;
+  left: -40px;
+  font-size: 60px;
+  font-family: Amatic, "Helvetica Neue";
+
+  .pycon-location,
+  .pycon-date {
+    display: inline;
+    padding: 0 20px;
+  }
+}

@@ -2,6 +2,7 @@
 @import "variables";
 
 @import "pycon/navbar";
+@import "pycon/home";
 
 // @import "pycon/sponsors";
 // @import "pycon/map";
@@ -30,6 +31,14 @@ body {
 
 body {
   padding-top: $navbar-height;
+}
+
+h1 {
+  color: $brand-secondary;
+}
+
+h2 {
+  color: $brand-primary;
 }
 
 //
