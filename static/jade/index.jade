@@ -3,22 +3,23 @@ include components/vars
 doctype html
 html(lang='en-us')
   head
-    include ./components/head
+    include components/meta
   body.home(data-spy='scroll', data-target='#main-navbar', data-offset="60")
-    include components/navbar
+    include components/header
 
-    section#section-home.home
-      include ./pages/home
-    section#speakers.speakers
-      include ./pages/speakers
-    section#schedule.timeline
-      include ./pages/timeline
-    section#tickets.tickets
-      include ./pages/tickets
-    section#sponsors.sponsors
-      include ./pages/sponsors
-    section#venue.map
-      include ./pages/map
-
-    include components/footer
-    include components/js
+    //
+    //- section#section-home.home
+    //-   include ./pages/home
+    //- section#speakers.speakers
+    //-   include ./pages/speakers
+    //- section#schedule.timeline
+    //-   include ./pages/timeline
+    //- section#tickets.tickets
+    //-   include ./pages/tickets
+    //- section#sponsors.sponsors
+    //-   include ./pages/sponsors
+    //- section#venue.map
+    //-   include ./pages/map
+    //- 
+    //- include components/footer
+    //- include components/js
