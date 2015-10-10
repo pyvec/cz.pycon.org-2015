@@ -15,7 +15,7 @@ div
           li.getting-here
             a(href='/'+year+'/#schedule') Getting here
           li.talks
-            a(href='/'+year+'/#tickets')
+            a(href=pageUrl("talks.html"))
               | Talks
               span.date Saturday 14th
           li.sprints
@@ -23,8 +23,9 @@ div
               | Sprints &amp; workshops
               span.date Sunday 15th
       
-      img.pycon-logo(
-        alt="PyCon CZ",
-        src='/'+year+"/static/images/pycon-cz-logo-icon.svg",
-        onerror="this.onerror = null; this.src = '/2015/static/images/pycon-cz-logo.png'"
-      )
+      a(href="/2015/")
+        img.pycon-logo(
+          alt="PyCon CZ",
+          src='/'+year+"/static/images/pycon-cz-logo-icon.svg",
+          onerror="this.onerror = null; this.src = '/2015/static/images/pycon-cz-logo.png'"
+        )

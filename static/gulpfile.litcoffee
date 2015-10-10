@@ -51,7 +51,8 @@ Command line arguments:
 
 Languages and compilers:
 
-    jade = require 'gulp-jade'
+    jade = require 'jade'
+    gulpJade = require 'gulp-jade'
     sass = require 'gulp-sass'
     autoprefixer = require 'gulp-autoprefixer'
     coffee = require 'gulp-coffee'
@@ -193,10 +194,13 @@ files to cache (for speedup of consecutive upload) and report changes.
         markdown: marked
         locals:
           debug: Debug
+          speakers: JSON.parse fs.readFileSync './data/speakers.json'
+          pageUrl: (path) -> "/2015/#{path}"
+          avatar: (filename) -> "/2015/static/images/speakers/#{filename}"
 
       gulp.src Source.jade
       .pipe defaultPlumber()
-      .pipe jade options
+      .pipe gulpJade options
       .pipe gulp.dest Destination.html
       .pipe reload stream: true
 

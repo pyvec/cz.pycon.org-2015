@@ -53,32 +53,29 @@ block viewport
         onerror="this.onerror = null; this.src = '/2015/static/images/ui/branch-in.png'"
       )
     
-    .talk-block
-      .event.master
-        .talk-description
-          .speaker Russel-Keith Maggee
-          p.
-            Dr Russell Keith-Magee is a 9 year veteran of the Django core team,
-            and President of the Django Software Foundation.
-           
-        .commit
-          img.avatar(
-            src=avatar("russell_keith_magee.png"),
-            alt='Photo of Russel Keith-Magee'
-          )
+    each speaker, index in speakers
+      .talk-block
+        .event.master
+          .talk-description
+            .speaker= speaker[0].name
+            p= speaker[0].title
 
-      .event.practical
-        .talk-description
-          .speaker Russel-Keith Maggee
-          p.
-            Dr Russell Keith-Magee is a 9 year veteran of the Django core team,
-            and President of the Django Software Foundation.
-           
-        .commit
-          img.avatar(
-            src=avatar("russell_keith_magee.png"),
-            alt='Photo of Russel Keith-Magee'
-          )
+          .commit
+            img.avatar(
+              src=avatar("russell_keith_magee.png"),
+              alt='Photo of Russel Keith-Magee'
+            )
+
+        .event.practical
+          .talk-description
+            .speaker= speaker[1].name
+            p= speaker[1].title
+             
+          .commit
+            img.avatar(
+              src=avatar("russell_keith_magee.png"),
+              alt='Photo of Russel Keith-Magee'
+            )
 
     .branch
       img(
