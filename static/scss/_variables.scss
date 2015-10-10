@@ -1,13 +1,13 @@
-// Default bootstrap variables
 @import "bootstrap/variables";
 
 // Grid
 
 $grid-gutter-width: 20px;
-$container-desktop: (960px + $grid-gutter-width);
+$container-desktop: (940px + $grid-gutter-width);
 $container-large-desktop: $container-desktop;
-$container-md: $container-desktop;
 $container-lg: $container-desktop;
+$container-md: $container-desktop;
+$screen-lg: $screen-md;
 
 // Color theme
 
@@ -21,11 +21,6 @@ $text-inverted: #fff;
 $navbar-height: 60px;
 
 // Theme overrides
-
-$jumbotron-bg: #fff;
-$jumbotron-color: #000;
-
-$claim-bg: #ddd;
 
 $speakers-social-link-color: #aaa;
 

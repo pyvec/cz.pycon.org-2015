@@ -1,3 +1,6 @@
+// size if PyCon logo (not displayed on homepage)
+$brand-size: 45px;
+
 .navbar {
   position: fixed;
   top: 0;
@@ -6,15 +9,26 @@
   height: $navbar-height;
 
   border-bottom: 1px solid $brand-silent;
+
+  .pycon-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $brand-size;
+    height: $brand-size;
+    transform: translate(-$brand-size/2 - 5px, -$brand-size/2);
+  }
 }
 
 .navbar-nav {
-  // size if PyCon logo (not displayed on homepage)
-  $brand-size: 30px;
   // space between items
   $item-padding: 40px;
   // enlarged space between middle items (placeholder for brand-logo)
   $brand-placeholder: 20px + ($item-padding + $brand-size) / 2;
+
+  // shift whole menu right to visualy align it with jumbotron and pycon logo
+  position: relative;
+  left: 35px;
 
   margin: 0;
   padding: 0;

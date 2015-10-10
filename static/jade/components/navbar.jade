@@ -7,8 +7,7 @@ div
         //-   .icon-bar
         //-   .icon-bar
         //-   .icon-bar
-        //- a.navbar-brand(href="/"+year+'/') PyCon CZ
-
+        //- a.navbar-brand(href="/"+year+'/') PyCon Cz
       .collapse.navbar-collapse#top
         ul.nav.navbar-nav
           li.about
@@ -23,3 +22,9 @@ div
             a(href='/'+year+'/#sponsors')
               | Sprints &amp; workshops
               span.date Sunday 15th
+      
+      img.pycon-logo(
+        alt="PyCon CZ",
+        src='/'+year+"/static/images/pycon-cz-logo-icon.svg",
+        onerror="this.onerror = null; this.src = '/2015/static/images/pycon-cz-logo.png'"
+      )
