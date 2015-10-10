@@ -44,6 +44,11 @@ body {
 body {
   font-weight: 300;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.canvas {
+  height: 100%;
 }
 
 .viewport {

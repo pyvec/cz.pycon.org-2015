@@ -31,11 +31,23 @@ html(lang='en-us')
     meta(property="og:url",         content=urlBase)
     meta(property="og:type",        content="website" )
 
-  body(class=pageClass)
+  body(class=pageClass, ontouchstart="")
     include components/navbar
+    .canvas
+      .overlay
+      .viewport
+        block viewport
 
-    .viewport
-      block viewport
-
-    include components/footer
-    //- include components/js
+      include components/footer
+    include components/js
+    
+    script(type="text/javascript").
+      $('.navbar-toggle').click(function(ev) {
+        ev.preventDefault();
+        $('body').toggleClass("open");
+      });
+      
+      $('.open').find('.viewport, .navbar a').click(function(ev) {
+        ev.preventDefault();
+        $('body').toggleClass("open");
+      })
