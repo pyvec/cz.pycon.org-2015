@@ -20,8 +20,13 @@
 
 // Global style overrides
 .home {
+  h1 {
+    color: $brand-primary;
+  }
+
   h2 {
     margin: 0;
+    color: $brand-secondary;
     font-size: 30px;
   }
 

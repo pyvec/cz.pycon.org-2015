@@ -8,6 +8,7 @@
 @import "pycon/navbar";
 @import "pycon/footer";
 @import "pycon/home";
+@import "pycon/talks";
 
 // @import "pycon/sponsors";
 // @import "pycon/map";
@@ -49,9 +50,9 @@ body {
 }
 
 h1 {
-  color: $brand-primary;
+  color: $brand-secondary;
 }
 
 h2 {
-  color: $brand-secondary;
+  color: $brand-primary;
 }

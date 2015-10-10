@@ -1,0 +1,101 @@
+$avatar-size: 96px;
+$commit-line-size: 10px;
+
+.talks {
+  h1 {
+    text-align: center;
+  }
+}
+
+.event-full {
+  @include make-row();
+
+  &.general {
+    .title {
+      // FIXME: HACK...
+      padding-top: 10px;
+    }
+  }
+
+  .title {
+    @include make-sm-column(5);
+
+    text-align: right;
+  }
+
+  .description {
+    @include make-sm-column(5);
+    @include make-sm-column-push(2);
+
+    .speaker {
+      color: $brand-primary;
+      font-weight: bold;
+    }
+
+    p {
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+  }
+
+  .commit {
+    @include make-sm-column(2);
+    @include make-sm-column-pull(5);
+    position: relative;
+    text-align: center;
+  }
+
+  // .title,
+  .description,
+  .commit {
+    padding: 16px 0;
+  }
+}
+
+
+.avatar {
+  width: $avatar-size;
+  height: $avatar-size;
+  border-radius: 50%;
+}
+
+.commit:after {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1000;
+  width: $commit-line-size;
+  height: 100%;
+  content: " ";
+  background-color: $commit-line;
+  transform: translateX(-50%);
+}
+
+
+.commit {
+  $dot-size: 35px;
+
+  .dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $dot-size;
+    height: $dot-size;
+    border-radius: 50%;
+    background-color: $commit-line;
+    transform: translate(-50%, -50%);
+  }
+
+  &.empty {
+    height: $avatar-size;
+  }
+
+  &.first:after {
+    top: 50%;
+    height: 50%;
+  }
+
+  &.last:after {
+    height: 50%;
+  }
+}
