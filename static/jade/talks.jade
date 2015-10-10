@@ -4,17 +4,18 @@ extends base
 mixin talk(speaker)
   .talk-description
     .speaker= speaker.name
-    a.github(href="https://github.com/" + speaker.github)
+    a.social.github(href="https://github.com/" + speaker.github)
       .fa.fa-github
-    a.twitter(href="https://twitter.com/" + speaker.twitter)
+    a.social.twitter(href="https://twitter.com/" + speaker.twitter)
       .fa.fa-twitter
     p= speaker.title
 
-  .commit
-    img.avatar(src=avatar(speaker.avatar), alt='Photo of ' + speaker.name)
+  .commit-holder
+    .commit
+      img.avatar(src=avatar(speaker.avatar), alt='Photo of ' + speaker.name)
 
 block vars
-  - var pageClass = "talks"
+  - var pageClass = "page-talks"
 
 block viewport
   .container

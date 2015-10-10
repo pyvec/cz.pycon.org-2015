@@ -1,7 +1,7 @@
 $avatar-size: 96px;
 $commit-line-size: 10px;
 
-.talks {
+.page-talks {
   h1 {
     text-align: center;
   }
@@ -30,6 +30,7 @@ $commit-line-size: 10px;
   .commit {
     @include make-sm-column(2);
     @include make-sm-column-pull(5);
+    text-align: center;
   }
 }
 
@@ -47,8 +48,14 @@ $commit-line-size: 10px;
       @include make-sm-column(8);
     }
 
-    .commit {
+    .commit-holder {
       @include make-sm-column(4);
+      padding-right: 11px;
+    }
+
+    // Simple hack to force breakline after Anastassiya Zidkova name
+    .speaker {
+      padding-left: 30px;
     }
   }
 
@@ -58,9 +65,10 @@ $commit-line-size: 10px;
       @include make-sm-column-push(4);
     }
 
-    .commit {
+    .commit-holder {
       @include make-sm-column(4);
       @include make-sm-column-pull(8);
+      padding-left: 11px;
     }
   }
 }
@@ -83,15 +91,14 @@ $commit-line-size: 10px;
 .avatar {
   width: $avatar-size;
   height: $avatar-size;
+  border: 1px solid $brand-silent;
   border-radius: 50%;
   background-color: $bg;
-  border: 1px solid $brand-silent;
 }
 
 .commit {
   $dot-size: 35px;
   padding: 16px 0;
-  text-align: center;
 
   .dot {
     position: absolute;
@@ -106,6 +113,10 @@ $commit-line-size: 10px;
 
   &.empty {
     height: $avatar-size;
+
+    &:after {
+      transform: translateX(-$commit-line-size / 2);
+    }
   }
 
   &.first:after {
@@ -120,13 +131,12 @@ $commit-line-size: 10px;
   &:after {
     position: absolute;
     top: 0;
-    left: 50%;
     z-index: -1000;
     width: $commit-line-size;
     height: 100%;
     content: " ";
     background-color: $commit-line;
-    transform: translateX(-50%);
+    transform: translateX((-$avatar-size - $commit-line-size)/2);
   }
 }
 
@@ -134,4 +144,16 @@ $commit-line-size: 10px;
   height: 103px;
   margin-bottom: -2px;
   text-align: center;
+}
+
+.social {
+  color: $brand-silent;
+
+  &.github:hover {
+    color: $github-color;
+  }
+
+  &.twitter:hover {
+    color: $twitter-color;
+  }
 }
