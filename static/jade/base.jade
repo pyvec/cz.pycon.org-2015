@@ -1,0 +1,41 @@
+include components/vars
+block vars
+
+doctype html
+html(lang='en-us')
+  head
+    block title
+      title= "PyCon CZ " + year
+
+    base(href='/'+year+'/')
+
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='keywords', content='Python, PyCon, Brno, Django, conference, Česká Republika, konference')
+    meta(name='description', content='The very first Python conference in the Czech Republic')
+    link(rel='shortcut icon', href='/'+year+'/static/images/pycon-cz-logo-icon.svg', type='image/svg+xml')
+    link(rel='shortcut icon', href='/'+year+'/static/images/pycon-cz-logo-icon.png', type='image/png')
+    //if lt IE 9
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js')
+    link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', rel='stylesheet')
+    link(href='/'+year+'/static/css/pyconcz.css', rel='stylesheet')
+
+    script(src='https://js.tito.io/v1', async)
+    link(rel="stylesheet", type="text/css", href='https://css.tito.io/v1')
+
+    //- Facebook Meta
+    meta(property="og:title",       content="PyCon CZ 2015" )
+    meta(property="og:site_name",   content="cz.pycon.org" )
+    meta(property="og:description", content="The very first Python conference in the Czech Republic" )
+    meta(property="og:image",       content=urlBase + "/static/images/pycon-cz-logo-fb.png" )
+    meta(property="og:url",         content=urlBase)
+    meta(property="og:type",        content="website" )
+
+  body(class=pageClass)
+    include components/navbar
+
+    .viewport
+      block viewport
+
+      include components/footer
+    //- include components/js
