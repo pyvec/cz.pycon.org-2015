@@ -4,12 +4,15 @@ $divider-inverted: #527bac;
   position: relative;
   clear: both;
   width: 100%;
-  height: $footer-height;
-  margin-top: -$footer-height + 80px;
   padding: 1em 0 2em;
   color: $text-inverted;
   background-color: $brand-primary;
   font-size: 14px;
+
+  @media (min-width: $screen-sm) {
+    height: $footer-height;
+    margin-top: -$footer-height + 80px;
+  }
 
   a {
     color: $text-inverted;
@@ -33,10 +36,17 @@ $divider-inverted: #527bac;
 
   .nav-title {
     display: block;
-    margin-bottom: 10px;
-    border-bottom: 1px solid $divider-inverted;
+    margin-top: 10px;
+    border-top: 1px solid $divider-inverted;
     font-weight: bold;
     font-size: 16px;
+
+    @media (min-width: $screen-sm) {
+      margin-top: 0;
+      margin-bottom: 10px;
+      border-top: 0;
+      border-bottom: 1px solid $divider-inverted;
+    }
 
     &:hover {
       border-bottom: 1px solid $text-inverted;
@@ -50,7 +60,9 @@ $divider-inverted: #527bac;
 }
 
 .psf-trademark {
-  text-align: center;
+  @media (min-width: $screen-sm) {
+    text-align: center;
+  }
 
   a {
     font-weight: bold;
