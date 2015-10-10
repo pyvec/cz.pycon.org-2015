@@ -19,36 +19,63 @@ $commit-line-size: 10px;
 
   .title {
     @include make-sm-column(5);
-
     text-align: right;
   }
 
-  .description {
+  .talk-description {
     @include make-sm-column(5);
     @include make-sm-column-push(2);
-
-    .speaker {
-      color: $brand-primary;
-      font-weight: bold;
-    }
-
-    p {
-      margin-top: 5px;
-      margin-bottom: 0;
-    }
   }
 
   .commit {
     @include make-sm-column(2);
     @include make-sm-column-pull(5);
-    position: relative;
-    text-align: center;
+  }
+}
+
+.talk-block {
+  @include make-row();
+
+  .event {
+    @include make-sm-column(6);
   }
 
-  // .title,
-  .description,
-  .commit {
-    padding: 16px 0;
+  .master {
+    text-align: right;
+
+    .talk-description {
+      @include make-sm-column(8);
+    }
+
+    .commit {
+      @include make-sm-column(4);
+    }
+  }
+
+  .practical {
+    .talk-description {
+      @include make-sm-column(8);
+      @include make-sm-column-push(4);
+    }
+
+    .commit {
+      @include make-sm-column(4);
+      @include make-sm-column-pull(8);
+    }
+  }
+}
+
+.talk-description {
+  padding: 16px 0;
+
+  .speaker {
+    color: $brand-primary;
+    font-weight: bold;
+  }
+
+  p {
+    margin-top: 5px;
+    margin-bottom: 0;
   }
 }
 
@@ -59,21 +86,10 @@ $commit-line-size: 10px;
   border-radius: 50%;
 }
 
-.commit:after {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  z-index: -1000;
-  width: $commit-line-size;
-  height: 100%;
-  content: " ";
-  background-color: $commit-line;
-  transform: translateX(-50%);
-}
-
-
 .commit {
   $dot-size: 35px;
+  padding: 16px 0;
+  text-align: center;
 
   .dot {
     position: absolute;
@@ -98,4 +114,22 @@ $commit-line-size: 10px;
   &.last:after {
     height: 50%;
   }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1000;
+    width: $commit-line-size;
+    height: 100%;
+    content: " ";
+    background-color: $commit-line;
+    transform: translateX(-50%);
+  }
+}
+
+.branch {
+  height: 103px;
+  margin-bottom: -2px;
+  text-align: center;
 }

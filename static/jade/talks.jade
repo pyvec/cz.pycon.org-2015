@@ -4,4 +4,107 @@ block vars
   - var pageClass = "talks"
 
 block viewport
-  h1 Talks
+  .container
+    h1 Talks &amp; Keynotes
+    
+    .event-full.general
+      .title
+        h2 The grand opening
+      .talk-description
+        p.
+          Welcome to the first PyCon CZ. #[br]
+          Meet our sponsors and get ready for a day full awesome talks!
+      
+      .commit.empty.first
+        .dot
+    
+    .event-full
+      .title
+        h2 Keynote #1 #[br] Twisted
+      .talk-description
+        .speaker Amber Brown
+        p.
+          Amber, better known as HawkOwl, is a core developer and release
+          manager of the Twisted project. 
+         
+      .commit
+        img.avatar(
+          src=avatar("amber_brown.jpg"),
+          alt='Photo of Amber Brown'
+        )
+
+    .event-full
+      h2.title Keynote #2 #[br] Funding of open-source projects
+      .talk-description
+        .speaker Russel-Keith Maggee
+        p.
+          Dr Russell Keith-Magee is a 9 year veteran of the Django core team,
+          and President of the Django Software Foundation.
+         
+      .commit
+        img.avatar(
+          src=avatar("russell_keith_magee.png"),
+          alt='Photo of Russel Keith-Magee'
+        )
+    
+    .branch
+      img(
+        src="/2015/static/images/ui/branch-in.svg",
+        onerror="this.onerror = null; this.src = '/2015/static/images/ui/branch-in.png'"
+      )
+    
+    .talk-block
+      .event.master
+        .talk-description
+          .speaker Russel-Keith Maggee
+          p.
+            Dr Russell Keith-Magee is a 9 year veteran of the Django core team,
+            and President of the Django Software Foundation.
+           
+        .commit
+          img.avatar(
+            src=avatar("russell_keith_magee.png"),
+            alt='Photo of Russel Keith-Magee'
+          )
+
+      .event.practical
+        .talk-description
+          .speaker Russel-Keith Maggee
+          p.
+            Dr Russell Keith-Magee is a 9 year veteran of the Django core team,
+            and President of the Django Software Foundation.
+           
+        .commit
+          img.avatar(
+            src=avatar("russell_keith_magee.png"),
+            alt='Photo of Russel Keith-Magee'
+          )
+
+    .branch
+      img(
+        src="/2015/static/images/ui/branch-out.svg",
+        onerror="this.onerror = null; this.src = '/2015/static/images/ui/branch-out.png'"
+      )
+    
+    .event-full.general
+      .title
+        h2 Lightning talks
+      .talk-description
+        p.
+          The is only one rule of lighning talks: #[br]
+          5 mins and hard cut. Get on stage and share your experience!
+      
+      .commit.empty
+        .dot
+    
+    .event-full.general
+      .title
+        h2 Thank you
+      .talk-description
+        p.
+          The first day of PyCon CZ is over.
+          Wrap it up and enjoy evening party.
+          See you tomorrow at sprint venue!
+      
+      .commit.empty.last
+        .dot
