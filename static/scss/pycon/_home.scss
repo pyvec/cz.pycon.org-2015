@@ -60,20 +60,38 @@
 
   .year {
     display: block;
+    margin-left: 60px;
     color: $brand-secondary;
+  }
+
+  @media (min-width: $screen-xs) {
+    .year {
+      margin-left: 0;
+    }
   }
 }
 
 .pycon-info {
   position: relative;
-  left: -40px;
   font-size: 60px;
   font-family: Amatic, "Helvetica Neue";
 
   .pycon-location,
   .pycon-date {
-    display: inline;
+    display: block;
+    margin: 0;
+    margin-top: 20px;
     padding: 0 20px;
+  }
+
+  @media (min-width: $screen-sm) {
+    left: -40px;
+
+    .pycon-location,
+    .pycon-date {
+      display: block;
+      padding: 0 20px;
+    }
   }
 }
 
