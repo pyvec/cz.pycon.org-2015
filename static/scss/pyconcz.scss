@@ -1,5 +1,9 @@
-@import "bootstrap/normalize";
 @import "variables";
+@import "bootstrap/normalize";
+@import "bootstrap/mixins/clearfix";
+@import "bootstrap/mixins/grid";
+@import "bootstrap/mixins/grid-framework";
+@import "bootstrap/grid";
 
 @import "pycon/navbar";
 @import "pycon/home";
@@ -35,13 +39,19 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
 }
 
+.viewport {
+  overflow-y: auto;
+  height: 100%;
+}
+
 h1 {
-  color: $brand-secondary;
+  color: $brand-primary;
 }
 
 h2 {
-  color: $brand-primary;
+  color: $brand-secondary;
 }
+
 
 //
 // section {

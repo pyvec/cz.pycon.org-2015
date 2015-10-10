@@ -1,6 +1,16 @@
 // Default bootstrap variables
 @import "bootstrap/variables";
 
+// Grid
+
+$grid-gutter-width: 20px;
+$container-desktop: (960px + $grid-gutter-width);
+$container-large-desktop: $container-desktop;
+$container-md: $container-desktop;
+$container-lg: $container-desktop;
+
+// Color theme
+
 $brand-primary: #1e5493;
 $brand-secondary: #d52034;
 $brand-silent: #d1d1d1;

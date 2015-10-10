@@ -7,7 +7,8 @@ html(lang='en-us')
   body.home(data-spy='scroll', data-target='#main-navbar', data-offset="60")
     include components/navbar
 
-    include pages/home/pycon
+    .viewport
+      include pages/home/pycon
     //- section#speakers.speakers
     //-   include ./pages/speakers
     //- section#schedule.timeline
