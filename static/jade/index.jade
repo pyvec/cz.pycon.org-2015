@@ -8,17 +8,48 @@ html(lang='en-us')
     include components/navbar
 
     .viewport
-      include pages/home/pycon
-      include components/footer
-    //- section#speakers.speakers
-    //-   include ./pages/speakers
-    //- section#schedule.timeline
-    //-   include ./pages/timeline
-    //- section#tickets.tickets
-    //-   include ./pages/tickets
-    //- section#sponsors.sponsors
-    //-   include ./pages/sponsors
-    //- section#venue.map
-    //-   include ./pages/map
+      .pycon
+        img.pycon-logo(
+          alt="PyCon CZ",
+          src='/'+year+"/static/images/pycon-cz-logo-icon.svg",
+          onerror="this.onerror = null; this.src = '/2015/static/images/pycon-cz-logo.png'"
+        )
+        
+        h1
+          | PyCon CZ
+          span.year= year
 
+        .pycon-info
+          p.pycon-location Brno, Czech Republic
+          p.pycon-date November 14-15
+
+      .claim
+        .container
+          p.
+            The very first #[strong PyCon] in the #[strong Czech Republic]. Join us
+            for a fun weekend full of talks, sprints and workshops about Python.
+
+      .container
+        .program
+          .program-item
+            h2 Talks
+            .date Saturday 14th
+            p.
+              #[strong One] day, #[strong two] parallel tracks, #[strong two] kenotes
+              and #[strong ten] awesome talks. Community, web, hardware, science, devops and more.
+          
+          .program-item
+            h2 Sprints &amp; workshops
+            .date Sunday 15th
+            p.
+              #[strong Six] workshops in #[strong two] blocks and sprinting all day long. Hack on
+              open-source projects together with other Python community members.
+        
+        .registration
+          h2 Registration is now open
+          p.lead Get your ticket now and be part of the first PyCon CZ!
+          .tito
+            tito-widget(event="pyvec/pycon-cz-2015")
+
+      include components/footer
     //- include components/js
