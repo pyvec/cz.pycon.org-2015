@@ -33,20 +33,19 @@
 
 html,
 body {
-  overflow: hidden;
   width: 100%;
   height: 100%;
 }
 
 body {
-  padding-top: $navbar-height;
   font-weight: 300;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .viewport {
-  overflow-y: auto;
-  height: 100%;
+  min-height: 100%;
+  padding-top: $navbar-height;
+  padding-bottom: $footer-height;
 }
 
 h1 {
@@ -56,74 +55,3 @@ h1 {
 h2 {
   color: $brand-secondary;
 }
-
-
-//
-// section {
-//   position: relative;
-//   width: 100%;
-//   margin-bottom: 20px;
-// }
-//
-// h2 {
-//   margin-bottom: 50px;
-//   font-weight: 500;
-//   font-size: 2.8em;
-//   text-align: center;
-// }
-//
-// .container {
-//     @media (min-width: $screen-md) {
-//       width: 80%;
-//       margin: 0 auto;
-//     }
-// }
-//
-// .jumbotron {
-//   margin-bottom: 0;
-//   font-family: "Amatic SC", "Helvetica Neue", "Helvetica", sans-serif;
-//   text-align: center;
-//
-//   h1 .label {
-//     display: none;
-//   }
-//
-//   .python-logo {
-//     $logo-size: 300px;
-//     max-height: $logo-size;
-//     margin: 0 auto;
-//   }
-//
-//   .event-date,
-//   .event-location {
-//     font-weight: bold;
-//     font-size: 40px;
-//
-//     @media (min-width: $screen-xs) {
-//       font-size: 60px;
-//     }
-//   }
-// }
-//
-// .lead {
-//   font-size: 1.3em;
-//   text-align: left;
-// }
-//
-// .claim {
-//   padding: $jumbotron-padding;
-//   color: $jumbotron-color;
-//   background: $claim-bg;
-//
-//   font-size: $jumbotron-font-size;
-//
-//   .lead {
-//     margin: 0;
-//     text-align: center;
-//   }
-// }
-//
-// footer {
-//   padding: 20px 0;
-//   line-height: 2;
-// }

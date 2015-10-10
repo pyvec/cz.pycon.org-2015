@@ -1,6 +1,11 @@
 $divider-inverted: #527bac;
 
 .site-footer {
+  position: relative;
+  clear: both;
+  width: 100%;
+  height: $footer-height;
+  margin-top: -$footer-height;
   padding: 1em 0 2em;
   color: $text-inverted;
   background-color: $brand-primary;

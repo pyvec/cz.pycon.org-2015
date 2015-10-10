@@ -6,9 +6,11 @@ $brand-size: 45px;
   top: 0;
   right: 0;
   left: 0;
+  z-index: 1000;
   height: $navbar-height;
 
   border-bottom: 1px solid $brand-silent;
+  background-color: $navbar-bg;
 
   .pycon-logo {
     position: absolute;
