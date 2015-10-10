@@ -4,11 +4,13 @@ extends base
 mixin talk(speaker)
   .talk-description
     .speaker= speaker.name
+    
+    p= speaker.title
+    
     a.social.github(href="https://github.com/" + speaker.github)
       .fa.fa-github
     a.social.twitter(href="https://twitter.com/" + speaker.twitter)
       .fa.fa-twitter
-    p= speaker.title
 
   .commit-holder
     .commit
@@ -22,8 +24,7 @@ block viewport
     h1 Talks &amp; Keynotes
     
     .event-full.general
-      .title
-        h2 The grand opening
+      h2.title The grand opening
       .talk-description
         p.
           Welcome to the first PyCon CZ. #[br]
@@ -33,8 +34,7 @@ block viewport
         .dot
     
     .event-full
-      .title
-        h2 Keynote #1 #[br] Twisted
+      h2.title Keynote #1 #[br] Twisted
       .talk-description
         .speaker Amber Brown
         p.

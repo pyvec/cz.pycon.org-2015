@@ -3,7 +3,10 @@
 @import "bootstrap/mixins/clearfix";
 @import "bootstrap/mixins/grid";
 @import "bootstrap/mixins/grid-framework";
+@import "bootstrap/mixins/responsive-visibility";
+@import "bootstrap/mixins/clearfix";
 @import "bootstrap/grid";
+@import "bootstrap/responsive-utilities";
 
 @import "pycon/navbar";
 @import "pycon/footer";
@@ -47,6 +50,10 @@ body {
   min-height: 100%;
   padding-top: $navbar-height;
   padding-bottom: $footer-height;
+}
+
+.clearfix {
+  @include clearfix();
 }
 
 h1 {

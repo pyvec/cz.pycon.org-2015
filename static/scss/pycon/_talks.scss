@@ -1,10 +1,31 @@
 $avatar-size: 96px;
 $commit-line-size: 10px;
 
-.page-talks {
-  h1 {
-    text-align: center;
+%commit-top-padding {
+  padding: 0;
+
+  @media (min-width: $screen-sm) {
+    padding-top: 15px;
   }
+
+  @media (min-width: $screen-md) {
+    padding-top: 25px;
+  }
+}
+
+.page-talks {
+  @media (min-width: $screen-xs) {
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+.branch,
+.commit,
+.commit-holder,
+.title br {
+    @extend .hidden-xs;
 }
 
 .event-full {
@@ -19,10 +40,24 @@ $commit-line-size: 10px;
 
   .title {
     @include make-sm-column(5);
-    text-align: right;
+
+    h1,
+    h2 {
+      margin: 0;
+    }
+
+    @media (min-width: $screen-sm) {
+      text-align: right;
+
+      h1,
+      h2 {
+        margin: 20px 0;
+      }
+    }
   }
 
   .talk-description {
+    @extend %commit-top-padding;
     @include make-sm-column(5);
     @include make-sm-column-push(2);
   }
@@ -30,6 +65,7 @@ $commit-line-size: 10px;
   .commit {
     @include make-sm-column(2);
     @include make-sm-column-pull(5);
+
     text-align: center;
   }
 }
@@ -39,30 +75,40 @@ $commit-line-size: 10px;
 
   .event {
     @include make-sm-column(6);
+    margin-top: 15px;
+    @media (min-width: $screen-sm) {
+      margin-top: 0;
+    }
   }
 
   .master {
-    text-align: right;
+    @media (min-width: $screen-sm) {
+      text-align: right;
+
+      // // Simple hack to force breakline after Anastassiya Zidkova name
+      .speaker {
+        padding-left: 30px;
+      }
+    }
 
     .talk-description {
+      @extend %commit-top-padding;
       @include make-sm-column(8);
+      padding-left: 0;
     }
 
     .commit-holder {
       @include make-sm-column(4);
       padding-right: 11px;
     }
-
-    // Simple hack to force breakline after Anastassiya Zidkova name
-    .speaker {
-      padding-left: 30px;
-    }
   }
 
   .practical {
     .talk-description {
+      @extend %commit-top-padding;
       @include make-sm-column(8);
       @include make-sm-column-push(4);
+      padding-left: 0;
     }
 
     .commit-holder {
@@ -148,6 +194,7 @@ $commit-line-size: 10px;
 
 .social {
   color: $brand-silent;
+  line-height: 2;
 
   &.github:hover {
     color: $github-color;
@@ -155,5 +202,19 @@ $commit-line-size: 10px;
 
   &.twitter:hover {
     color: $twitter-color;
+  }
+
+  .master & {
+    margin-right: 10px;
+    margin-left: 0;
+
+    @media (min-width: $screen-xs) {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+
+  .practical & {
+    margin-right: 10px;
   }
 }
