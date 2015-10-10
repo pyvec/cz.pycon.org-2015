@@ -84,6 +84,8 @@ $commit-line-size: 10px;
   width: $avatar-size;
   height: $avatar-size;
   border-radius: 50%;
+  background-color: $bg;
+  border: 1px solid $brand-silent;
 }
 
 .commit {

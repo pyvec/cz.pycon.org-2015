@@ -1,14 +1,15 @@
 [
   [
     {
-    "name": "Anastassiya Zidkova, Filip Sedlak",
-    "track": "master",
-    "title": "Using Django for Genome Engineering",
-    "abstract": "This talk is for people interested to see how their programming knowledge can be applied in biology research, particularly genomics.\n\nCurrently, various technologies allow to change genetic information. Among these technologies, CRISPR is the most efficient and safe. \n\nCRISPR contains sequence of 20 letters and it is searching for match in DNA (think of it as a very long string). If it succeeds, then DNA is damaged by the cut.\nThis ability can be used  for targeted genome editing, where regions of interest can be changed.\n\nIn order to change DNA at the right place, scientists need to design the sequence which would match the target DNA.\n\nThe designed sequence shouldn't match anywhere else in the genome. Since this is biology, things are not perfect. The sequences may match even if there are a few mismatched letters. When we identify the candidate sequences, the most computationally intensive part is to look for places in the whole genome where the candidate could at least partially match.\n\nOur tool for designing such sequences is written in Python, using Django and Berkeley DB. For one analysis, we run tens of millions queries against a database of 700 million sites in genome.",
-    "bio": "Anastassiya Zidkova has background in human genetics. During her PhD, she got interested in data analysis using R. She then had postdoc in bioinformatics, where she was doing genetic data analysis using python and R. Currently, she is working in MSD IT GIC on projects in bioinformatics and knowledge engineering areas.\n\nFilip Sedlak is a software engineer at the pharmaceutical company MSD. His background is in chemical informatics and now focuses on knowledge management and bioinformatics.",
-    "company": "MSD IT GIC",
-    "twitter": "AnastassiyaZidk",
-    "github": "anastazie"
+      "name": "Anastassiya Zidkova, Filip Sedlak",
+      "track": "master",
+      "title": "Using Django for Genome Engineering",
+      "abstract": "This talk is for people interested to see how their programming knowledge can be applied in biology research, particularly genomics.\n\nCurrently, various technologies allow to change genetic information. Among these technologies, CRISPR is the most efficient and safe. \n\nCRISPR contains sequence of 20 letters and it is searching for match in DNA (think of it as a very long string). If it succeeds, then DNA is damaged by the cut.\nThis ability can be used  for targeted genome editing, where regions of interest can be changed.\n\nIn order to change DNA at the right place, scientists need to design the sequence which would match the target DNA.\n\nThe designed sequence shouldn't match anywhere else in the genome. Since this is biology, things are not perfect. The sequences may match even if there are a few mismatched letters. When we identify the candidate sequences, the most computationally intensive part is to look for places in the whole genome where the candidate could at least partially match.\n\nOur tool for designing such sequences is written in Python, using Django and Berkeley DB. For one analysis, we run tens of millions queries against a database of 700 million sites in genome.",
+      "bio": "Anastassiya Zidkova has background in human genetics. During her PhD, she got interested in data analysis using R. She then had postdoc in bioinformatics, where she was doing genetic data analysis using python and R. Currently, she is working in MSD IT GIC on projects in bioinformatics and knowledge engineering areas.\n\nFilip Sedlak is a software engineer at the pharmaceutical company MSD. His background is in chemical informatics and now focuses on knowledge management and bioinformatics.",
+      "company": "MSD IT GIC",
+      "twitter": "AnastassiyaZidk",
+      "github": "anastazie",
+      "avatar": "anastassiya_zidkova.jpg"
     },
     {
       "name": "Michal Hořejšek",
@@ -18,7 +19,8 @@
       "bio": "Vedoucí vývoje převážně Pythonistů, se zájmem také o JavaScript a funkcionální svět Haskellu.",
       "company": "Seznam.cz",
       "twitter": "horejsek",
-      "github": "horejsek"
+      "github": "horejsek",
+      "avatar": "michal_horejsek.jpg"
     }
   ], [
     {
@@ -29,7 +31,8 @@
       "bio": "Piotr's adventure with Python programming has started in September 2014, when he decided to convert from photography. Three months later he got hired by an amazing company STX Next that acknowledged his quick learning skills. He is also a junior mentor at PyLadies Poland. Beyond the 'Pythoning' he has over six years of work experience as the photojournalist, war photographer and local head of photography in one of the largest European publishing house.",
       "company": "STX Next",
       "twitter": "dybacompl",
-      "github": "pdyba"
+      "github": "pdyba",
+      "avatar": "piotr_dyba.jpg"
     },
     {
       "name": "Svetlana Margetova",
@@ -38,8 +41,9 @@
       "abstract": "How to use Django for backend for mobile  app. How to create models and rest api with django rest framework according to mobile approach. How to support mobile specific requirements in Django, such as push notifications, mobile payments, rendering data to tablets, qr codes and more.",
       "bio": "I am Django programmer :)",
       "company": "http://margetova.eu/#/form/whoyouare",
-      "twitter": "https://twitter.com/Mandragora258",
-      "github": "SvetlanaM"
+      "twitter": "Mandragora258",
+      "github": "SvetlanaM",
+      "avatar": "svetlana_margetova.jpg"
     }
   ], [
     {
@@ -50,7 +54,8 @@
       "bio": "Jessica Rose is a self-taught technologist obsessed with fostering equal access to technical education and growing amazing developer communities. She's founded Open Code, co-founded Trans*Code and is always interested in hearing about new projects. American born and based in England, she loves fancy cakes and simple coffee.",
       "company": "DreamFactory",
       "twitter": "jesslynnrose",
-      "github": "jessrose"
+      "github": "jessrose",
+      "avatar": "jessiva_rose.jpg"
     },
     {
       "name": "Elyézer Rezende",
@@ -60,7 +65,8 @@
       "bio": "A Brazilian, quality engineer, developer and podcaster that first discovered Python on 2008 and fall in love. Then started to learn and explore Python's features. At Dec 2013 joined Red Hat where can do Python every day.",
       "company": "Red Hat",
       "twitter": "elyezer",
-      "github": "elyezer"
+      "github": "elyezer",
+      "avatar": "elyezer_rezende.jpg"
     }
   ], [
     {
@@ -71,7 +77,8 @@
       "bio": "A Python programmer since 2005, working on variety of Open Source projects, such as MoinMoin, Hatta Wiki, Ralph, and OpenStack. A founding member of the Nigmalabs hackerspace. Plays tinwhistle horribly.",
       "company": "Red Hat",
       "twitter": "deshipu",
-      "github": "deshipu"
+      "github": "deshipu",
+      "avatar": "radomir_dopieralski.jpg"
     },
     {
       "name": "Valentina Mukhamedzhanova",
@@ -81,7 +88,8 @@
       "bio": "I'm a Software Engineer at Red Hat working on Yum package manager and its \"dandified\" fork - DNF. I'm a Linux, Python, and open-source enthusiast.",
       "company": "Red Hat",
       "twitter": "umirra",
-      "github": "megaumi"
+      "github": "megaumi",
+      "avatar": "valentina_mukhamedzhanova.png"
     }
   ], [
     {
@@ -92,7 +100,8 @@
       "bio": "Software engineer at Red Hat, member of Fedoproject, leader of Python3 as default change in Fedora",
       "company": "Red Hat",
       "twitter": null,
-      "github": null
+      "github": null,
+      "avatar": "robert_kuska.jpeg"
     },
     {
       "name": "Jan Čermák",
@@ -101,8 +110,9 @@
       "abstract": "Nowadays we can not only meet Python on PCs and servers but even on many other platforms, including tiny 8-bit chips. You will learn something about Python on embedded devices, ranging from lightweight implementations of Python language to full-blown CPython running on single-board computers or routers.\n\nThe second part of the presentation will focus on pitfalls of cross-compilation of Python and 3rd party packages when a native compiler is not available on the target device.",
       "bio": "I work as an R&D programmer in the CZ.NIC Labs. Aside from developing web applications in Django, I maintain the ecosystem of OpenWrt packages and pioneer the idea of having Python as the engine for router's configuration GUI. I split my free time between playing with various hackable devices, enjoying live music gigs and cooking (the last one being a relic of my formal chemical education).",
       "company": "CZ.NIC, z. s. p. o.",
-      "twitter": "https://twitter.com/sairon",
-      "github": "sairon"
+      "twitter": "sairon",
+      "github": "sairon",
+      "avatar": "jan_cermak.jpg"
     }
   ], [
     {
@@ -113,7 +123,8 @@
       "bio": "Viktor is CTO at Twisto which is a technology company providing consumer payment and credit services. He is responsible for the whole platform development, including API and customer credit scoring as well as for leading a team of developers.\n\nHe has years of experience with web application development and Python is his language of first choice for at least the past 5 years.",
       "company": "Twisto payments a.s.",
       "twitter": "hareevs",
-      "github": "hareevs"
+      "github": "hareevs",
+      "avatar": "viktor_stiskala.png"
     },
     {
       "name": "Věroš Kaplan",
@@ -123,7 +134,8 @@
       "bio": "Věroš used to be Python developer but now he works mostly as operations guy. He believes in DevOps and OpenSource movements.\n\nHe works as open-source consultant for Inuits (whatever it means) in Brno.",
       "company": "Inuits",
       "twitter": "verosk",
-      "github": "verosk"
+      "github": "verosk",
+      "avatar": "veros_kaplan.jpg"
     }
   ]
 ]

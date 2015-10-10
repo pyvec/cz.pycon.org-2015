@@ -1,5 +1,18 @@
 extends base
 
+//- render single speaker
+mixin talk(speaker)
+  .talk-description
+    .speaker= speaker.name
+    a.github(href="https://github.com/" + speaker.github)
+      .fa.fa-github
+    a.twitter(href="https://twitter.com/" + speaker.twitter)
+      .fa.fa-twitter
+    p= speaker.title
+
+  .commit
+    img.avatar(src=avatar(speaker.avatar), alt='Photo of ' + speaker.name)
+
 block vars
   - var pageClass = "talks"
 
@@ -53,29 +66,15 @@ block viewport
         onerror="this.onerror = null; this.src = '/2015/static/images/ui/branch-in.png'"
       )
     
+    //-  Iterate over speakers object (loaded in gulpfile from data/speakers.json)
+    //-  and render mixin talk() (see above)
     each speaker, index in speakers
       .talk-block
         .event.master
-          .talk-description
-            .speaker= speaker[0].name
-            p= speaker[0].title
-
-          .commit
-            img.avatar(
-              src=avatar("russell_keith_magee.png"),
-              alt='Photo of Russel Keith-Magee'
-            )
+          +talk(speaker[0])
 
         .event.practical
-          .talk-description
-            .speaker= speaker[1].name
-            p= speaker[1].title
-             
-          .commit
-            img.avatar(
-              src=avatar("russell_keith_magee.png"),
-              alt='Photo of Russel Keith-Magee'
-            )
+          +talk(speaker[1])
 
     .branch
       img(
