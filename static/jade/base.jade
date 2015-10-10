@@ -42,12 +42,24 @@ html(lang='en-us')
     include components/js
     
     script(type="text/javascript").
+      function closeNavbar() {
+        $closer.unbind();
+        $body.toggleClass("open");
+      }
+      
+      var $body = $('body');
+      var $closer = $('.viewport, .navbar a');
+      
       $('.navbar-toggle').click(function(ev) {
         ev.preventDefault();
-        $('body').toggleClass("open");
+        
+        if ($body.hasClass('open')) {
+          closeNavbar();
+        } else {
+          $body.toggleClass("open");
+          $closer.click(function(ev) {
+            ev.preventDefault();
+            closeNavbar();
+          })
+        }
       });
-      
-      $('.open').find('.viewport, .navbar a').click(function(ev) {
-        ev.preventDefault();
-        $('body').toggleClass("open");
-      })
