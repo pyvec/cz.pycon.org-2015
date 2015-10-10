@@ -1,8 +1,21 @@
+%section-margin {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+%divider {
+  &:after {
+    position: relative;
+    top: 30px;
+    width: 300px;
+    height: 1px;
+    margin: 0 auto;
+    background-color: $brand-silent;
+  }
+}
+
 .pycon {
-  position: relative;
-  left: -30px;
-  margin-top: 80px;
-  margin-bottom: 50px;
+  @extend %section-margin;
 
   font-family: Amatic, "Helvetica Neue";
   line-height: 1;
@@ -25,7 +38,7 @@
 
   .year {
     display: block;
-    color: $brand-primary;
+    color: $brand-secondary;
   }
 }
 
@@ -39,5 +52,41 @@
   .pycon-date {
     display: inline;
     padding: 0 20px;
+  }
+}
+
+.claim {
+  padding: 15px 0;
+  color: $text-inverted;
+  background-color: $brand-primary;
+
+  font-size: 28px;
+  text-align: center;
+}
+
+// Program at homepage
+.program {
+  @extend %section-margin;
+  @extend %divider;
+  @include make-row();
+}
+
+.program-item:first-child {
+  @include make-sm-column-offset(2);
+}
+
+.program-item {
+  @include make-sm-column(4);
+
+  font-size: 18px;
+  text-align: center;
+
+  h2 {
+    margin: 0;
+    font-size: 30px;
+  }
+
+  .date {
+    color: $brand-primary;
   }
 }

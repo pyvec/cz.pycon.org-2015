@@ -26,6 +26,10 @@
   src: local("Amatic SC Bold"), local("AmaticSC-Bold"), url(https://fonts.gstatic.com/s/amaticsc/v7/IDnkRTPGcrSVo50UyYNK75S3E-kSBmtLoNJPDtbj2Pk.ttf) format("truetype");
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   overflow: hidden;
