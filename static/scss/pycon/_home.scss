@@ -1,3 +1,7 @@
+%centered-content {
+  text-align: center;
+}
+
 %section-margin {
   margin-top: 50px;
   margin-bottom: 60px;
@@ -14,12 +18,25 @@
   }
 }
 
+// Global style overrides
+.home {
+  h2 {
+    margin: 0;
+    font-size: 30px;
+  }
+
+  .lead {
+    font-size: 24px;
+  }
+}
+
+// Pycon Logo jumbotron
 .pycon {
   @extend %section-margin;
+  @extend %centered-content;
 
   font-family: Amatic, "Helvetica Neue";
   line-height: 1;
-  text-align: center;
 
   .pycon-logo {
     display: inline-block;
@@ -76,17 +93,19 @@
 }
 
 .program-item {
+  @extend %centered-content;
   @include make-sm-column(4);
 
   font-size: 18px;
-  text-align: center;
-
-  h2 {
-    margin: 0;
-    font-size: 30px;
-  }
 
   .date {
     color: $brand-primary;
   }
+}
+
+// Registration
+.registration {
+  @extend %centered-content;
+  @extend %section-margin;
+  @extend %divider;
 }
