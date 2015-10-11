@@ -1,0 +1,124 @@
+extends ../base
+
+//- render single speaker
+mixin talk(speaker)
+  .talk-description
+    .speaker= speaker.name
+    
+    p= speaker.title
+    
+    a.social.github(href="https://github.com/" + speaker.github)
+      .fa.fa-github
+    a.social.twitter(href="https://twitter.com/" + speaker.twitter)
+      .fa.fa-twitter
+
+  .commit-holder
+    .commit
+      img.avatar(src=avatar(speaker.avatar), alt='Photo of ' + speaker.name)
+
+block vars
+  - var pageClass = "page-talks"
+
+block viewport
+  .container
+    h1 Talks &amp; Keynotes
+    
+    .event-full.general
+      h2.title The grand opening
+      .talk-description
+        p.
+          Welcome to the first PyCon CZ. #[br]
+          Meet our sponsors and get ready for a day full awesome talks!
+      
+      .commit.empty.first
+        .dot
+    
+    .event-full
+      h2.title Keynote #1 #[br] Twisted
+      .talk-description
+        .speaker Amber Brown
+        p.
+          Amber, better known as HawkOwl, is a core developer and release
+          manager of the Twisted project. 
+         
+      .commit
+        img.avatar(
+          src=avatar("amber_brown.jpg"),
+          alt='Photo of Amber Brown'
+        )
+
+    .event-full
+      h2.title Keynote #2 #[br] Funding of open-source projects
+      .talk-description
+        .speaker Russel-Keith Maggee
+        p.
+          Dr Russell Keith-Magee is a 9 year veteran of the Django core team,
+          and President of the Django Software Foundation.
+         
+      .commit
+        img.avatar(
+          src=avatar("russell_keith_magee.png"),
+          alt='Photo of Russel Keith-Magee'
+        )
+    
+    .branch
+      img(
+        src="/2015/static/images/ui/branch-in.svg",
+        onerror="this.onerror = null; this.src = '/2015/static/images/ui/branch-in.png'"
+      )
+    
+    //-  Iterate over speakers object (loaded in gulpfile from data/speakers.json)
+    //-  and render mixin talk() (see above)
+    each speaker, index in speakers
+      .talk-block
+        .event.master
+          +talk(speaker[0])
+
+        .event.practical
+          +talk(speaker[1])
+
+    .branch
+      img(
+        src="/2015/static/images/ui/branch-out.svg",
+        onerror="this.onerror = null; this.src = '/2015/static/images/ui/branch-out.png'"
+      )
+    
+    .event-full.general
+      .title
+        h2 Lightning talks
+      .talk-description
+        p.
+          The is only one rule of lighning talks: #[br]
+          5 mins and hard cut. Get on stage and share your experience!
+      
+      .commit.empty
+        .dot
+    
+    .event-full.general
+      .title
+        h2 Thank you
+      .talk-description
+        p.
+          The first day of PyCon CZ is over.
+          Wrap it up and enjoy evening party.
+          See you tomorrow at sprint venue!
+      
+      .commit.empty.last
+        .dot
+
+    a.anchor#directions
+    h2 The venue
+    
+    p.lead.
+      The conference is going to be held in Brno University of Technology.
+
+  .map
+    address
+      p.strong VUT FIT
+      p 49°11'25.8"N 16°37'13.1"E
+      p Building D
+      p Božetěchova 1/2
+      p 612 66 Brno
+      p Czech Republic
+
+    #map.vut
