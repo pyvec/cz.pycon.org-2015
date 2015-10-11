@@ -30,7 +30,11 @@ and static files are inside `static` directory.
       coffee: BuildRoot + '/static/js/'
 
     Source =
-      jade: ['jade/index.jade', 'jade/talks.jade']
+      jade: [
+        'jade/index.jade',
+        'jade/talks.jade',
+        'jade/about/*.jade'
+      ]
       scss: 'scss/**/*.scss'
       scss_main: 'scss/pyconcz.scss'
       files: 'files/**'
@@ -198,7 +202,7 @@ files to cache (for speedup of consecutive upload) and report changes.
           pageUrl: (path) -> "/2015/#{path}"
           avatar: (filename) -> "/2015/static/images/speakers/#{filename}"
 
-      gulp.src Source.jade
+      gulp.src Source.jade, {base: "./jade"}
       .pipe defaultPlumber()
       .pipe gulpJade options
       .pipe gulp.dest Destination.html

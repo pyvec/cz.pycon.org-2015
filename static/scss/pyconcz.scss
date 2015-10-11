@@ -12,6 +12,7 @@
 @import "pycon/footer";
 @import "pycon/home";
 @import "pycon/talks";
+@import "pycon/coc";
 
 // @import "pycon/sponsors";
 // @import "pycon/map";
@@ -42,9 +43,14 @@ body {
 }
 
 body {
+  overflow-x: hidden;
   font-weight: 300;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
-  overflow-x: hidden;
+  line-height: 1.4;
+}
+
+a {
+  color: $brand-primary;
 }
 
 .canvas {

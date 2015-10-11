@@ -34,21 +34,25 @@ $brand-size: 45px;
 .canvas {
   transition: all .2s ease;
 
-  // .open & {
-  //   transform: translate($offcanvas-navbar-width);
-  // }
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 0;
+    // pointer-events: none;
+    transition: opacity 0.2s ease;
 
-  // .overlay {
-  //   position: absolute;
-  //   // top: $navbar-height;
-  //   // right: 0;
-  //   // bottom: 0;
-  //   bottom: 0;
-  //   height: 100%;
-  //   width: 100%;
-  //   z-index: 1000;
-  //   background-color: rgba(0, 0, 0, 0.8);
-  // }
+    .open & {
+      display: block;
+      opacity: 0.8;
+      // pointer-events: all;
+    }
+  }
 }
 
 .navbar-nav {
