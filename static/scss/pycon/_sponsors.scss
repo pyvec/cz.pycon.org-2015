@@ -11,3 +11,49 @@
     background-color: $brand-silent;
   }
 }
+
+.sponsors {
+  text-align: center;
+
+  h3 {
+    color: $brand-primary;
+  }
+
+  .platinum {
+    h3 {
+      margin-bottom: -20px;
+    }
+  }
+}
+
+.sponsor {
+  .gold,
+  .silver {
+    @include make-row();
+  }
+
+  .gold & {
+    @include make-sm-column(6);
+  }
+
+  .silver & {
+    @include make-sm-column(4);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .sponsor-twisto {
+    position: relative;
+    top: -30px;
+    z-index: -1;
+  }
+
+  .sponsor-placeholder {
+    position: relative;
+    top: 30px;
+    font-size: 1.2em;
+  }
+}
