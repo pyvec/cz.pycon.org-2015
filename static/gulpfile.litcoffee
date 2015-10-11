@@ -71,6 +71,7 @@ Optimization and compression:
     bytediff = require 'gulp-bytediff'
     sourcemaps = require 'gulp-sourcemaps'
     rev    = require 'gulp-rev'
+    revReplace = require 'gulp-rev-replace'
     collect = require 'gulp-rev-collector'
     imageop = require 'gulp-image-optimization'
     concat = require 'gulp-concat'
@@ -249,7 +250,6 @@ gulp-sass, gulp-autprefixer or gulp-sourcemaps (dunno which one). See
       gulp.src Source.files
       .pipe gulp.dest Destination.files
 
-
 **clean** -- Clean the build dir
 
     gulp.task 'clean', (callback) ->
@@ -266,16 +266,18 @@ gulp-sass, gulp-autprefixer or gulp-sourcemaps (dunno which one). See
       .pipe rev()
       .pipe gulp.dest BuildRoot
       .pipe rev.manifest Destination.manifest
-      .pipe gulp.dest '.'
+      .pipe gulp.dest "."
 
 **collect** - Replace static file names with versioned ones.
 
     gulp.task 'collect', ->
+      manifest = gulp.src(Destination.manifest)
+
       gulp.src [
         Destination.manifest,
         BuildRoot + '/**/*.{html,css}'
       ]
-      .pipe collect()
+      .pipe revReplace {manifest}
       .pipe gulp.dest BuildRoot
 
 **images** - optimalization of images
