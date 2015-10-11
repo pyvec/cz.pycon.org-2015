@@ -1,0 +1,35 @@
+$map-height: 250px;
+
+.map {
+  position: relative;
+
+  address {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: left;
+    padding: 0 $padding-base-horizontal;
+
+    @media (min-width: $screen-sm) {
+      position: absolute;
+      bottom: 20px;
+      left: 120px;
+      z-index: 1000;
+      width: 250px;
+      padding: 20px;
+    }
+
+    .strong {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    p {
+      margin: 5px;
+    }
+  }
+}
+
+#map {
+  width: 100%;
+  height: $map-height;
+}

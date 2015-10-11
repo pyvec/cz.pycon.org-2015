@@ -12,18 +12,10 @@
 @import "pycon/footer";
 @import "pycon/home";
 @import "pycon/coc";
+@import "pycon/map";
 @import "pycon/talks";
 @import "pycon/sponsors";
 
-// @import "pycon/sponsors";
-// @import "pycon/map";
-// @import "pycon/speakers";
-// @import "pycon/timeline";
-// @import "pycon/tickets";
-// @import "pycon/team";
-// @import "pycon/coc";
-// @import "pycon/getting_here";
-// @import "pycon/sponsorship";
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC:700);
 
 @font-face {
@@ -74,6 +66,13 @@ a {
 
 .lead {
   font-size: 1.2em;
+}
+
+.anchor {
+  position: relative;
+  top: -$navbar-height;
+  display: block;
+  visibility: hidden;
 }
 
 h1 {
