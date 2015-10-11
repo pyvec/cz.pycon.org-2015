@@ -11,8 +11,9 @@
 @import "pycon/navbar";
 @import "pycon/footer";
 @import "pycon/home";
-@import "pycon/talks";
 @import "pycon/coc";
+@import "pycon/talks";
+@import "pycon/sponsors";
 
 // @import "pycon/sponsors";
 // @import "pycon/map";
@@ -69,6 +70,10 @@ a {
 
 .clearfix {
   @include clearfix();
+}
+
+.lead {
+  font-size: 1.2em;
 }
 
 h1 {

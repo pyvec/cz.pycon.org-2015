@@ -1,0 +1,13 @@
+.call-to-action {
+  font-size: 1.3em;
+  text-align: center;
+
+  &:before {
+    display: block;
+    width: 300px;
+    height: 1px;
+    margin: 1em auto;
+    content: " ";
+    background-color: $brand-silent;
+  }
+}
