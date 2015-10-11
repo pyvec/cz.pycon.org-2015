@@ -1,0 +1,84 @@
+extends ../base
+
+//- render single speaker
+mixin talk(speaker)
+  .talk-description
+    .speaker= speaker.name
+    
+    p= speaker.title
+    
+    if speaker.github
+      a.social.github(href="https://github.com/" + speaker.github)
+        .fa.fa-github
+    if speaker.twitter
+      a.social.twitter(href="https://twitter.com/" + speaker.twitter)
+        .fa.fa-twitter
+
+  .commit-holder
+    .commit
+      img.avatar(src=avatar(speaker.avatar), alt='Photo of ' + speaker.name)
+
+block vars
+  - var pageClass = "page-talks"
+
+block viewport
+  .container
+    h1 Sprints &amp; Workshops
+    
+    .event-full.general
+      h2.title Breakfast
+      .talk-description
+        p.
+          Good morning, everyone! #[br]
+          Join us for delicous breakfast before coding madness begins      
+      .commit.empty.first
+        .dot
+    
+    .branch
+      img(
+        src="/2015/static/images/ui/branch-in.svg",
+        onerror="this.onerror = null; this.src = '/2015/static/images/ui/branch-in.png'"
+      )
+    
+    //-  Iterate over workshops object (loaded in gulpfile from data/workshops.json)
+    //-  and render mixin talk() (see above)
+    each speaker, index in workshops
+      .talk-block
+        .event.master
+          +talk(speaker[0])
+
+        .event.practical
+          +talk(speaker[1])
+
+    .branch
+      img(
+        src="/2015/static/images/ui/branch-out.svg",
+        onerror="this.onerror = null; this.src = '/2015/static/images/ui/branch-out.png'"
+      )
+        
+    .event-full.general
+      .title
+        h2 Thank you
+      .talk-description
+        p.
+          It was a loong weekend and it's time to go home. #[br]
+          The first PyCon CZ is over. See you next year!
+      
+      .commit.empty.last
+        .dot
+
+    a.anchor#directions
+    h2 The venue
+    
+    p.lead.
+      Spaces for sprints and workshops are provided by #[a(href="http://www.hubbrno.cz/en/") Impact Hub Brno]. 
+
+  .map
+    address
+      p.strong Impact Hub Brno
+      p 49°13'34.5"N 16°35'49.0"E
+      p Cyrilská 7
+      p 602 00 Brno
+      p Czech Republic
+      
+    #map.impact

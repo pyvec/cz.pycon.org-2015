@@ -41,14 +41,14 @@ footer.site-footer
             //-   a(href="/") #[strong Lightning talks]
 
         li.section 
-          a.nav-title(href="/") Sprints &amp; Workshops
+          a.nav-title(href=pageUrl("workshops/")) Sprints &amp; Workshops
           ul
             li
-              a(href="/") Schedule
+              a(href=pageUrl("workshops/")) Schedule
             li
-              a(href="/") Directions
-            li
-              a(href="/") #[strong Registration]
+              a(href=pageUrl("workshops/#directions")) Directions
+            //- li
+            //-   a(href=pageUrl("workshops/registration.html")) #[strong Registration]
 
     .psf-trademark
       p

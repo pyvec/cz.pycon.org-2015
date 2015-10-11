@@ -33,7 +33,8 @@ and static files are inside `static` directory.
       jade: [
         'jade/index.jade',
         'jade/talks.jade',
-        'jade/about/*.jade'
+        'jade/about/*.jade',
+        'jade/workshops/*.jade'
       ]
       scss: 'scss/**/*.scss'
       scss_main: 'scss/pyconcz.scss'
@@ -199,6 +200,7 @@ files to cache (for speedup of consecutive upload) and report changes.
         locals:
           debug: Debug
           speakers: JSON.parse fs.readFileSync './data/speakers.json'
+          workshops: JSON.parse fs.readFileSync './data/workshops.json'
           pageUrl: (path) -> "/2015/#{path}"
           avatar: (filename) -> "/2015/static/images/speakers/#{filename}"
 
