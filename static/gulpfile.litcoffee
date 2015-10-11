@@ -32,8 +32,8 @@ and static files are inside `static` directory.
     Source =
       jade: [
         'jade/index.jade',
-        'jade/talks.jade',
         'jade/about/*.jade',
+        'jade/talks/*.jade',
         'jade/workshops/*.jade'
       ]
       scss: 'scss/**/*.scss'
