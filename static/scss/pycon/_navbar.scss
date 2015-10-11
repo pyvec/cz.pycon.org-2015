@@ -127,12 +127,14 @@ $brand-size: 45px;
     // space between items
     $item-padding: 40px;
     // enlarged space between middle items (placeholder for brand-logo)
-    $brand-placeholder: 20px + ($item-padding + $brand-size) / 2;
+    $brand-placeholder: 25px + ($item-padding + $brand-size) / 2;
 
     position: relative;
     top: 0;
-    // shift whole menu right to visualy align it with jumbotron and pycon logo
-    left: 35px;
+
+    // Custom offset for "visual" centering of menu
+    // left: -15px;  // uncomment when getting started section is added to menu
+    left: 40px;
 
     padding: 0;
     // asymetric padding to make navbar items in visual middle
@@ -167,8 +169,21 @@ $brand-size: 45px;
       }
     }
 
-    .getting-here {
+    .tickets {
       margin-right: $brand-placeholder;
+
+      a {
+        padding: 8px 20px;
+        border: 1px solid $brand-primary;
+        border-radius: 8px;
+        color: $text-inverted;
+        background-color: $brand-primary;
+
+        &:hover {
+          color: $brand-primary;
+          background-color: $text-inverted;
+        }
+      }
     }
 
     .talks {

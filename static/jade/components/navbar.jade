@@ -5,9 +5,12 @@ header#top
 
     ul.nav.navbar-nav
       li.about
-        a(href='/'+year+'/#speakers') About
-      li.getting-here
-        a(href='/'+year+'/#schedule') Getting here
+        a(href=pageUrl("#")) About
+      //- li.getting-here
+      //-   a(href=pageUrl("")) Getting here
+      li.tickets
+        a(href=pageUrl("about/tickets.html"))
+          | Tickets
       li.talks
         a(href=pageUrl("talks.html"))
           | Talks
