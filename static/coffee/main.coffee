@@ -1,43 +1,40 @@
-lng = 16.596936
-lat = 49.226245
-
-init = ->
-  map = new GMaps {
-    div: '#map'
-    zoom: 17
-    lat: lat
-    lng: lng
-    scrollwheel: false
-    draggable: false
-  }
-
-  map.addMarker {
-    lat: lat,
-    lng: lng,
-    title: 'PyCon CZ 2015'
-  }
-
-  $ ->
-    $('a[href*=#]:not([href=#])').click ->
-      p_name = location.pathname
-      l_cond = p_name.replace(/^\//, '') == @pathname.replace(/^\//, '')
-      if l_cond and location.hostname == @hostname
-        target = $(@hash)
-        if not target.length
-          target = $('[name=' + @hash.slice(1) + ']')
-        if target.length
-          $('html,body').animate {scrollTop: target.offset().top - 60}, 300
-          return false
-      return
-    return
-
-
 $ ->
-  init()
-  hash_param =  window.location.hash
-  if hash_param?
-    target = $(hash_param)
-    if not target.length
-      target = $('[name=' + hash_param.slice(1) + ']')
-    if target.length
-      $('html,body').animate {scrollTop: target.offset().top - 60}, 0
+  if $("#map.vut").length
+    talks =
+      lng: 16.596936
+      lat: 49.226245
+
+    mapVut = new GMaps {
+      div: '#map'
+      zoom: 17
+      lat: talks.lat
+      lng: talks.lng
+      scrollwheel: false
+      draggable: false
+    }
+
+    mapVut.addMarker {
+      lat: talks.lat,
+      lng: talks.lng,
+      title: 'PyCon CZ 2015 - Talks & Keynotes'
+    }
+
+  if $("#map.impact").length
+    workshops =
+      lng: 16.620317
+      lat: 49.190492
+
+    mapImpact = new GMaps {
+      div: "#map"
+      zoom: 15
+      lat: workshops.lat
+      lng: workshops.lng
+      scrollwheel: false
+      draggable: false
+    }
+
+    mapImpact.addMarker {
+      lat: workshops.lat,
+      lng: workshops.lng,
+      title: 'PyCon CZ 2015 - Sprints & Workshops'
+    }

@@ -30,7 +30,12 @@ and static files are inside `static` directory.
       coffee: BuildRoot + '/static/js/'
 
     Source =
-      jade: ['jade/index.jade', 'jade/real_pages/**/*.jade']
+      jade: [
+        'jade/index.jade',
+        'jade/about/*.jade',
+        'jade/talks/*.jade',
+        'jade/workshops/*.jade'
+      ]
       scss: 'scss/**/*.scss'
       scss_main: 'scss/pyconcz.scss'
       files: 'files/**'
@@ -51,7 +56,8 @@ Command line arguments:
 
 Languages and compilers:
 
-    jade = require 'gulp-jade'
+    jade = require 'jade'
+    gulpJade = require 'gulp-jade'
     sass = require 'gulp-sass'
     autoprefixer = require 'gulp-autoprefixer'
     coffee = require 'gulp-coffee'
@@ -65,6 +71,7 @@ Optimization and compression:
     bytediff = require 'gulp-bytediff'
     sourcemaps = require 'gulp-sourcemaps'
     rev    = require 'gulp-rev'
+    revReplace = require 'gulp-rev-replace'
     collect = require 'gulp-rev-collector'
     imageop = require 'gulp-image-optimization'
     concat = require 'gulp-concat'
@@ -193,10 +200,14 @@ files to cache (for speedup of consecutive upload) and report changes.
         markdown: marked
         locals:
           debug: Debug
+          speakers: JSON.parse fs.readFileSync './data/speakers.json'
+          workshops: JSON.parse fs.readFileSync './data/workshops.json'
+          pageUrl: (path) -> "/2015/#{path}"
+          avatar: (filename) -> "/2015/static/images/speakers/#{filename}"
 
-      gulp.src Source.jade
+      gulp.src Source.jade, {base: "./jade"}
       .pipe defaultPlumber()
-      .pipe jade options
+      .pipe gulpJade options
       .pipe gulp.dest Destination.html
       .pipe reload stream: true
 
@@ -239,7 +250,6 @@ gulp-sass, gulp-autprefixer or gulp-sourcemaps (dunno which one). See
       gulp.src Source.files
       .pipe gulp.dest Destination.files
 
-
 **clean** -- Clean the build dir
 
     gulp.task 'clean', (callback) ->
@@ -256,16 +266,18 @@ gulp-sass, gulp-autprefixer or gulp-sourcemaps (dunno which one). See
       .pipe rev()
       .pipe gulp.dest BuildRoot
       .pipe rev.manifest Destination.manifest
-      .pipe gulp.dest '.'
+      .pipe gulp.dest "."
 
 **collect** - Replace static file names with versioned ones.
 
     gulp.task 'collect', ->
+      manifest = gulp.src(Destination.manifest)
+
       gulp.src [
         Destination.manifest,
         BuildRoot + '/**/*.{html,css}'
       ]
-      .pipe collect()
+      .pipe revReplace {manifest}
       .pipe gulp.dest BuildRoot
 
 **images** - optimalization of images

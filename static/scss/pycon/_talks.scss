@@ -1,0 +1,216 @@
+$avatar-size: 96px;
+$commit-line-size: 10px;
+
+%commit-top-padding {
+  padding: 0;
+
+  @media (min-width: $screen-sm) {
+    padding-top: 20px;
+  }
+}
+
+.page-talks {
+  @media (min-width: $screen-xs) {
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+.branch,
+.commit,
+.commit-holder,
+.title br {
+    @extend .hidden-xs;
+}
+
+.event-full {
+  @include make-row();
+
+  &.general {
+    .title {
+      // FIXME: HACK...
+      padding-top: 10px;
+    }
+  }
+
+  .title {
+    @include make-sm-column(5);
+
+    h1,
+    h2 {
+      margin: 0;
+    }
+
+    @media (min-width: $screen-sm) {
+      text-align: right;
+
+      h1,
+      h2 {
+        margin: 20px 0;
+      }
+    }
+  }
+
+  .talk-description {
+    @extend %commit-top-padding;
+    @include make-sm-column(5);
+    @include make-sm-column-push(2);
+  }
+
+  .commit {
+    @include make-sm-column(2);
+    @include make-sm-column-pull(5);
+
+    text-align: center;
+  }
+}
+
+.talk-block {
+  @include make-row();
+
+  .event {
+    @include make-sm-column(6);
+    margin-top: 15px;
+
+    @media (min-width: $screen-sm) {
+      margin-top: 0;
+    }
+  }
+
+  .master {
+    @media (min-width: $screen-sm) {
+      text-align: right;
+
+      // // Simple hack to force breakline after Anastassiya Zidkova name
+      .speaker {
+        padding-left: 30px;
+      }
+    }
+
+    .talk-description {
+      @extend %commit-top-padding;
+      @include make-sm-column(8);
+      padding-left: 0;
+    }
+
+    .commit-holder {
+      @include make-sm-column(4);
+      padding-right: 11px;
+    }
+  }
+
+  .practical {
+    .talk-description {
+      @extend %commit-top-padding;
+      @include make-sm-column(8);
+      @include make-sm-column-push(4);
+      padding-left: 0;
+    }
+
+    .commit-holder {
+      @include make-sm-column(4);
+      @include make-sm-column-pull(8);
+      padding-left: 11px;
+    }
+  }
+}
+
+.talk-description {
+  padding: 16px 0;
+
+  .speaker {
+    color: $brand-primary;
+    font-weight: bold;
+  }
+
+  p {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+}
+
+
+.avatar {
+  width: $avatar-size;
+  height: $avatar-size;
+  border: 1px solid $brand-silent;
+  border-radius: 50%;
+  background-color: $bg;
+}
+
+.commit {
+  $dot-size: 35px;
+  padding: 16px 0;
+
+  .dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $dot-size;
+    height: $dot-size;
+    border-radius: 50%;
+    background-color: $commit-line;
+    transform: translate(-50%, -50%);
+  }
+
+  &.empty {
+    height: $avatar-size;
+
+    &:after {
+      transform: translateX(-$commit-line-size / 2);
+    }
+  }
+
+  &.first:after {
+    top: 50%;
+    height: 50%;
+  }
+
+  &.last:after {
+    height: 50%;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    z-index: -1000;
+    width: $commit-line-size;
+    height: 100%;
+    content: " ";
+    background-color: $commit-line;
+    transform: translateX((-$avatar-size - $commit-line-size)/2);
+  }
+}
+
+.branch {
+  height: 103px;
+  margin-bottom: -2px;
+  text-align: center;
+}
+
+.social {
+  color: $brand-silent;
+  line-height: 2;
+
+  &.github:hover {
+    color: $github-color;
+  }
+
+  &.twitter:hover {
+    color: $twitter-color;
+  }
+
+  .master & {
+    margin-right: 10px;
+    margin-left: 0;
+  }
+
+  .practical & {
+    margin-right: 10px;
+
+    @media (min-width: $screen-xs) {
+      margin-left: 0;
+    }
+  }
+}

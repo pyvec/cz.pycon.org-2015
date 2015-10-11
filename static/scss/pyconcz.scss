@@ -1,97 +1,84 @@
-@import 'bootstrap';
-@import 'pycon/sponsors';
-@import 'pycon/map';
-@import 'pycon/speakers';
-@import 'pycon/timeline';
-@import 'pycon/tickets';
-@import 'pycon/team';
-@import 'pycon/coc';
-@import 'pycon/getting_here';
-@import 'pycon/sponsorship';
+@import "variables";
+@import "bootstrap/normalize";
+@import "bootstrap/mixins/clearfix";
+@import "bootstrap/mixins/grid";
+@import "bootstrap/mixins/grid-framework";
+@import "bootstrap/mixins/responsive-visibility";
+@import "bootstrap/mixins/clearfix";
+@import "bootstrap/grid";
+@import "bootstrap/responsive-utilities";
+
+@import "pycon/navbar";
+@import "pycon/footer";
+@import "pycon/home";
+@import "pycon/coc";
+@import "pycon/map";
+@import "pycon/talks";
+@import "pycon/sponsors";
+
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC:700);
 
 @font-face {
-  font-family: 'Amatic';
+  font-family: "Amatic";
   font-style: normal;
   font-weight: 700;
-  src: local('Amatic SC Bold'), local('AmaticSC-Bold'), url(https://fonts.gstatic.com/s/amaticsc/v7/IDnkRTPGcrSVo50UyYNK75S3E-kSBmtLoNJPDtbj2Pk.ttf) format('truetype');
+  src: local("Amatic SC Bold"), local("AmaticSC-Bold"), url(https://fonts.gstatic.com/s/amaticsc/v7/IDnkRTPGcrSVo50UyYNK75S3E-kSBmtLoNJPDtbj2Pk.ttf) format("truetype");
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html,
 body {
-  position: relative;
+  width: 100%;
   height: 100%;
 }
 
 body {
+  overflow-x: hidden;
+  font-weight: 300;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+a {
+  color: $brand-primary;
+}
+
+.canvas {
+  height: 100%;
+}
+
+.viewport {
+  min-height: 100%;
   padding-top: $navbar-height;
-}
+  padding-bottom: 40px;
 
-section {
-  position: relative;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-h2 {
-  margin-bottom: 50px;
-  font-weight: 500;
-  font-size: 2.8em;
-  text-align: center;
-}
-
-.container {
-    @media (min-width: $screen-md) {
-      width: 80%;
-      margin: 0 auto;
-    }
-}
-
-.jumbotron {
-  margin-bottom: 0;
-  font-family: "Amatic SC", "Helvetica Neue", "Helvetica", sans-serif;
-  text-align: center;
-
-  h1 .label {
-    display: none;
+  @media (min-width: $screen-sm) {
+    padding-bottom: $footer-height;
   }
+}
 
-  .python-logo {
-    $logo-size: 300px;
-    max-height: $logo-size;
-    margin: 0 auto;
-  }
-
-  .event-date,
-  .event-location {
-    font-weight: bold;
-    font-size: 40px;
-
-    @media (min-width: $screen-xs) {
-      font-size: 60px;
-    }
-  }
+.clearfix {
+  @include clearfix();
 }
 
 .lead {
-  font-size: 1.3em;
-  text-align: left;
+  font-size: 1.2em;
 }
 
-.claim {
-  padding: $jumbotron-padding;
-  color: $jumbotron-color;
-  background: $claim-bg;
-
-  font-size: $jumbotron-font-size;
-
-  .lead {
-    margin: 0;
-    text-align: center;
-  }
+.anchor {
+  position: relative;
+  top: -$navbar-height;
+  display: block;
+  visibility: hidden;
 }
 
-footer {
-  padding: 20px 0;
-  line-height: 2;
+h1 {
+  color: $brand-secondary;
+}
+
+h2 {
+  color: $brand-primary;
 }

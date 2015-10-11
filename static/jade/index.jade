@@ -1,24 +1,78 @@
-include components/vars
+extends base
 
-doctype html
-html(lang='en-us')
-  head
-    include ./components/head
-  body.home(data-spy='scroll', data-target='#main-navbar', data-offset="60")
-    include components/navbar
+block vars
+  - var pageClass = "home"
 
-    section#section-home.home
-      include ./pages/home
-    section#speakers.speakers
-      include ./pages/speakers
-    section#schedule.timeline
-      include ./pages/timeline
-    section#tickets.tickets
-      include ./pages/tickets
-    section#sponsors.sponsors
-      include ./pages/sponsors
-    section#venue.map
-      include ./pages/map
+block viewport
+  .pycon
+    img.pycon-logo(
+      alt="PyCon CZ",
+      src='/'+year+"/static/images/pycon-cz-logo-icon.svg",
+      onerror="this.onerror = null; this.src = '/2015/static/images/pycon-cz-logo.png'"
+    )
+    
+    h1
+      | PyCon CZ
+      span.year= year
 
-    include components/footer
-    include components/js
+    .pycon-info
+      p.pycon-location Brno, Czech Republic
+      p.pycon-date November 14-15
+
+  .claim
+    .container
+      p.
+        The very first #[strong PyCon] in the #[strong Czech Republic]. Join us
+        for a fun weekend full of talks, sprints and workshops about Python.
+
+  .container
+    .program
+      .program-item
+        h2 Talks
+        .date Saturday 14th
+        p.
+          #[strong One] day, #[strong two] parallel tracks, #[strong two] kenotes
+          and #[strong ten] awesome talks. Community, web, hardware, science, devops and more.
+      
+      .program-item
+        h2 Sprints &amp; workshops
+        .date Sunday 15th
+        p.
+          #[strong Six] workshops in #[strong two] blocks and sprinting all day long. Hack on
+          open-source projects together with other Python community members.
+    
+    .registration
+      h2 Registration is now open
+      p.lead #[a(href=pageUrl("about/tickets.html")) Get your ticket] now and be part of the first PyCon CZ!
+      .tito
+        tito-widget(event="pyvec/pycon-cz-2015")
+  
+    .sponsors
+      h2 Our sponsors
+
+      .platinum
+        h3 Platinum sponsor
+        .sponsor
+          a.sponsor-skypicker(href="https://skypicker.com")
+            img(src="https://cz.skypicker.com/images/about/skypicker-logo.png")
+
+      .gold
+        h3 Gold sponsors
+        .sponsor
+          a.sponsor-psf(href="https://www.python.org/psf/")
+            img(src=pageUrl("/static/images/sponsors/psf.png"))
+        .sponsor
+          a.sponsor-twisto(href="https://www.twisto.cz")
+            img(src=pageUrl("/static/images/sponsors/twisto.jpg"))
+
+      .silver
+        h3 Silver sponsors
+        .sponsor
+          a.sponsor-imper(href="https://imper.cz")
+            img(src=pageUrl("/static/images/sponsors/imper.png"))
+        .sponsor
+          a.sponsor-pycharm(href="https://www.jetbrains.com/pycharm/")
+            img(src=pageUrl("/static/images/sponsors/pycharm.png"))
+        .sponsor
+          a.sponsor-placeholder(href=pageUrl("about/sponsorship.html")).
+            Become our partner!

@@ -1,15 +1,71 @@
-footer
+footer.site-footer
   .container
-    footer
-      a(href='/'+year+'/coc.html')
-        | Code of Conduct
+    nav
+      ul.nav-footer
+        li.section
+          a.nav-title(href=pageUrl("#")) About
+          ul
+            //- li
+            //-   a(href="/") Team
+            //- li
+            //-   a(href="/") Event
+            li
+              a(href=pageUrl("about/tickets.html")) #[strong Tickets]
+            //- li
+            //-   a(href="/") Speakers
+            li
+              a(href=pageUrl("about/sponsorship.html")) Sponsorship
+            li
+              a(href=pageUrl("about/code-of-conduct.html")) #[strong Code of Conduct]
+              
+        li.section
+          a.nav-title(href=pageUrl("talks/")) Talks
+          ul
+            li
+              a(href=pageUrl("talks/")) Schedule
+            li
+              a(href=pageUrl("talks/#directions")) Directions
+            //- li
+            //-   a(href="/") #[strong Registration]
+            //- li
+            //-   a(href="/") #[strong Lightning talks]
 
-      p.psf-trademark
-        a(href='https://www.python.org/psf/trademarks/pycon/', target='_blank') PyCon™
-        |  is a trademark for worldwide conference activities claimed by
-        a(href='https://www.python.org/psf-landing/', target='_blank') Python Software Foundation
-        | .
+        li.section 
+          a.nav-title(href=pageUrl("workshops/")) Sprints &amp; Workshops
+          ul
+            li
+              a(href=pageUrl("workshops/")) Schedule
+            li
+              a(href=pageUrl("workshops/#directions")) Directions
+            //- li
+            //-   a(href=pageUrl("workshops/registration.html")) #[strong Registration]
+            
+        li.section
+          .social-links
+            | Spread the word about #[strong PyCon CZ!]
+            ul
+              li
+                a(href='https://twitter.com/pyconcz')
+                  i.fa.fa-twitter
+              li
+                a(href='https://www.facebook.com/events/1624916497723396/')
+                  i.fa.fa-facebook
+              li
+                a(href='http://lanyrd.com/2015/pyconcz/')
+                  i.fa.fa-calendar-check-o
+              li
+                a(href='https://github.com/pyvec/cz.pycon.org-2015')
+                  i.fa.fa-github
+              li
+                a(href='https://pyconcz.slack.com')
+                  i.fa.fa-slack
+              li
+                a(href='mailto:info@pycon.cz')
+                  i.fa.fa-envelope
 
+    .psf-trademark
       p
-        a(href="mailto:"+contactEmail)
-          | Feel free to contact us!
+        :markdown
+          [PyCon™](href='https://www.python.org/psf/trademarks/pycon/') 
+          is a trademark for worldwide conference activities claimed by
+          [Python Software foundation](href='https://www.python.org/psf-landing/').

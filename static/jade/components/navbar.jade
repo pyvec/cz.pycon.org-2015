@@ -1,44 +1,28 @@
-div
-  header
-    .navbar.navbar-default.navbar-fixed-top
-      .navbar-header
-        button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#main-navbar", aria-expanded="false")
-          .sr-only Toggle navigation
-          .icon-bar
-          .icon-bar
-          .icon-bar
-        a.navbar-brand(href="/"+year+'/') PyCon CZ
+header#top
+  .navbar
+    button.navbar-toggle(type="button", aria-expanded="false")
+      .fa.fa-bars
 
-      .collapse.navbar-collapse#main-navbar
-        ul.nav.navbar-nav
-          li
-            a(href='/'+year+'/#speakers') Speakers
-          li
-            a(href='/'+year+'/#schedule') Schedule
-          li
-            a(href='/'+year+'/#tickets') Tickets
-          li
-            a(href='/'+year+'/#sponsors') Sponsors
-          li
-            a(href='/'+year+'/team.html') Team
-          li
-            a(href='/'+year+'/#venue') Venue
-        ul.right.nav
-          li
-            a(href='https://twitter.com/pyconcz', target='_blank')
-              i.fa.fa-twitter
-          li
-            a(href='https://www.facebook.com/events/1624916497723396/', target='_blank')
-              i.fa.fa-facebook
-          li
-            a(href='http://lanyrd.com/2015/pyconcz/', target='_blank')
-              i.fa.fa-calendar-check-o
-          li
-            a(href='https://github.com/pyvec/cz.pycon.org-2015', target='_blank')
-              i.fa.fa-github
-          li
-            a(href='https://pyconcz.slack.com', target='_blank')
-              i.fa.fa-slack
-          li
-            a(href='mailto:info@pycon.cz')
-              i.fa.fa-envelope
+    ul.nav.navbar-nav
+      li.about
+        a(href=pageUrl("#")) About
+      //- li.getting-here
+      //-   a(href=pageUrl("")) Getting here
+      li.tickets
+        a(href=pageUrl("about/tickets.html"))
+          | Tickets
+      li.talks
+        a(href=pageUrl("talks/"))
+          | Talks
+          span.date Saturday 14th
+      li.sprints
+        a(href=pageUrl("workshops/"))
+          | Sprints &amp; workshops
+          span.date Sunday 15th
+    
+    a(href="/2015/")
+      img.pycon-logo(
+        alt="PyCon CZ",
+        src='/'+year+"/static/images/pycon-cz-logo-icon.svg",
+        onerror="this.onerror = null; this.src = '/2015/static/images/pycon-cz-logo.png'"
+      )

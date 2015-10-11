@@ -1,0 +1,49 @@
+extends ../base
+
+block viewport
+  .container
+    h1 Tickets
+
+    p.lead
+      a.tickets-link(href=ticketsLink) Ticket sales
+      |  are now open. We have rates for individuals, corporate
+      |  attendees and also for students. It's simple: We want you all to
+      |  attend the first year edition of #[strong PyCon CZ].
+
+    tito-widget(event="pyvec/pycon-cz-2015")
+
+    h2 What's included in ticket price
+
+    ul.ticket-features
+      li all #[strong two days] of the event - talks, sprints and workshops
+      li lunch and refreshments on both days
+      li delicious #[strong coffee] with awesome #[strong Czech cakes] during breaks
+      li t-shirt, full bag of conference swag and gifts
+
+    p.
+      Accomodation and travel costs are not covered. However, we'll try to
+      find you the best hotel deals in Brno.
+
+    h2 What ticket is the right for me?
+
+    p.
+      We try to keep the ticket prices as low as possible. Every corporate
+      ticket allows us to issue two #[strong Student] tickets. If you employer
+      is paying for your ticket, please select a #[strong Corporate] rate.
+
+    p.
+      Do you want to buy more than 10 tickets for your employees? Contact us
+      directly and also consider our #[a(href=pageUrl("about/sponsorship.html")) sponsorship]
+      packages.
+
+    h2 Where does all the money go?
+
+    p.
+      This is a non-profit event run by volunteers and driven by the community.
+      Event is organized with help of Czech Python/Django community
+      – #[a(href="http://pyvec.org") Pyvec].
+    
+    p.
+      #[strong Everything] we receive from your ticket purchases goes
+      directly towards the costs of running the event and making it enjoyable
+      and memorable for all attendees.

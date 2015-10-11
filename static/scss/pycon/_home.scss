@@ -1,0 +1,139 @@
+%centered-content {
+  text-align: center;
+}
+
+%section-margin {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+%divider {
+  &:after {
+    position: relative;
+    top: 30px;
+    width: 300px;
+    height: 1px;
+    margin: 0 auto;
+    background-color: $brand-silent;
+  }
+}
+
+// Global style overrides
+.home {
+  h1 {
+    color: $brand-primary;
+  }
+
+  h2 {
+    margin: 0;
+    color: $brand-secondary;
+    font-size: 30px;
+  }
+
+  .lead {
+    font-size: 24px;
+  }
+}
+
+// Pycon Logo jumbotron
+.pycon {
+  @extend %section-margin;
+  @extend %centered-content;
+
+  font-family: Amatic, "Helvetica Neue";
+  line-height: 1;
+
+  .pycon-logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 250px;
+    height: 250px;
+  }
+
+  h1 {
+    display: inline-block;
+    margin: 0;
+    font-size: 96px;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .year {
+    display: block;
+    margin-left: 60px;
+    color: $brand-secondary;
+  }
+
+  @media (min-width: $screen-xs) {
+    .year {
+      margin-left: 0;
+    }
+  }
+}
+
+.pycon-info {
+  position: relative;
+  font-size: 60px;
+  font-family: Amatic, "Helvetica Neue";
+
+  .pycon-location,
+  .pycon-date {
+    display: block;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: $screen-sm) {
+    left: -40px;
+
+    .pycon-location,
+    .pycon-date {
+      display: inline-block;
+      padding: 0 20px;
+    }
+  }
+}
+
+.claim {
+  padding: 15px 0;
+  color: $text-inverted;
+  background-color: $brand-primary;
+
+  font-size: 28px;
+  text-align: center;
+}
+
+// Program at homepage
+.program {
+  @extend %section-margin;
+  @extend %divider;
+  @include make-row();
+}
+
+.program-item:first-child {
+  @include make-sm-column-offset(2);
+}
+
+.program-item {
+  @extend %centered-content;
+  @include make-sm-column(4);
+
+  font-size: 18px;
+
+  .date {
+    color: $brand-primary;
+  }
+}
+
+// Registration
+.registration {
+  @extend %centered-content;
+  @extend %section-margin;
+  @extend %divider;
+}
+
+.tito {
+  font-size: 20px;
+  text-align: left;
+}

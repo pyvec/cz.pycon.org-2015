@@ -1,0 +1,88 @@
+$divider-inverted: #527bac;
+
+.site-footer {
+  position: relative;
+  clear: both;
+  width: 100%;
+  padding: 1em 0 2em;
+  color: $text-inverted;
+  background-color: $brand-primary;
+  font-size: 14px;
+
+  @media (min-width: $screen-sm) {
+    height: $footer-height;
+    margin-top: -$footer-height + 80px;
+  }
+
+  a {
+    color: $text-inverted;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-footer {
+    @include make-row();
+    margin-bottom: 3em;
+    line-height: 1.3;
+  }
+
+  .nav-title {
+    display: block;
+    margin-top: 10px;
+    border-top: 1px solid $divider-inverted;
+    font-weight: bold;
+    font-size: 16px;
+
+    @media (min-width: $screen-sm) {
+      margin-top: 0;
+      margin-bottom: 10px;
+      border-top: 0;
+      border-bottom: 1px solid $divider-inverted;
+
+      &:hover {
+        border-bottom: 1px solid $text-inverted;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .section {
+    @include make-sm-column(3);
+  }
+}
+
+.social-links {
+  margin-bottom: 2em;
+
+  li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 2em;
+  }
+
+  @media (min-width: $screen-sm) {
+    text-align: center;
+
+    li {
+      margin-right: 10px;
+    }
+  }
+}
+
+.psf-trademark {
+  @media (min-width: $screen-sm) {
+    text-align: center;
+  }
+
+  a {
+    font-weight: bold;
+  }
+}

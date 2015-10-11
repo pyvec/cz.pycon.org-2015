@@ -1,22 +1,38 @@
-// Default bootstrap variables
 @import "bootstrap/variables";
 
+// Grid
+
+$grid-gutter-width: 20px;
+$container-desktop: (940px + $grid-gutter-width);
+$container-large-desktop: $container-desktop;
+$container-lg: $container-desktop;
+$container-md: $container-desktop;
+$screen-lg: $screen-md;
+
+// Color theme
+
+$twitter-color: #55acee;
+$github-color: #333;
+
+$brand-primary: #1e5493;
+$brand-secondary: #d52034;
+$brand-silent: #d1d1d1;
+
+$text-color: #646464;
+$text-inverted: #fff;
+
+$commit-line: #dfdfdf;
+
+$bg: #fff;
+$navbar-bg: rgba(255, 255, 255, 0.97);
+
+// Dimensions
+
+$navbar-height: 60px;
+// $footer-height: 300px; // uncomment when getting-here section is published
+$footer-height: 220px;
+$offcanvas-navbar-width: 220px;
+
 // Theme overrides
-
-$jumbotron-bg: #fff;
-$jumbotron-color: #000;
-
-$claim-bg: #ddd;
-
-$speakers-social-link-color: #aaa;
-
-$tricolor-red: #A72624;
-$tricolor: #fff #A72624 #5ba4c0;
-
-//map
-$map-height: 400px;
-$text-shadow-color: #ccc;
-
-$images-size: 150px;
 
 $font-size-base: 16px;
