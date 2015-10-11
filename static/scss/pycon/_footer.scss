@@ -59,6 +59,24 @@ $divider-inverted: #527bac;
   }
 }
 
+.social-links {
+  margin-bottom: 2em;
+
+  li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 2em;
+  }
+
+  @media (min-width: $screen-sm) {
+    text-align: center;
+
+    li {
+      margin-right: 10px;
+    }
+  }
+}
+
 .psf-trademark {
   @media (min-width: $screen-sm) {
     text-align: center;
