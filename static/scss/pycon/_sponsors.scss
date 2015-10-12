@@ -26,10 +26,21 @@
   }
 }
 
+.djangogirls,
+.platinum,
+.gold,
+.silver {
+  @include make-row();
+}
+
+.djangogirls {
+  margin-top: 3em;
+}
+
 .sponsor {
-  .gold,
-  .silver {
-    @include make-row();
+  .djangogirls &,
+  .platinum & {
+    @include make-sm-column(12);
   }
 
   .gold & {
@@ -55,5 +66,11 @@
     position: relative;
     top: 30px;
     font-size: 1.2em;
+  }
+
+  .sponsor-redhat {
+    position: relative;
+    top: -40px;
+    z-index: -1;
   }
 }
