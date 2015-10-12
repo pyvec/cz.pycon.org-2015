@@ -93,15 +93,15 @@
     }
   ], [
     {
-      "name": "Robert Kuska",
+      "name": "Jarka Schovancová",
       "track": "master",
-      "title": "Porting to Python3",
-      "abstract": "Intended audience: anyone who would like to port their or some other codebase to python3\n\nTalk will start with introduction about why you should choose Python3\nover Python2 for a new projects.\nI will continue with a tutorial about how to start porting your codebase\nto be Python3 compatible which will consist of three main parts:\nknow your deps: I will introduce some alternatives for modules\nwhich doesn't yet support Python3\nbuilding: this part will aim on tools which will help you make your codebase buildable with python3\ntesting: in this part you will learn about how to setup your project to be tested with various python versions.\nIn the end I will summarize all the introduced tools and libraries.",
-      "bio": "Software engineer at Red Hat, member of Fedoproject, leader of Python3 as default change in Fedora",
-      "company": "Red Hat",
-      "twitter": null,
-      "github": null,
-      "avatar": "robert_kuska.jpeg"
+      "title": "Processing of large data sets",
+      "abstract": "",
+      "bio": "",
+      "company": "CERN",
+      "twitter": "jschovan",
+      "github": "jschovan",
+      "avatar": "jarka_schovancova.jpg"
     },
     {
       "name": "Jan Čermák",
