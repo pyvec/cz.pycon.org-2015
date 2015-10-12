@@ -70,7 +70,11 @@
 
   .sponsor-redhat {
     position: relative;
-    top: -40px;
+    top: -30px;
     z-index: -1;
+
+    img {
+      width: 90%;
+    }
   }
 }
