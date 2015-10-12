@@ -50,6 +50,10 @@ $commit-line-size: 10px;
         margin: 20px 0;
       }
     }
+
+    &.russell {
+      margin-bottom: 0;
+    }
   }
 
   .talk-description {
@@ -117,6 +121,7 @@ $commit-line-size: 10px;
 }
 
 .talk-description {
+  max-height: 100px;
   padding: 16px 0;
 
   .speaker {
@@ -206,6 +211,7 @@ $commit-line-size: 10px;
     margin-left: 0;
   }
 
+  .event-full &,
   .practical & {
     margin-right: 10px;
 
