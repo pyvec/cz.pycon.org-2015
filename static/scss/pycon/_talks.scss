@@ -194,6 +194,12 @@ $commit-line-size: 10px;
   text-align: center;
 }
 
+.workshop {
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
 .social {
   color: $brand-silent;
   line-height: 2;
@@ -211,6 +217,7 @@ $commit-line-size: 10px;
     margin-left: 0;
   }
 
+  .workshop &,
   .event-full &,
   .practical & {
     margin-right: 10px;

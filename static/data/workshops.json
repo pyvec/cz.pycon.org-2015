@@ -1,66 +1,52 @@
 [
-  [
-    {
-      "name": "Jachym Cepicky",
-      "avatar": "jachym_cepicky.jpg",
-      "title": "GIS in Python",
-      "abstract": "Python is one of the most popular programming languages, with strong support in nowadays GIS technologies. This workshop will give you overview of some basic libraries and their Python bindings (GDAL, Proj4), more abstract and easier to be used libraries (Rasterio, Fiona, Shapely), and show you, how to access GeoServer and Mapserver from Python script. OGC Standards and how to deal with them, will be demonstrated using OWSLib. Apparently, the topic is so wide, that at the end nobody is expected to master all or at least one of mentioned (or not mentioned) technologies. This workshop is meant as introduction to the world of GeoPython and brief overview.",
-      "bio": "Long time user and contributor to open source software for geospatial (GIS).",
-      "company": "GISMentors",
-      "twitter": "jachymc",
-      "github": "jachym"
-    },
-    {
-      "name": "Peter Inglesby",
-      "avatar": "peter_inglesby.jpg",
-      "title": "Django Security",
-      "abstract": "This workshop will explore some of the ways that Django helps you keep your applications and your users secure.\n\nWe'll do this by taking a simple Django site, disabling some of Django's built-in protections, and looking at how to exploit the weaknesses that become exposed.\n\nAlong the way, we'll look at types of attack including session hijacking, cross site scripting, cross site request forgery, and SQL injection.\n\nThis workshop is not a comprehensive \"HOW TO\" guide for keeping a Django site secure.\n\nInstead, its goal is to help you understand the mentality required to both evaluate the kinds of security risks that web applications are exposed to, and protect against those risks.",
-      "bio": "I'm a programmer and trainer from the UK.",
-      "company": "Import Training",
-      "twitter": "inglesp",
-      "github": "inglesp"
-    }
-  ], [
-    {
-      "name": "Tomáš Bedřich",
-      "avatar": "tobas_bedrich.png",
-      "title": "Web scraping",
-      "abstract": "We will try out the process of website scraping including HTML and AJAX inspection; usage of requests, BeautifulSoup and lxml modules and working with raw data using text manipulations and regular expressions.",
-      "bio": "I am a small entrepreneur from Pilsen, living in Prague. Creating websites, programming mostly in Python, PHP, C(++) and some other languages. In free time geocacher and motocycle rider.",
-      "company": "tbedrich.cz",
-      "twitter": "tbedrich",
-      "github": "tomasbedrich"
-    },
-    {
-      "name": "Tomas Babej",
-      "avatar": "default_male.png",
-      "title": "Hands on python-cryptography",
-      "abstract": "Have you ever wanted to secure your python application with some cryptography, but got confused by APIs which were too low level? Python-cryptography is a new emerging library which strives to provide \"crypto for humans\" in Python. In this workshop, we will explore how to use it to secure our applications in a reliable manner. No substantial cryptography knowledge required.",
-      "bio": "Tomas works a software engineer at Red Hat, focusing on the FreeIPA project. He's interested in security, math and open source.",
-      "company": "Red Hat",
-      "twitter": "",
-      "github": ""
-    }
-  ], [
-    {
-      "name": "Nischal HP",
-      "avatar": "nischal_hp.jpg",
-      "title": "Introduction to Deep Learning for Natural Language Processing",
-      "abstract": "OBJECTIVE:\nIn fields like computer vision, speech recognition and natural language processing, deep learning has produced state-of-art results. And they are showing lot of promise in other fields too.\n\nThis workshop will provide an introduction to deep learning for natural language processing. It would cover some of the common deep learning architectures, advantages and concerns, along with some hands-on.\n\nDESCRIPTION:\n1) What is deep learning?\n2) Motivation: Some use cases where it has produced state-of-art results for NLP\n3) Introduction to neural networks; backpropagation algorithm\n4) Supervised learning: Text classification using multi-layer perceptron, recurrent neural networks\n5) Text generation using recurrent neural networks\n6) Impact of GPUs\n\nThe repository for this workshop:\nhttps://github.com/rouseguy/intro2deeplearning/\n\nPlease install the requirements prior to the workshop.\n\nRequirements\nThe attendee should understand the following terms:\n1. Bias and Variance\n2. Train, Test and Validation sets\n3. Cross-validation, grid-search, hyperparameter optimization\n4. Measuring model accuracy (Precision, Recall, F1 score, Area Under Curve)\n5. Supervised and Unsupervised learning\n\nKnowing Python is a plus, but not mandatory.",
-      "bio": "Nischal HP is a Data Engineer at Redmart, India. He has a Masters in Computer Science from BITS, Pilani, India. He lives on music, ardent traveler and a mad soccer fan.\n\nBargava Subramanian is a Senior Data Scientist at Cisco Systems, India. He has a Masters in Statistics from University of Maryland, College Park, USA. He is a data geek and an ardent NBA follower.",
-      "company": "Redmart",
-      "twitter": "nischalhp",
-      "github": "nischalhp"
-    },
-    {
-      "name": "Martin Korbel",
-      "avatar": "default_male.png",
-      "title": "Python & OpenStack - easy way to create a remote controller for OpenStack",
-      "abstract": "If you are thinking about integration of OpenStack in your application and you afraid that it is so difficult. Don't worry, it is very easy when we can use novaclient module. We will show, how can you upload your public ssh key, create a new instance, join it to security group, make a snapshot and many others. All these things, we will present in simple example, where we will  create \"own remote controller of  OpenStack\".",
-      "bio": "Hi,\nmy name is Martin Korbel and I work in the Satellite 5 team as QE. I'm 32 years old and  I live in Letovice (small town about 40 km north from Brno).  Before this job I worked as network administrator at the grammar school. I have studied a bachelor at Palacky university and then I have done a master's degree at Masaryk university. \nIn Satellite team I'm working on many different projects for QE (framework for Selenium, GreenTea - system for automatic daily testing and of course client tools for OpenStack). \nI like book reading, history, scifi and programming.",
-      "company": "RedHat",
-      "twitter": "",
-      "github": ""
-    }
-  ]
+  {
+    "name": "Tomáš Bedřich",
+    "avatar": "tobas_bedrich.png",
+    "title": "Web scraping",
+    "abstract": "We will try out the process of website scraping including HTML and AJAX inspection; usage of requests, BeautifulSoup and lxml modules and working with raw data using text manipulations and regular expressions.",
+    "bio": "I am a small entrepreneur from Pilsen, living in Prague. Creating websites, programming mostly in Python, PHP, C(++) and some other languages. In free time geocacher and motocycle rider.",
+    "company": "tbedrich.cz",
+    "twitter": "tbedrich",
+    "github": "tomasbedrich"
+  },
+  {
+    "name": "Tomas Babej",
+    "avatar": "default_male.png",
+    "title": "Hands on python-cryptography",
+    "abstract": "Have you ever wanted to secure your python application with some cryptography, but got confused by APIs which were too low level? Python-cryptography is a new emerging library which strives to provide \"crypto for humans\" in Python. In this workshop, we will explore how to use it to secure our applications in a reliable manner. No substantial cryptography knowledge required.",
+    "bio": "Tomas works a software engineer at Red Hat, focusing on the FreeIPA project. He's interested in security, math and open source.",
+    "company": "Red Hat",
+    "twitter": "",
+    "github": ""
+  },
+  {
+    "name": "Jachym Cepicky",
+    "avatar": "jachym_cepicky.jpg",
+    "title": "GIS in Python",
+    "abstract": "Python is one of the most popular programming languages, with strong support in nowadays GIS technologies. This workshop will give you overview of some basic libraries and their Python bindings (GDAL, Proj4), more abstract and easier to be used libraries (Rasterio, Fiona, Shapely), and show you, how to access GeoServer and Mapserver from Python script. OGC Standards and how to deal with them, will be demonstrated using OWSLib. Apparently, the topic is so wide, that at the end nobody is expected to master all or at least one of mentioned (or not mentioned) technologies. This workshop is meant as introduction to the world of GeoPython and brief overview.",
+    "bio": "Long time user and contributor to open source software for geospatial (GIS).",
+    "company": "GISMentors",
+    "twitter": "jachymc",
+    "github": "jachym"
+  },
+  {
+    "name": "Nischal HP",
+    "avatar": "nischal_hp.jpg",
+    "title": "Introduction to Deep Learning for Natural Language Processing",
+    "abstract": "OBJECTIVE:\nIn fields like computer vision, speech recognition and natural language processing, deep learning has produced state-of-art results. And they are showing lot of promise in other fields too.\n\nThis workshop will provide an introduction to deep learning for natural language processing. It would cover some of the common deep learning architectures, advantages and concerns, along with some hands-on.\n\nDESCRIPTION:\n1) What is deep learning?\n2) Motivation: Some use cases where it has produced state-of-art results for NLP\n3) Introduction to neural networks; backpropagation algorithm\n4) Supervised learning: Text classification using multi-layer perceptron, recurrent neural networks\n5) Text generation using recurrent neural networks\n6) Impact of GPUs\n\nThe repository for this workshop:\nhttps://github.com/rouseguy/intro2deeplearning/\n\nPlease install the requirements prior to the workshop.\n\nRequirements\nThe attendee should understand the following terms:\n1. Bias and Variance\n2. Train, Test and Validation sets\n3. Cross-validation, grid-search, hyperparameter optimization\n4. Measuring model accuracy (Precision, Recall, F1 score, Area Under Curve)\n5. Supervised and Unsupervised learning\n\nKnowing Python is a plus, but not mandatory.",
+    "bio": "Nischal HP is a Data Engineer at Redmart, India. He has a Masters in Computer Science from BITS, Pilani, India. He lives on music, ardent traveler and a mad soccer fan.\n\nBargava Subramanian is a Senior Data Scientist at Cisco Systems, India. He has a Masters in Statistics from University of Maryland, College Park, USA. He is a data geek and an ardent NBA follower.",
+    "company": "Redmart",
+    "twitter": "nischalhp",
+    "github": "nischalhp"
+  },
+  {
+    "name": "Martin Korbel",
+    "avatar": "default_male.png",
+    "title": "Python & OpenStack - easy way to create a remote controller for OpenStack",
+    "abstract": "If you are thinking about integration of OpenStack in your application and you afraid that it is so difficult. Don't worry, it is very easy when we can use novaclient module. We will show, how can you upload your public ssh key, create a new instance, join it to security group, make a snapshot and many others. All these things, we will present in simple example, where we will  create \"own remote controller of  OpenStack\".",
+    "bio": "Hi,\nmy name is Martin Korbel and I work in the Satellite 5 team as QE. I'm 32 years old and  I live in Letovice (small town about 40 km north from Brno).  Before this job I worked as network administrator at the grammar school. I have studied a bachelor at Palacky university and then I have done a master's degree at Masaryk university. \nIn Satellite team I'm working on many different projects for QE (framework for Selenium, GreenTea - system for automatic daily testing and of course client tools for OpenStack). \nI like book reading, history, scifi and programming.",
+    "company": "RedHat",
+    "twitter": "",
+    "github": ""
+  }
 ]

@@ -1,72 +1,70 @@
 extends ../base
 
 //- render single speaker
-mixin talk(speaker)
-  .talk-description
-    .speaker= speaker.name
-    
-    p= speaker.title
-    
-    if speaker.github
-      a.social.github(href="https://github.com/" + speaker.github)
-        .fa.fa-github
-    if speaker.twitter
-      a.social.twitter(href="https://twitter.com/" + speaker.twitter)
-        .fa.fa-twitter
+mixin talk(workshop)
+  .workshop
+    //- img.avatar(src=avatar(workshop.avatar), alt='Photo of ' + workshop.name)
 
-  .commit-holder
-    .commit
-      img.avatar(src=avatar(speaker.avatar), alt='Photo of ' + speaker.name)
+    h3
+      = workshop.title
+      small 
+        | by 
+        = workshop.name
+    
+    if workshop.github
+      a.social.github(href="https://github.com/" + workshop.github)
+        .fa.fa-github
+    if workshop.twitter
+      a.social.twitter(href="https://twitter.com/" + workshop.twitter)
+        .fa.fa-twitter
+          
+    p= workshop.abstract
+    
 
 block vars
-  - var pageClass = "page-talks"
+  - var pageClass = "page-workshops"
 
 block viewport
   .container
     h1 Sprints &amp; Workshops
     
-    .event-full.general
-      h2.title Breakfast
-      .talk-description
-        p.
-          Good morning, everyone! #[br]
-          Join us for delicous breakfast before coding madness begins      
-      .commit.empty.first
-        .dot
+    h2 Breakfast
+    p.
+      Good morning, everyone!
+      Let's start with something pleasant. Join us for delicous breakfast before coding madness begins.     
     
-    .branch
-      img(
-        src="/2015/static/images/ui/branch-in.svg",
-        onerror="this.onerror = null; this.src = '/2015/static/images/ui/branch-in.png'"
-      )
+    h2 Workshops
+    p.
+      There's going to be six workshops in 3 rooms. One block of
+      workshops before the lunch and one after.
+      
+    p.
     
     //-  Iterate over workshops object (loaded in gulpfile from data/workshops.json)
     //-  and render mixin talk() (see above)
-    each speaker, index in workshops
-      .talk-block
-        .event.master
-          +talk(speaker[0])
-
-        .event.practical
-          +talk(speaker[1])
-
-    .branch
-      img(
-        src="/2015/static/images/ui/branch-out.svg",
-        onerror="this.onerror = null; this.src = '/2015/static/images/ui/branch-out.png'"
-      )
-        
-    .event-full.general
-      .title
-        h2 Thank you
-      .talk-description
-        p.
-          It was a loong weekend and it's time to go home. #[br]
-          The first PyCon CZ is over. See you next year!
+    each workshop, index in workshops
+      +talk(workshop)
       
-      .commit.empty.last
-        .dot
+    h2 Sprints
+    p.
+      Along workshops listed above, there's going to be ongoing hacking &amp;
+      conding atmosphere. If you don't have your project you want to work with
+      other developers, you can join some of our designed sprints:
+      
+    h3 Python 3 Porting
+    p.
+      Make your project Python 3 compatible or help a project you like!
+      Experienced porters can help you on your way, with guidance on porting
+      strategies, best practices, libraries and automation. They can even
+      give you advices how to convince management/upstream that supporting
+      Python 3 is a good idea.
 
+    h2 This is the end – thank you!
+    p.
+      It was a loong weekend and it's time to go home. #[br]
+      The first PyCon CZ is over. See you next year!
+
+    hr
     a.anchor#directions
     h2 The venue
     
