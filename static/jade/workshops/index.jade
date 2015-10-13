@@ -14,6 +14,8 @@ mixin talk(speaker)
       a.social.twitter(href="https://twitter.com/" + speaker.twitter)
         .fa.fa-twitter
 
+    p= speaker.abstract
+
   .commit-holder
     .commit
       img.avatar(src=avatar(speaker.avatar), alt='Photo of ' + speaker.name)
@@ -24,7 +26,8 @@ block vars
 block viewport
   .container
     h1 Sprints &amp; Workshops
-    
+
+    p.
     .event-full.general
       h2.title Breakfast
       .talk-description
@@ -33,22 +36,33 @@ block viewport
           Join us for delicous breakfast before coding madness begins      
       .commit.empty.first
         .dot
-    
+
     .branch
       img(
         src="/2015/static/images/ui/branch-in.svg",
         onerror="this.onerror = null; this.src = '/2015/static/images/ui/branch-in.png'"
       )
-    
-    //-  Iterate over workshops object (loaded in gulpfile from data/workshops.json)
-    //-  and render mixin talk() (see above)
-    each speaker, index in workshops
-      .talk-block
-        .event.master
-          +talk(speaker[0])
 
-        .event.practical
-          +talk(speaker[1])
+    .talk-block
+      .event.master
+        .talk-description
+          .speaker.
+            Sprints
+          p.
+           All day is open for you to sprint on any interesting project.
+
+        .commit-holder
+          .commit.empty
+
+      .event.practical
+        .talk-description
+          .speaker.
+            Workshops
+          p.
+            Get hands-on introduction to a project.
+
+        .commit-holder
+          .commit.empty
 
     .branch
       img(
@@ -66,6 +80,39 @@ block viewport
       
       .commit.empty.last
         .dot
+
+    h2 Sprints
+
+    p.
+        All day is open for you to sprint on any interesting project.
+        Sprints will be announced after lightning talks on Saturday.
+        If you want your sprint listed here before then, just e-mail the organizers.
+
+    h3 Python 3 Porting
+
+    p.
+        Make your project Python 3 compatible, or help a project you like!
+        Experienced porters can help you on your way, with guidance on porting
+        strategies, best practices, libraries and automation, or even
+        convincing management/upstream that supporting Python 3 is a good idea.
+
+    h2 Workshops
+    
+    Note that the workshops may still change.
+    
+    h3 Morning
+
+    each speaker, index in workshops[0]
+      .talk-block
+        .event.practical
+          +talk(speaker)
+
+    h3 Afternoon
+
+    each speaker, index in workshops[1]
+      .talk-block
+        .event.practical
+          +talk(speaker)
 
     a.anchor#directions
     h2 The venue

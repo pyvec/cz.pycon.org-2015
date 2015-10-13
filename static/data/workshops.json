@@ -1,27 +1,6 @@
 [
   [
     {
-      "name": "Jachym Cepicky",
-      "avatar": "jachym_cepicky.jpg",
-      "title": "GIS in Python",
-      "abstract": "Python is one of the most popular programming languages, with strong support in nowadays GIS technologies. This workshop will give you overview of some basic libraries and their Python bindings (GDAL, Proj4), more abstract and easier to be used libraries (Rasterio, Fiona, Shapely), and show you, how to access GeoServer and Mapserver from Python script. OGC Standards and how to deal with them, will be demonstrated using OWSLib. Apparently, the topic is so wide, that at the end nobody is expected to master all or at least one of mentioned (or not mentioned) technologies. This workshop is meant as introduction to the world of GeoPython and brief overview.",
-      "bio": "Long time user and contributor to open source software for geospatial (GIS).",
-      "company": "GISMentors",
-      "twitter": "jachymc",
-      "github": "jachym"
-    },
-    {
-      "name": "Peter Inglesby",
-      "avatar": "peter_inglesby.jpg",
-      "title": "Django Security",
-      "abstract": "This workshop will explore some of the ways that Django helps you keep your applications and your users secure.\n\nWe'll do this by taking a simple Django site, disabling some of Django's built-in protections, and looking at how to exploit the weaknesses that become exposed.\n\nAlong the way, we'll look at types of attack including session hijacking, cross site scripting, cross site request forgery, and SQL injection.\n\nThis workshop is not a comprehensive \"HOW TO\" guide for keeping a Django site secure.\n\nInstead, its goal is to help you understand the mentality required to both evaluate the kinds of security risks that web applications are exposed to, and protect against those risks.",
-      "bio": "I'm a programmer and trainer from the UK.",
-      "company": "Import Training",
-      "twitter": "inglesp",
-      "github": "inglesp"
-    }
-  ], [
-    {
       "name": "Tomáš Bedřich",
       "avatar": "tobas_bedrich.png",
       "title": "Web scraping",
@@ -41,7 +20,18 @@
       "twitter": "",
       "github": ""
     }
-  ], [
+  ],
+  [
+    {
+      "name": "Jachym Cepicky",
+      "avatar": "jachym_cepicky.jpg",
+      "title": "GIS in Python",
+      "abstract": "Python is one of the most popular programming languages, with strong support in nowadays GIS technologies. This workshop will give you overview of some basic libraries and their Python bindings (GDAL, Proj4), more abstract and easier to be used libraries (Rasterio, Fiona, Shapely), and show you, how to access GeoServer and Mapserver from Python script. OGC Standards and how to deal with them, will be demonstrated using OWSLib. Apparently, the topic is so wide, that at the end nobody is expected to master all or at least one of mentioned (or not mentioned) technologies. This workshop is meant as introduction to the world of GeoPython and brief overview.",
+      "bio": "Long time user and contributor to open source software for geospatial (GIS).",
+      "company": "GISMentors",
+      "twitter": "jachymc",
+      "github": "jachym"
+    },
     {
       "name": "Nischal HP",
       "avatar": "nischal_hp.jpg",
