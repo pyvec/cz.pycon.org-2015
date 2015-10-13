@@ -29,13 +29,19 @@ Contribute
     bower install
     ```
 
-2. Run *watcher* (it opens browser at http://localhost:3000):
+  (If you don't want to install system-wide, run e.g. `npm config set prefix ~/.local/npm_prefix` beforehand; then run the tools from `~/.local/npm_prefix/bin`.)
+
+2. Run *watcher*:
 
     ```
     cd static && gulp
     ```
 
-3. Commit changes and submit pull-request
+3. Visit http://localhost:3000/2015/
+
+ This is needed because the development version doesn't have the 2015 redirect set up.
+
+4. Commit changes and submit pull-request
 
 Publish to AWS S3 (authorization required)
 ------------------------------------------
