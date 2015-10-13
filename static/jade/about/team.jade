@@ -1,0 +1,92 @@
+extends ../base
+
+block vars
+  - var pageClass = "page-team"
+
+block viewport
+  .container
+    h1 Who is behind this?
+    
+    p.lead.
+      PyCon is community event. There are more than 30 people on our Slack channel and
+      even more volunteers helped us by sending PR on #[a(href="https://github.com/pyvec/cz.pycon.org-2015") github]. If you
+      drew the organization structure of PyCon CZ team,
+      #[strong you — the attendee] would be at the top. The incredible amount of
+      volunteers would follow. There's a little or no difference between organizer
+      and volunteer, because we all do it in our free time without any claim for wage.
+      Below there's a list of our core team members.
+      
+    p.call-to-action.
+      We are here for #[strong you].
+    
+    p.lead.
+    .team-member
+      img(src='https://pbs.twimg.com/profile_images/528237673563959297/yYJxmlNO.png', alt='Photo of Tomáš Ehrlich')
+      p.name
+        a(href="https://twitter.com/tomas_ehrlich") Tomáš Ehrlich
+      p.description C3PO &amp; Sponsors
+
+    .team-member
+      img(src='https://djangogirls.org/uploads/event/coaches/ja.jpg', alt='')
+      p.name
+        a(href="https://twitter.com/honzajavorek") Honza Javorek
+      p.description Media &amp; Promotion
+
+    .team-member
+      img(src='https://pbs.twimg.com/profile_images/598803746722816000/htcvwi8Z.jpg', alt='')
+      p.name
+        a(href="https://twitter.com/thatdocslady") Mikey Ariel
+      p.description Tickets &amp; Mentoring
+
+    .team-member
+      img(src='/'+year+'/static/images/team/natali.jpg', alt='')
+      p.name
+        a(href="https://www.facebook.com/natali.debosque") Natália Sedláková
+      p.description DjangoGirls organizer
+
+    .team-member
+      img(src='https://sk.gravatar.com/userimage/8116216/d3c0082d1cc96ed303565970e447b254.jpg?size=400', alt='')
+      p.name
+        a(href="https://twitter.com/netman92") Stanislav Komanec
+      p.description Website administrator
+
+    .team-member
+      img(src='https://scontent-vie1-1.xx.fbcdn.net/hphotos-xat1/t31.0-8/11536487_10206028010931663_6339000516200778558_o.jpg', alt='')
+      p.name
+        a(href="https://www.facebook.com/martin.matuszek") Martin Matuszek
+      p.description Swag &amp; Collectables
+
+    .team-member
+      img(src='https://scontent-vie1-1.xx.fbcdn.net/hphotos-xpt1/t31.0-8/10463609_10205508922336237_4028946742293895321_o.jpg', alt='')
+      p.name
+        a(href="https://twitter.com/styrax_raveon") Martin Hořák
+      p.description Events manager
+
+    .team-member
+      img(src='https://scontent-fra3-1.xx.fbcdn.net/hprofile-xfa1/l/t31.0-1/c84.0.749.749/265598_10150223402570824_5262769_o.jpg', alt='')
+      p.name
+        a(href="https://twitter.com/honzakral") Honza Král
+      p.description Speakers
+      
+    .team-member
+      img(src='/'+year+'/static/images/team/petr.jpg', alt='')
+      p.name
+        a(href="http://encukou.cz") Petr Viktorin
+      p.description Sprints &amp; Workshops
+
+    .team-member
+      img(src='/'+year+'/static/images/team/vehrlich.jpg', alt='')
+      p.name
+        a(href="https://twitter.com/melront") Václav Ehrlich
+      p.description Photographer
+
+    .team-member
+      img(src='/'+year+'/static/images/team/chris.jpg', alt='')
+      p.name
+        a(href="https://twitter.com/kejbaly2") Chris Ward
+      p.description Sponsors
+
+  .container
+    p.call-to-action.
+     Wanna become part of our team or just offer a hand? 
+     #[a(href="mailto:info@pycon.cz?subject=Please, add me to your Slack!") Join us] on Slack!

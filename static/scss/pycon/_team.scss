@@ -1,0 +1,40 @@
+.page-team {
+  h1 {
+    text-align: center;
+  }
+
+  .lead {
+    width: 80%;
+    margin: 0 auto 3em;
+  }
+}
+
+.team-member {
+  @include make-xs-column(6);
+  @include make-sm-column(3);
+
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    width: $images-size;
+    height: $images-size;
+    border: 1px solid $brand-silent;
+    border-radius: $images-size / 2;
+  }
+
+  .name {
+    padding: 0;
+    margin: 0;
+    font-size: 1.3em;
+  }
+
+  .description {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
