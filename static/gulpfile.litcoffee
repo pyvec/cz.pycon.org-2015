@@ -33,6 +33,7 @@ and static files are inside `static` directory.
       jade: [
         'jade/index.jade',
         'jade/about/*.jade',
+        'jade/getting-here/*.jade',
         'jade/talks/*.jade',
         'jade/workshops/*.jade'
       ]

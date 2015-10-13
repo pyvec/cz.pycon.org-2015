@@ -133,8 +133,7 @@ $brand-size: 45px;
     top: 0;
 
     // Custom offset for "visual" centering of menu
-    // left: -15px;  // uncomment when getting started section is added to menu
-    left: 40px;
+    left: -25px;  // uncomment when getting started section is added to menu
 
     padding: 0;
     // asymetric padding to make navbar items in visual middle
@@ -179,9 +178,9 @@ $brand-size: 45px;
         color: $text-inverted;
         background-color: $brand-primary;
 
-        &:hover {
-          color: $brand-primary;
-          background-color: $text-inverted;
+        &:hover,
+        &:active {
+          background-color: lighten($brand-primary, 10%);
         }
       }
     }

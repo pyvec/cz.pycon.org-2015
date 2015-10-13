@@ -19,16 +19,20 @@ footer.site-footer
               a(href=pageUrl("about/code-of-conduct.html")) #[strong Code of Conduct]
               
         li.section
+          a.nav-title(href=pageUrl("getting-here/")) Getting Here
+          ul
+            li
+              a(href=pageUrl("getting-here/#travelling")) Travelling
+            li
+              //- a(href=pageUrl("getting-here/#directions")) Accommodation
+
+        li.section
           a.nav-title(href=pageUrl("talks/")) Talks
           ul
             li
               a(href=pageUrl("talks/")) Schedule
             li
               a(href=pageUrl("talks/#directions")) Directions
-            //- li
-            //-   a(href="/") #[strong Registration]
-            //- li
-            //-   a(href="/") #[strong Lightning talks]
 
         li.section 
           a.nav-title(href=pageUrl("workshops/")) Sprints &amp; Workshops
@@ -40,28 +44,27 @@ footer.site-footer
             //- li
             //-   a(href=pageUrl("workshops/registration.html")) #[strong Registration]
             
-        li.section
-          .social-links
-            | Spread the word about #[strong PyCon CZ!]
-            ul
-              li
-                a(href='https://twitter.com/pyconcz')
-                  i.fa.fa-twitter
-              li
-                a(href='https://www.facebook.com/events/1624916497723396/')
-                  i.fa.fa-facebook
-              li
-                a(href='http://lanyrd.com/2015/pyconcz/')
-                  i.fa.fa-calendar-check-o
-              li
-                a(href='https://github.com/pyvec/cz.pycon.org-2015')
-                  i.fa.fa-github
-              li
-                a(href='https://pyconcz.slack.com')
-                  i.fa.fa-slack
-              li
-                a(href='mailto:info@pycon.cz')
-                  i.fa.fa-envelope
+    .social-links
+      | Spread the word about #[strong PyCon CZ!]
+      ul
+        li
+          a(href='https://twitter.com/pyconcz')
+            i.fa.fa-twitter
+        li
+          a(href='https://www.facebook.com/events/1624916497723396/')
+            i.fa.fa-facebook
+        li
+          a(href='http://lanyrd.com/2015/pyconcz/')
+            i.fa.fa-calendar-check-o
+        li
+          a(href='https://github.com/pyvec/cz.pycon.org-2015')
+            i.fa.fa-github
+        li
+          a(href='https://pyconcz.slack.com')
+            i.fa.fa-slack
+        li
+          a(href='mailto:info@pycon.cz')
+            i.fa.fa-envelope
 
     .psf-trademark
       p
