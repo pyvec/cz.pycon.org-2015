@@ -11,15 +11,21 @@ mixin talk(workshop)
         | by 
         = workshop.name
     
-    if workshop.github
-      a.social.github(href="https://github.com/" + workshop.github)
-        .fa.fa-github
-    if workshop.twitter
-      a.social.twitter(href="https://twitter.com/" + workshop.twitter)
-        .fa.fa-twitter
+      if workshop.github
+        a.social.github(href="https://github.com/" + workshop.github)
+          .fa.fa-github
+      if workshop.twitter
+        a.social.twitter(href="https://twitter.com/" + workshop.twitter)
+          .fa.fa-twitter
           
-    p= workshop.abstract
+    != md(workshop.abstract)
     
+    if workshop.requirements
+      .requirements
+        h4 Requirements
+        ul
+          each requirement, index in workshop.requirements
+            li!= md(requirement)
 
 block vars
   - var pageClass = "page-workshops"
@@ -31,15 +37,18 @@ block viewport
     h2 Breakfast
     p.
       Good morning, everyone!
-      Let's start with something pleasant. Join us for delicous breakfast before coding madness begins.     
+      Let's start with something pleasant. Join us for a delicous breakfast before the coding madness begins.
     
     h2 Workshops
     p.
-      There's going to be six workshops in 3 rooms. One block of
-      workshops before the lunch and one after.
+      There will be six workshops in 3 rooms. One block of
+      workshops before lunch, and one after.
       
     p.
-    
+      Please bring a laptop with a working Python interpreter and
+      #[a(href="https://pip.readthedocs.org") pip].
+      Some workshops have additional requirements.
+
     //-  Iterate over workshops object (loaded in gulpfile from data/workshops.json)
     //-  and render mixin talk() (see above)
     each workshop, index in workshops
@@ -48,8 +57,8 @@ block viewport
     h2 Sprints
     p.
       Along workshops listed above, there's going to be ongoing hacking &amp;
-      conding atmosphere. If you don't have your project you want to work with
-      other developers, you can join some of our designed sprints:
+      conding atmosphere. If you don't have your project you want to work on
+      with other developers, you can join some of our pre-annonunced sprints:
       
     h3 Python 3 Porting
     p.
@@ -59,7 +68,11 @@ block viewport
       give you advices how to convince management/upstream that supporting
       Python 3 is a good idea.
 
-    h2 This is the end – thank you!
+    h3 Your Sprint Here
+    p.
+      Additional sprints will be announced after lightning talks on Saturday.
+
+    h2 Closing
     p.
       It was a loong weekend and it's time to go home. #[br]
       The first PyCon CZ is over. See you next year!
