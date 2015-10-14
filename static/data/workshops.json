@@ -1,49 +1,58 @@
 [
   {
-    "name": "Tomáš Bedřich",
-    "avatar": "tobas_bedrich.png",
-    "title": "Web scraping",
-    "abstract": "We will try out the process of website scraping including HTML and AJAX inspection; usage of requests, BeautifulSoup and lxml modules and working with raw data using text manipulations and regular expressions.",
-    "bio": "I am a small entrepreneur from Pilsen, living in Prague. Creating websites, programming mostly in Python, PHP, C(++) and some other languages. In free time geocacher and motocycle rider.",
-    "company": "tbedrich.cz",
-    "twitter": "tbedrich",
-    "github": "tomasbedrich"
-  },
-  {
-    "name": "Tomas Babej",
+    "name": "Tomáš Babej",
     "avatar": "default_male.png",
     "title": "Hands on python-cryptography",
-    "abstract": "Have you ever wanted to secure your python application with some cryptography, but got confused by APIs which were too low level? Python-cryptography is a new emerging library which strives to provide \"crypto for humans\" in Python. In this workshop, we will explore how to use it to secure our applications in a reliable manner. No substantial cryptography knowledge required.",
+    "abstract": "Have you ever wanted to secure your python application with some cryptography, but got confused by APIs which were too low level? [Python-cryptography](https://cryptography.io) is a new emerging library which strives to provide \"crypto for humans\" in Python. In this workshop, we will explore how to use it to secure our applications in a reliable manner. No substantial cryptography knowledge required.",
     "bio": "Tomas works a software engineer at Red Hat, focusing on the FreeIPA project. He's interested in security, math and open source.",
     "company": "Red Hat",
     "twitter": "",
     "github": ""
   },
   {
+    "name": "Tomáš Bedřich",
+    "avatar": "tobas_bedrich.png",
+    "title": "Web scraping",
+    "abstract": "We will try out the process of website scraping including HTML and AJAX inspection; usage of [requests](http://docs.python-requests.org), [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) and [lxml](http://lxml.de/) modules and working with raw data using text manipulations and regular expressions.",
+    "bio": "I am a small entrepreneur from Pilsen, living in Prague. Creating websites, programming mostly in Python, PHP, C(++) and some other languages. In free time geocacher and motocycle rider.",
+    "company": "tbedrich.cz",
+    "twitter": "tbedrich",
+    "github": "tomasbedrich"
+  },
+  {
     "name": "Jachym Cepicky",
     "avatar": "jachym_cepicky.jpg",
     "title": "GIS in Python",
-    "abstract": "Python is one of the most popular programming languages, with strong support in nowadays GIS technologies. This workshop will give you overview of some basic libraries and their Python bindings (GDAL, Proj4), more abstract and easier to be used libraries (Rasterio, Fiona, Shapely), and show you, how to access GeoServer and Mapserver from Python script. OGC Standards and how to deal with them, will be demonstrated using OWSLib. Apparently, the topic is so wide, that at the end nobody is expected to master all or at least one of mentioned (or not mentioned) technologies. This workshop is meant as introduction to the world of GeoPython and brief overview.",
+    "abstract": "Python is one of the most popular programming languages, with strong support for today's GIS technologies. This workshop will give you overview of some basic libraries and their Python bindings ([GDAL](http://www.gdal.org/), [Proj4](https://github.com/OSGeo/proj.4/wiki)), more abstract and easier to be used libraries ([Rasterio](https://github.com/mapbox/rasterio), [Fiona](http://toblerity.org/fiona/manual.html), [Shapely](http://toblerity.org/shapely/manual.html)), and show you how to access GeoServer and Mapserver from Python scripts. OGC Standards and how to deal with them will be demonstrated using [OWSLib](http://geopython.github.io/OWSLib/).\n\nOf course, the topic is so wide, that at the end nobody is expected to master the mentioned (or not mentioned) technologies. This workshop is meant as an introduction to the world of GeoPython, and a brief overview.",
+    "requirements": [
+        "USB stick with the [OSGeo Live](http://live.osgeo.org/en/download.html) system",
+        "Alternatively, have the above libraries installed on your computer"
+    ],
     "bio": "Long time user and contributor to open source software for geospatial (GIS).",
     "company": "GISMentors",
     "twitter": "jachymc",
     "github": "jachym"
   },
   {
-    "name": "Nischal HP",
-    "avatar": "nischal_hp.jpg",
-    "title": "Introduction to Deep Learning for Natural Language Processing",
-    "abstract": "OBJECTIVE:\nIn fields like computer vision, speech recognition and natural language processing, deep learning has produced state-of-art results. And they are showing lot of promise in other fields too.\n\nThis workshop will provide an introduction to deep learning for natural language processing. It would cover some of the common deep learning architectures, advantages and concerns, along with some hands-on.\n\nDESCRIPTION:\n1) What is deep learning?\n2) Motivation: Some use cases where it has produced state-of-art results for NLP\n3) Introduction to neural networks; backpropagation algorithm\n4) Supervised learning: Text classification using multi-layer perceptron, recurrent neural networks\n5) Text generation using recurrent neural networks\n6) Impact of GPUs\n\nThe repository for this workshop:\nhttps://github.com/rouseguy/intro2deeplearning/\n\nPlease install the requirements prior to the workshop.\n\nRequirements\nThe attendee should understand the following terms:\n1. Bias and Variance\n2. Train, Test and Validation sets\n3. Cross-validation, grid-search, hyperparameter optimization\n4. Measuring model accuracy (Precision, Recall, F1 score, Area Under Curve)\n5. Supervised and Unsupervised learning\n\nKnowing Python is a plus, but not mandatory.",
-    "bio": "Nischal HP is a Data Engineer at Redmart, India. He has a Masters in Computer Science from BITS, Pilani, India. He lives on music, ardent traveler and a mad soccer fan.\n\nBargava Subramanian is a Senior Data Scientist at Cisco Systems, India. He has a Masters in Statistics from University of Maryland, College Park, USA. He is a data geek and an ardent NBA follower.",
-    "company": "Redmart",
-    "twitter": "nischalhp",
-    "github": "nischalhp"
+    "name": "Robert Smallshire",
+    "avatar": "robert_smallshire.jpg",
+    "title": "Event-Sourced Domain Models in Python",
+    "abstract": "In first part of this workshop we explore how to implement rich domain models using plain-old Python objects which are completely independent of any particular persistence technology such as an object-relational mapper. Domain models often embody the core value of software systems, so implementing models independently of - often ephemeral - technology choices is an important strategy for long-lived, high-value systems.\n\nIn the second part of this workshop we implement an event-sourced architecture for persistence of our domain model, whereby all changes applied to the model are recorded as events in a simple, append-only event-store. From this event store we can reconstitute the model state as it was at any historical time, something that is difficult – if not impossible – to do with most object-relational solutions. Furthermore, we can project the event stream into other representations to support queries which are not conveniently supported by the entities in our model, or which roll-up historical data. Among many other benefits, such projected read-models gives very high scalability on the read-side\n\nThis workshop is aimed at Python developers who want to step beyond the limits of canned framework-based solutions such as Django models, or toolkits such as SQLAlchemy, (which are ultimately about managing the horrors of shared-mutable state). Event-sourced domain models facilitate allow us to combine the best aspects of object-oriented design with robust and simple persistence inspired by functional-programming practice.",
+    "requirements": [
+         "[Python 3.4](https://www.python.org/downloads/) or higher",
+         "[Workshop student materials](https://bitbucket.org/sixty-north/d5-workshop-exercises-student-material) installed from Bitbucket. Further instructions are to be found there.",
+         "You can also look at the [introductory slides](http://sixty-north.com/blog/event-sourced-domain-models-in-python-at-pycon-uk) which were used in the workshop."
+    ],
+    "bio": "Robert Smallshire is a founding director of Sixty North, a software consulting and training business in Norway providing services throughout Europe. Robert has worked in senior architecture and technical management roles for several software companies providing tools in the energy sector for dealing with the masses of information flowing from today’s digital oil fields. He has dealt with understanding, designing, advocating and implementing effective architectures for sophisticated scientific and enterprise software in Python, C++, C# and F# and Javascript. Robert is a regular speaker at conferences, meetups and corporate software events and can be found speaking about topics as diverse as behavioural microeconomics in software development to implementing web services on 8-bit microcontrollers. He is organiser of the Oslo Python group and holds a Ph.D. in a natural science.",
+    "company": "Sixty North",
+    "twitter": "robsmallshire",
+    "github": "rob-smallshire"
   },
   {
     "name": "Martin Korbel",
     "avatar": "default_male.png",
     "title": "Python & OpenStack - easy way to create a remote controller for OpenStack",
-    "abstract": "If you are thinking about integration of OpenStack in your application and you afraid that it is so difficult. Don't worry, it is very easy when we can use novaclient module. We will show, how can you upload your public ssh key, create a new instance, join it to security group, make a snapshot and many others. All these things, we will present in simple example, where we will  create \"own remote controller of  OpenStack\".",
+    "abstract": "If you are thinking about integration of OpenStack in your application and you afraid that it is so difficult. Don't worry, it is very easy when we can use the [novaclient](https://github.com/openstack/python-novaclient) module. We will show how can you upload your public ssh key, create a new instance, join it to a security group, make a snapshot, and do many other tasks. We will present all these things in a simple example, where we will  create our own “remote controller of  OpenStack”.",
     "bio": "Hi,\nmy name is Martin Korbel and I work in the Satellite 5 team as QE. I'm 32 years old and  I live in Letovice (small town about 40 km north from Brno).  Before this job I worked as network administrator at the grammar school. I have studied a bachelor at Palacky university and then I have done a master's degree at Masaryk university. \nIn Satellite team I'm working on many different projects for QE (framework for Selenium, GreenTea - system for automatic daily testing and of course client tools for OpenStack). \nI like book reading, history, scifi and programming.",
     "company": "RedHat",
     "twitter": "",
