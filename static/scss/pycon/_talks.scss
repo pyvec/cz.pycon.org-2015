@@ -198,12 +198,15 @@ $commit-line-size: 10px;
   h3 {
     margin-bottom: 0;
   }
+
   .requirements {
     h4 {
-      font-weight: normal;
       margin-bottom: 0;
+      font-weight: normal;
     }
-    & > ul, & > ul > li > p {
+
+    ul,
+    p {
       margin-top: 0;
       margin-bottom: 0;
     }
@@ -237,7 +240,8 @@ $commit-line-size: 10px;
     }
   }
 
-  .workshop small+& {
-     margin-left: 1ex;
+  .workshop & {
+    margin-right: 0;
+    margin-left: 0.5em;
   }
 }
