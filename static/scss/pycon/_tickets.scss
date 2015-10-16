@@ -1,0 +1,19 @@
+@media (min-width: $screen-sm) {
+  .ticket-overview {
+    @include make-row();
+    padding: 0;
+    list-style: none;
+
+    li {
+      @include make-sm-column(2);
+      text-align: center;
+
+      .number {
+        display: block;
+        color: $brand-secondary;
+        font-weight: bold;
+        font-size: 56px;
+      }
+    }
+  }
+}
