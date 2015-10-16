@@ -1,0 +1,7 @@
+.twitter-list {
+  @include make-row();
+}
+
+.twitter-content {
+  @include make-sm-column(6);
+}
