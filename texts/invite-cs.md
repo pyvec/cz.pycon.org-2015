@@ -1,13 +1,13 @@
-# První česká Python konference představuje speakery, bude se konat v listopadu
+# The first Czech Python conference introduces the speakers. It will be held in November
 
-[PyCon CZ](http://cz.pycon.org/), první konference v ČR zaměřená čistě na **programovací jazyk [Python](http://python.cz/)**, se bude konat v **Brně** na [VUT FIT](http://www.fit.vutbr.cz/) a v [Impact Hubu](http://www.hubbrno.cz/), **14. až 15. listopadu**. Akce je organizována s podporou neziskovky [Pyvec](http://pyvec.org/), která se snaží již několik let v ČR propagovat Python a kultivovat jeho komunitu.
+[PyCon CZ](http://cz.pycon.org/), the first conference in the Czech Republic focused on the **programming language [Python](http://python.cz/)**, will take place in **Brno** at [VUT FIT](http://www.fit.vutbr.cz/) and in [Impact Hub](http://www.hubbrno.cz/), on **Nov 14th - 15th**. The event is supported by NGO [Pyvec](http://pyvec.org/) which has been promoting Python and cultivating its Czech community for several years now.
 
 ![PyCon CZ 2015](https://raw.githubusercontent.com/pyvec/cz.pycon.org-2015/master/static/files/static/images/pycon-cz-logo.png)
 
-První den je věnován přednáškám. Na programu je **14 příspěvků od českých i zahraničních speakerů**. Konferenci budou otevírat [Amber Brown](https://twitter.com/hawkieowl) (Twisted) a [Russell-Keith Maggee](https://twitter.com/freakboy3742) (Django), následovat budou příspěvky z nejrůznějších prostředí, kde lze Python použít (genové inženýrství, webové frameworky, výzkum částic v CERNu, DevOps, embedded systémy, bankovnictví, ...). [Celý program soboty.](https://cz.pycon.org/2015/talks/)
+The first day is dedicated to talks. There are **14 talks from Czech and foreign speakers**. [Amber Brown](https://twitter.com/hawkieowl) (Twisted) a [Russell-Keith Maggee](https://twitter.com/freakboy3742) (Django) will open the conference, followed by talks from various environments which can use Python (genetic engineering, web frameworks, particle physics research in CERN, DevOps, embedded systems, banking, ...). [Saturday programme.](https://cz.pycon.org/2015/talks/)
 
-Konferenční neděle pak bude o **workshopech a sprintech**, kde může návštěvník přímo přiložit ruku k dílu. Těšit se lze na bezpečnost, kryptografii, cloud, scrapování webu, geografii, a další. [Program neděle.](https://cz.pycon.org/2015/workshops/)
+Sunday programme will be about **workshops and sprints** where the visitors can pitch in. Look forward to security, cryptography, cloud, web scraping, geography, and other topics. [Sunday programme.](https://cz.pycon.org/2015/workshops/)
 
-Před samotnou konferencí se odehrává další vydání **workshopu pro začátečnice v programování** - [Django Girls](http://djangogirls.org/brno/), kam je stále ještě možné [se přihlásit](https://djangogirls.org/brno/apply/).
+Before the conference, another edition of a **workshop for female beginners in programming** - [Django Girls](http://djangogirls.org/brno/) will be organised. You can still [apply](https://djangogirls.org/brno/apply/).
 
-[Lístky lze koupit od **75 EUR (2000 Kč)**](https://cz.pycon.org/2015/about/tickets.html), pro studenty je zlevněná varianta **45 EUR (1200 Kč)**.
+[Tickets are available at **EUR 75 (CZK 2000)**](https://cz.pycon.org/2015/about/tickets.html), with student discount at **EUR 45 (CZK 1200)**.
