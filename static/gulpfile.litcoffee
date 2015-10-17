@@ -13,7 +13,7 @@ cz.pycon.org 2015 gulp file
 
 Configuration:
 
-    Debug = true
+    Debug = false
     DisableScssLint = false  # scss linter requires ruby gem
 
 Build destinations -- whole website is static build from jade templates
