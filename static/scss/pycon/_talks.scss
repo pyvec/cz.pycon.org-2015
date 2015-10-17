@@ -18,7 +18,7 @@ $commit-line-size: 10px;
 }
 
 .branch,
-.branch-description
+.branch-description,
 .commit,
 .commit-holder,
 .title br {
@@ -28,32 +28,29 @@ $commit-line-size: 10px;
 .event-full {
   @include make-row();
 
-  &.general {
-    .title {
-      // FIXME: HACK...
-      padding-top: 10px;
-    }
-  }
-
   .title {
     @include make-sm-column(5);
+  }
 
-    h1,
-    h2 {
-      margin: 0;
-    }
-
-    @media (min-width: $screen-sm) {
-      text-align: right;
-
-      h1,
-      h2 {
-        margin: 20px 0;
+  @media (min-width: $screen-sm) {
+    &.general {
+      .title {
+        // FIXME: HACK...
+        padding-top: 10px;
       }
     }
 
-    &.russell {
-      margin-bottom: 0;
+    .title {
+      text-align: right;
+
+      &.russell {
+        margin-bottom: 0;
+      }
+    }
+
+    h1,
+    h2 {
+      margin-top: 0.7em;
     }
   }
 
