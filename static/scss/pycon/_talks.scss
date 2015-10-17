@@ -18,6 +18,7 @@ $commit-line-size: 10px;
 }
 
 .branch,
+.branch-description
 .commit,
 .commit-holder,
 .title br {
@@ -185,6 +186,36 @@ $commit-line-size: 10px;
     content: " ";
     background-color: $commit-line;
     transform: translateX((-$avatar-size - $commit-line-size)/2);
+  }
+}
+
+.branch-description {
+  @include make-row();
+  vertical-align: bottom;
+
+  .branch-name {
+    @include make-sm-column(4);
+
+    height: 100px;
+    font-size: 24px;
+  }
+
+  .branch {
+    @include make-sm-column(4);
+  }
+
+  .master,
+  .practical {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .master {
+    right: $grid-gutter-width / 2;
+  }
+
+  .practical {
+    left: 4px;
   }
 }
 

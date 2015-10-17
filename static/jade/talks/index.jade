@@ -70,11 +70,16 @@ block viewport
           alt='Photo of Russel Keith-Magee'
         )
     
-    .branch
-      img(
-        src="/2015/static/images/ui/branch-in.svg",
-        onerror="this.onerror = null; this.src = '/2015/static/images/ui/branch-in.png'"
-      )
+    .branch-description
+      .branch-name
+        .master Master branch
+      .branch
+        img(
+          src="/2015/static/images/ui/branch-in.svg",
+          onerror="this.onerror = null; this.src = '/2015/static/images/ui/branch-in.png'"
+        )
+      .branch-name
+        .practical Practical branch
     
     //-  Iterate over speakers object (loaded in gulpfile from data/speakers.json)
     //-  and render mixin talk() (see above)
