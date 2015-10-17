@@ -6,16 +6,16 @@ header#top
     ul.nav.navbar-nav
       li.about
         a(href=pageUrl("#")) About
-      li.getting-here
+      li.getting-here(class=activePage == "getting-here" ? "active" : "")
         a(href=pageUrl("getting-here/")) Getting here
       li.tickets
         a(href=pageUrl("about/tickets.html"))
           | Tickets
-      li.talks
+      li.talks(class=activePage == "talks" ? "active" : "")
         a(href=pageUrl("talks/"))
           | Talks
           span.date Saturday 14th
-      li.sprints
+      li.sprints(class=activePage == "workshops" ? "active" : "")
         a(href=pageUrl("workshops/"))
           | Sprints &amp; workshops
           span.date Sunday 15th

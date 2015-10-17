@@ -161,6 +161,8 @@ $brand-size: 45px;
         transition: width .2s ease, background-color .2s ease;
       }
 
+      &.active:after,
+      &:active:after,
       &:hover:after {
         width: 100%;
         background-color: $brand-secondary;
