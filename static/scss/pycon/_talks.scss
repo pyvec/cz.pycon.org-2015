@@ -14,6 +14,10 @@ $commit-line-size: 10px;
     h1 {
       text-align: center;
     }
+
+    h3 {
+      font-size: 16px;
+    }
   }
 }
 
@@ -30,6 +34,17 @@ $commit-line-size: 10px;
 
   .title {
     @include make-sm-column(5);
+  }
+
+  small {
+    position: absolute;
+    display: block;
+    margin-top: -5px;
+    color: $brand-silent;
+
+    @media (min-width: $screen-sm) {
+      right: $grid-gutter-width / 2;
+    }
   }
 
   @media (min-width: $screen-sm) {
@@ -55,7 +70,8 @@ $commit-line-size: 10px;
     }
 
     h1,
-    h2 {
+    h2,
+    h3 {
       margin-top: 0.7em;
     }
   }
@@ -76,6 +92,15 @@ $commit-line-size: 10px;
 
 .talk-block {
   @include make-row();
+
+  h3 {
+    margin-bottom: 0.2em;
+
+    @media (min-width: $screen-sm) {
+      margin-top: -0;
+      margin-bottom: 0;
+    }
+  }
 
   .event {
     @include make-sm-column(6);
@@ -139,6 +164,31 @@ $commit-line-size: 10px;
   }
 }
 
+.misc {
+  color: darken($brand-silent, 10%);
+
+  small {
+    margin-right: 0.7em;
+  }
+
+  .track {
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    text-align: right;
+
+    .practical & {
+      text-align: left;
+    }
+  }
+
+  .social:last-child {
+    margin-right: 0;
+  }
+}
 
 .avatar {
   width: $avatar-size;
@@ -189,10 +239,6 @@ $commit-line-size: 10px;
     content: " ";
     background-color: $commit-line;
     transform: translateX((-$avatar-size - $commit-line-size)/2);
-
-    .master & {
-      transform: translateX((-$avatar-size - $commit-line-size)/2 + 1);
-    }
   }
 }
 
@@ -209,6 +255,7 @@ $commit-line-size: 10px;
 
   .branch {
     @include make-sm-column(4);
+    left: -1px;
   }
 
   .master,
@@ -258,7 +305,6 @@ $commit-line-size: 10px;
 
 .social {
   color: $brand-silent;
-  line-height: 2;
 
   &.github:hover {
     color: $github-color;
@@ -271,6 +317,10 @@ $commit-line-size: 10px;
   .master & {
     margin-right: 10px;
     margin-left: 0;
+  }
+
+  .event-full & {
+    line-height: 2;
   }
 
   .workshop &,

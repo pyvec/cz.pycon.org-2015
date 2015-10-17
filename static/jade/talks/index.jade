@@ -3,15 +3,22 @@ extends ../base
 //- render single speaker
 mixin talk(speaker)
   .talk-description
-    .speaker= speaker.name
-    
+    h3.speaker
+      = speaker.name
+
+    .misc
+      small=speaker.time
+      small.track
+        = speaker.track
+        |  branch
+      a.social.github(href="https://github.com/" + speaker.github)
+        .fa.fa-github
+      a.social.twitter(href="https://twitter.com/" + speaker.twitter)
+        .fa.fa-twitter
+
     p= speaker.title
     
-    a.social.github(href="https://github.com/" + speaker.github)
-      .fa.fa-github
-    a.social.twitter(href="https://twitter.com/" + speaker.twitter)
-      .fa.fa-twitter
-
+    
   .commit-holder
     .commit
       img.avatar(src=avatar(speaker.avatar), alt='Photo of ' + speaker.name)
@@ -32,7 +39,7 @@ block viewport
     h1 Talks &amp; Keynotes
     
     .event-full.general
-      h2.title Registration opens
+      h2.title Registration #[small 8:00]
       .talk-description
         p.
           Grab your lanyard, swag bag and cofee. #[br]
@@ -42,7 +49,7 @@ block viewport
         .dot
 
     .event-full.general
-      h2.title The grand opening
+      h2.title The grand opening #[small 8:55]
       .talk-description
         p.
           Welcome to the first #[strong PyCon CZ]. #[br]
@@ -52,7 +59,7 @@ block viewport
         .dot
     
     .event-full
-      h2.title Keynote #1 #[br] Twisted
+      h2.title Keynote #1 #[br] Twisted #[small 9:00]
       .talk-description
         .speaker Amber Brown
         p.
@@ -70,7 +77,7 @@ block viewport
         )
 
     .event-full
-      h2.title.russell Keynote #2 #[br] The secret sauce behind #[br] Open Source
+      h2.title.russell Keynote #2 #[br] The secret sauce behind #[br] Open Source #[small 10:00]
       .talk-description
         .speaker Russell-Keith Maggee
         p.
@@ -118,7 +125,7 @@ block viewport
     
     .event-full.general
       .title
-        h2 Lightning talks
+        h2 Lightning talks #[small 19:00]
       .talk-description
         p.
           The is only one rule of lighning talks: #[br]
@@ -129,7 +136,7 @@ block viewport
     
     .event-full.general
       .title
-        h2 Thank you
+        h2 Thank you #[small 18:30]
       .talk-description
         p.
           The first day of PyCon CZ is over.
