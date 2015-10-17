@@ -38,6 +38,12 @@ $commit-line-size: 10px;
         // FIXME: HACK...
         padding-top: 10px;
       }
+
+      .talk-description {
+        @media (min-width: $screen-sm) {
+          padding-top: 10px;
+        }
+      }
     }
 
     .title {
@@ -183,6 +189,10 @@ $commit-line-size: 10px;
     content: " ";
     background-color: $commit-line;
     transform: translateX((-$avatar-size - $commit-line-size)/2);
+
+    .master & {
+      transform: translateX((-$avatar-size - $commit-line-size)/2 + 1);
+    }
   }
 }
 
@@ -220,6 +230,11 @@ $commit-line-size: 10px;
   height: 103px;
   margin-bottom: -2px;
   text-align: center;
+
+  &.in img {
+    position: relative;
+    left: 1px;
+  }
 }
 
 .workshop {

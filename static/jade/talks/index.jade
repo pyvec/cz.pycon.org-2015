@@ -15,6 +15,13 @@ mixin talk(speaker)
   .commit-holder
     .commit
       img.avatar(src=avatar(speaker.avatar), alt='Photo of ' + speaker.name)
+    
+mixin branch-out()
+  .branch.out
+    img(
+      src="/2015/static/images/ui/branch-out.svg",
+      onerror="this.onerror = null; this.src = '/2015/static/images/ui/branch-out.png'"
+    )
 
 block vars
   - var pageClass = "page-talks"
@@ -38,8 +45,8 @@ block viewport
       h2.title The grand opening
       .talk-description
         p.
-          Welcome to the first PyCon CZ. #[br]
-          Very short introduction.
+          Welcome to the first #[strong PyCon CZ]. #[br]
+          Applause, introduction, jokes and meanwhile we lock the main doors…
       
       .commit.empty
         .dot
@@ -83,13 +90,19 @@ block viewport
     .branch-description
       .branch-name
         .master Master branch
-      .branch
+      .branch.in
         img(
           src="/2015/static/images/ui/branch-in.svg",
           onerror="this.onerror = null; this.src = '/2015/static/images/ui/branch-in.png'"
         )
       .branch-name
         .practical Practical branch
+    
+    h2.visible-xs-block Talks
+    p.visible-xs-block.
+      Two parallel branches of talks are going to be held in two rooms: D105 and
+      D0206. #[strong Master branch] in D105 will be about general topics,
+      while #[strong Practical branch] in D0206 will present more specific ones.
     
     //-  Iterate over speakers object (loaded in gulpfile from data/speakers.json)
     //-  and render mixin talk() (see above)
@@ -101,11 +114,7 @@ block viewport
         .event.practical
           +talk(speaker[1])
 
-    .branch
-      img(
-        src="/2015/static/images/ui/branch-out.svg",
-        onerror="this.onerror = null; this.src = '/2015/static/images/ui/branch-out.png'"
-      )
+    +branch-out()
     
     .event-full.general
       .title
