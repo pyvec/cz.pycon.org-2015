@@ -11,3 +11,10 @@ node_modules/
 # Cache
 static/.awspublish-*
 static/rev-manifest.json
+
+# API
+api/venv
+api/**/.cache
+api/config.py
+__pycache__/
+*.py[cod]
