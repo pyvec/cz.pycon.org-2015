@@ -20,6 +20,16 @@
     "github": "tomasbedrich"
   },
   {
+    "name": "Martin Korbel",
+    "avatar": "default_male.png",
+    "title": "Python & OpenStack - easy way to create a remote controller for OpenStack",
+    "abstract": "If you are thinking about integration of OpenStack in your application and you afraid that it is so difficult. Don't worry, it is very easy when we can use the [novaclient](https://github.com/openstack/python-novaclient) module. We will show how can you upload your public ssh key, create a new instance, join it to a security group, make a snapshot, and do many other tasks. We will present all these things in a simple example, where we will  create our own “remote controller of  OpenStack”.",
+    "bio": "Hi,\nmy name is Martin Korbel and I work in the Satellite 5 team as QE. I'm 32 years old and  I live in Letovice (small town about 40 km north from Brno).  Before this job I worked as network administrator at the grammar school. I have studied a bachelor at Palacky university and then I have done a master's degree at Masaryk university. \nIn Satellite team I'm working on many different projects for QE (framework for Selenium, GreenTea - system for automatic daily testing and of course client tools for OpenStack). \nI like book reading, history, scifi and programming.",
+    "company": "RedHat",
+    "twitter": "",
+    "github": ""
+  },
+  {
     "name": "Jachym Cepicky",
     "avatar": "jachym_cepicky.jpg",
     "title": "GIS in Python",
@@ -49,13 +59,18 @@
     "github": "rob-smallshire"
   },
   {
-    "name": "Martin Korbel",
-    "avatar": "default_male.png",
-    "title": "Python & OpenStack - easy way to create a remote controller for OpenStack",
-    "abstract": "If you are thinking about integration of OpenStack in your application and you afraid that it is so difficult. Don't worry, it is very easy when we can use the [novaclient](https://github.com/openstack/python-novaclient) module. We will show how can you upload your public ssh key, create a new instance, join it to a security group, make a snapshot, and do many other tasks. We will present all these things in a simple example, where we will  create our own “remote controller of  OpenStack”.",
-    "bio": "Hi,\nmy name is Martin Korbel and I work in the Satellite 5 team as QE. I'm 32 years old and  I live in Letovice (small town about 40 km north from Brno).  Before this job I worked as network administrator at the grammar school. I have studied a bachelor at Palacky university and then I have done a master's degree at Masaryk university. \nIn Satellite team I'm working on many different projects for QE (framework for Selenium, GreenTea - system for automatic daily testing and of course client tools for OpenStack). \nI like book reading, history, scifi and programming.",
-    "company": "RedHat",
-    "twitter": "",
-    "github": ""
+    "name": "Nischal HP",
+    "avatar": "nischal_hp.jpg",
+    "title": "Introduction to Deep Learning for Natural Language Processing",
+    "abstract": "In fields like computer vision, speech recognition and natural language processing, deep learning has produced state-of-art results. And they are showing lot of promise in other fields too.\nThis workshop will provide an introduction to deep learning for natural language processing (NLP). It will cover some of the common deep learning architectures, describe advantages and concerns, and provide some hands-on experience.\n\nContent\n1. What is deep learning?\n2. Motivation: Some use cases where it has produced state-of-art results for NLP\n3. Introduction to neural networks; backpropagation algorithm\n4. Supervised learning: Text classification using multi-layer perceptron, recurrent neural networks\n5. Text generation using recurrent neural networks\n6. Impact of GPUs",
+    "bio": "Nischal HP is a Data Engineer at Redmart, India. He has a Masters in Computer Science from BITS, Pilani, India. He lives on music, ardent traveler and a mad soccer fan.\n\nBargava Subramanian is a Senior Data Scientist at Cisco Systems, India. He has a Masters in Statistics from University of Maryland, College Park, USA. He is a data geek and an ardent NBA follower.",
+    "requirements": [
+         "Please install requirements and data from [the Github repository](https://github.com/rouseguy/intro2deeplearning/)",
+         "Please read up on the following terms:\n* [Bias](https://en.wikipedia.org/wiki/Bias_%28statistics%29) and [Variance](https://en.wikipedia.org/wiki/Variance)\n* [Train, Validation, and Test sets](https://en.wikipedia.org/wiki/Test_set)\n* [Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_%28statistics%29), [grid-search, hyperparameter optimization](https://en.wikipedia.org/wiki/Hyperparameter_optimization)\n* Measuring model accuracy ([Precision, Recall](https://en.wikipedia.org/wiki/Precision_and_recall), [F1 score](https://en.wikipedia.org/wiki/F1_score), [Area Under Curve](https://en.wikipedia.org/wiki/Area_under_the_curve))\n* [Supervised](https://en.wikipedia.org/wiki/Supervised_learning) and [Unsupervised learning](https://en.wikipedia.org/wiki/Unsupervised_learning)",
+         "Knowing Python is a plus, but not mandatory."
+    ],
+    "company": "Redmart",
+    "twitter": "nischalhp",
+    "github": "nischalhp"
   }
 ]
