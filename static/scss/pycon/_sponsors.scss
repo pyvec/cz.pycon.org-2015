@@ -62,12 +62,6 @@
     z-index: -1;
   }
 
-  .sponsor-placeholder {
-    position: relative;
-    top: 30px;
-    font-size: 1.2em;
-  }
-
   .sponsor-redhat {
     position: relative;
     top: -30px;
@@ -76,5 +70,15 @@
     img {
       width: 90%;
     }
+  }
+}
+
+.sponsor-placeholder {
+  position: relative;
+  top: 30px;
+  font-size: 1.2em;
+
+  &.alone {
+    font-size: 2em;
   }
 }
