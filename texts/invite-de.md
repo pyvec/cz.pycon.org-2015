@@ -1,3 +1,5 @@
+#Die erste Python Konferenz stellt Speakers vor, sie wird im November stattfinden
+
 [PyCon CZ](http://cz.pycon.org/), die erste Konferenz in der Tschechische Republik, gerichtet reinlich an die **Programmiersprache [Python](http://python.cz/)**, wird in **Brno** an [VUT FIT](http://www.fit.vutbr.cz/) und in [Impact Hub](http://www.hubbrno.cz/) **von 14. bis 15. November** stattfinden. Die Veranstaltung wurde mit Hilfe der ungewinnlichen Organisation [Pyvec](http://pyvec.org/) organisiert, die schon ein paar Jahren in Tschechien um die Propagierung Pythons und Kultivierung von seiner Gesellschaft bemüht.
 
 ![PyCon CZ 2015](https://raw.githubusercontent.com/pyvec/cz.pycon.org-2015/master/static/files/static/images/pycon-cz-logo.png)
