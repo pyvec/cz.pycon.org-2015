@@ -4,7 +4,7 @@
  
  ![PyCon CZ 2015](https://raw.githubusercontent.com/pyvec/cz.pycon.org-2015/master/static/files/static/images/pycon-cz-logo.png)
  
-The first day is dedicated to talks. There are **14 talks from Czech and foreign speakers**. [Amber Brown](https://twitter.com/hawkieowl) (Twisted) a [Russell-Keith Maggee](https://twitter.com/freakboy3742) (Django) will open the conference, followed by talks from various environments which can use Python (genetic engineering, web frameworks, particle physics research in CERN, DevOps, embedded systems, banking, ...). [Saturday programme.](https://cz.pycon.org/2015/talks/)
+The first day is dedicated to talks. There are **14 talks from Czech and foreign speakers**. [Amber Brown](https://twitter.com/hawkieowl) (Twisted) a [Russell-Keith Magee](https://twitter.com/freakboy3742) (Django) will open the conference, followed by talks from various environments which can use Python (genetic engineering, web frameworks, particle physics research in CERN, DevOps, embedded systems, banking, ...). [Saturday programme.](https://cz.pycon.org/2015/talks/)
  
 Sunday programme will be about **workshops and sprints** where the visitors can pitch in. Look forward to security, cryptography, cloud, web scraping, geography, and other topics. [Sunday programme.](https://cz.pycon.org/2015/workshops/)
  

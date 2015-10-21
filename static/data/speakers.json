@@ -141,7 +141,7 @@
       "name": "Věroš Kaplan",
       "track": "Practical",
       "title": "So you have an Python app and now what?",
-      "abstract": "So you have prepared a new shiny Python/Django application and you want to deploy it to the real world.\n\nTalk about miscllaneous aspects of Python applications from the Ops view. This topic includes reproducible deployment and upgrading, together with related services like Celery, etc. Don't forget relation with config-management tools like Puppet and Ansible, backup operations and possibly others not-so-fancy-but-needed ops tools.",
+      "abstract": "So you have prepared a new shiny Python/Django application and you want to deploy it to the real world.\n\nTalk about miscellaneous aspects of Python applications from the Ops view. This topic includes reproducible deployment and upgrading, together with related services like Celery, etc. Don't forget relation with config-management tools like Puppet and Ansible, backup operations and possibly others not-so-fancy-but-needed ops tools.",
       "bio": "Věroš used to be Python developer but now he works mostly as operations guy. He believes in DevOps and OpenSource movements.\n\nHe works as open-source consultant for Inuits (whatever it means) in Brno.",
       "company": "Inuits",
       "twitter": "verosk",
