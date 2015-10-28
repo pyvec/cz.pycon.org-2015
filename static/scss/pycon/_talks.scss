@@ -64,6 +64,7 @@ $commit-line-size: 10px;
     .title {
       text-align: right;
 
+      &.amber,
       &.russell {
         margin-bottom: 0;
       }
