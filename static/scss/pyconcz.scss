@@ -48,6 +48,11 @@ body {
 
 a {
   color: $brand-primary;
+
+  sup {
+    display:inline-block;
+    text-decoration: none;
+  }
 }
 
 .canvas {
