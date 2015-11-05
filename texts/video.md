@@ -1,5 +1,5 @@
 Breaking news in the world of technology
 
-Engineers from the european eastern block, namely from Czech Republic, have been working in the last couple of years on serious research about Python programming language. Their breakthrough discoveries and successes are going to present at the first PyCon CZ.
+For several tough years, engineers from the Eastern European bloc, namely from the Czech Republic, have been working on serious research about Python programming language. Their breakthrough discoveries and successes are going to be presented at the first Python conference in the Czech Rpublic: PyCon CZ.
 
-The importance of this event is taken seriously and the announcement spread quickly through scientific and engineering field. People from all around the world travel to the exotic city of Brno in the heart of Europe to learn, share knowledge and celebrate scientific progress of all mankind.
+The importance of this event is taken seriously and the good news is spreading quickly through scientific and engineering fields. People from all around the world travel to the exotic city of Brno in the heart of Europe to learn, share knowledge, and to celebrate scientific progress of all mankind.
