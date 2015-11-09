@@ -1,5 +1,6 @@
 [
   {
+    "time": "10:00 – 13:00",
     "name": "Tomáš Babej",
     "avatar": "default_male.png",
     "title": "Hands on python-cryptography",
@@ -10,6 +11,7 @@
     "github": ""
   },
   {
+    "time": "10:00 – 13:00",
     "name": "Tomáš Bedřich",
     "avatar": "tobas_bedrich.png",
     "title": "Web scraping",
@@ -20,6 +22,7 @@
     "github": "tomasbedrich"
   },
   {
+    "time": "10:00 – 13:00",
     "name": "Martin Korbel",
     "avatar": "default_male.png",
     "title": "Python & OpenStack - easy way to create a remote controller for OpenStack",
@@ -30,6 +33,7 @@
     "github": ""
   },
   {
+    "time": "14:00 – 17:00",
     "name": "Jachym Cepicky",
     "avatar": "jachym_cepicky.jpg",
     "title": "GIS in Python",
@@ -44,6 +48,7 @@
     "github": "jachym"
   },
   {
+    "time": "14:00 – 17:00",
     "name": "Robert Smallshire",
     "avatar": "robert_smallshire.jpg",
     "title": "Event-Sourced Domain Models in Python",
@@ -59,6 +64,7 @@
     "github": "rob-smallshire"
   },
   {
+    "time": "14:00 – 17:00",
     "name": "Nischal HP",
     "avatar": "nischal_hp.jpg",
     "title": "Introduction to Deep Learning for Natural Language Processing",

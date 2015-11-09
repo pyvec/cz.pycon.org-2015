@@ -181,7 +181,7 @@ $commit-line-size: 10px;
   @media (min-width: $screen-sm) {
     text-align: right;
 
-    .practical & {
+    .practical &, .page-workshops & {
       text-align: left;
     }
   }
@@ -302,6 +302,11 @@ $commit-line-size: 10px;
       margin-bottom: 0;
     }
   }
+}
+
+small.workshop-time {
+  color: darken($brand-silent, 10%);
+  display: block;
 }
 
 .social {

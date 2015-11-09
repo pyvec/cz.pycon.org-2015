@@ -10,7 +10,10 @@ mixin talk(workshop)
       small 
         | by 
         = workshop.name
-    
+
+    .misc
+      small
+        = workshop.time
       if workshop.github
         a.social.github(href="https://github.com/" + workshop.github)
           .fa.fa-github
@@ -35,7 +38,10 @@ block viewport
   .container
     h1 Sprints &amp; Workshops
     
-    h2 Breakfast
+    h2
+      | Breakfast
+      small.workshop-time.
+        8:00
     p.
       Good morning, everyone!
       Let's start with something pleasant. Join us for delicious breakfast before the coding madness begins.
@@ -55,7 +61,10 @@ block viewport
     each workshop, index in workshops
       +talk(workshop)
       
-    h2 Sprints
+    h2
+     | Sprints
+     small.workshop-time.
+       8:30 – 18:00
     p.
       Along workshops listed above, there's going to be an ongoing hacking &amp;
       coding atmosphere. If you don't have your project you want to work on
@@ -73,7 +82,10 @@ block viewport
     p.
       Additional sprints will be announced after lightning talks on Saturday.
 
-    h2 Closing
+    h2
+      | Closing
+      small.workshop-time.
+        18:00
     p.
       It was a looong weekend and it's time to go home. #[br]
       The first PyCon CZ is over. See you next year!
