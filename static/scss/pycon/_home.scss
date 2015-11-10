@@ -124,6 +124,13 @@
   .date {
     color: $brand-primary;
   }
+  .venue {
+    margin-top: 1em;
+    font-size: 16px;
+    i {
+      padding: 0 .25em;
+    }
+  }
 }
 
 // Registration
