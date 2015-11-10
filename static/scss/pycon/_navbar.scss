@@ -133,7 +133,7 @@ $brand-size: 45px;
     top: 0;
 
     // Custom offset for "visual" centering of menu
-    left: -25px;  // uncomment when getting started section is added to menu
+    left: 0;
 
     padding: 0;
     // asymetric padding to make navbar items in visual middle
@@ -173,18 +173,18 @@ $brand-size: 45px;
     .tickets {
       margin-right: $brand-placeholder;
 
-      a {
-        padding: 8px 20px;
-        border: 1px solid $brand-primary;
-        border-radius: 8px;
-        color: $text-inverted;
-        background-color: $brand-primary;
-
-        &:hover,
-        &:active {
-          background-color: lighten($brand-primary, 10%);
-        }
-      }
+      // a {
+        // padding: 8px 20px;
+      //   border: 1px solid $brand-primary;
+      //   border-radius: 8px;
+      //   color: $text-inverted;
+      //   background-color: $brand-primary;
+      //
+      //   &:hover,
+      //   &:active {
+      //     background-color: lighten($brand-primary, 10%);
+      //   }
+      // }
     }
 
     .talks {
