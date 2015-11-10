@@ -80,3 +80,18 @@
     font-size: 2em;
   }
 }
+
+@media (max-width: $screen-sm) {
+  .sponsors {
+    h3 {
+      margin-bottom: 0 !important;
+    }
+    .sponsor {
+      margin-top: 15px;
+      padding: 0 30px;
+      .sponsor-redhat {
+        top: auto !important;
+      }
+    }
+  }
+}
