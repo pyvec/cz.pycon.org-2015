@@ -27,6 +27,9 @@
     "avatar": "default_male.png",
     "title": "Python & OpenStack - easy way to create a remote controller for OpenStack",
     "abstract": "If you are thinking about integration of OpenStack in your application and you afraid that it is so difficult. Don't worry, it is very easy when we can use the [novaclient](https://github.com/openstack/python-novaclient) module. We will show how can you upload your public ssh key, create a new instance, join it to a security group, make a snapshot, and do many other tasks. We will present all these things in a simple example, where we will  create our own “remote controller of  OpenStack”.",
+    "requirements": [
+        "A Linux-based operating system is preferred."
+    ],
     "bio": "Hi,\nmy name is Martin Korbel and I work in the Satellite 5 team as QE. I'm 32 years old and  I live in Letovice (small town about 40 km north from Brno).  Before this job I worked as network administrator at the grammar school. I have studied a bachelor at Palacky university and then I have done a master's degree at Masaryk university. \nIn Satellite team I'm working on many different projects for QE (framework for Selenium, GreenTea - system for automatic daily testing and of course client tools for OpenStack). \nI like book reading, history, scifi and programming.",
     "company": "RedHat",
     "twitter": "",
@@ -40,7 +43,7 @@
     "abstract": "Python is one of the most popular programming languages, with strong support for today's GIS technologies. This workshop will give you overview of some basic libraries and their Python bindings ([GDAL](http://www.gdal.org/), [Proj4](https://github.com/OSGeo/proj.4/wiki)), more abstract and easier to be used libraries ([Rasterio](https://github.com/mapbox/rasterio), [Fiona](http://toblerity.org/fiona/manual.html), [Shapely](http://toblerity.org/shapely/manual.html)), and show you how to access GeoServer and Mapserver from Python scripts. OGC Standards and how to deal with them will be demonstrated using [OWSLib](http://geopython.github.io/OWSLib/).\n\nOf course, the topic is so wide, that at the end nobody is expected to master the mentioned (or not mentioned) technologies. This workshop is meant as an introduction to the world of GeoPython, and a brief overview.",
     "requirements": [
         "USB stick with the [OSGeo Live](http://live.osgeo.org/en/download.html) system",
-        "Alternatively, have recent versions of these libraries installed on your computer:\n* fiona\n* shapely\n* GDAL\n* rasterio\n* owslib\n* mapscript\n* pyproj"
+        "Alternatively, have recent versions of these libraries installed on your computer:\n* fiona\n* shapely\n* GDAL\n* rasterio\n* owslib\n* mapscript\n* pyproj\n* ipython\n* notebook"
     ],
     "bio": "Long time user and contributor to open source software for geospatial (GIS).",
     "company": "GISMentors",
