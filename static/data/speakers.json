@@ -60,7 +60,7 @@
       "twitter": "jesslynnrose",
       "github": "jessrose",
       "avatar": "jessiva_rose.jpg",
-      "time": "14:00"
+      "time": "14:20"
     },
     {
       "name": "Elyézer Rezende",
@@ -72,7 +72,7 @@
       "twitter": "elyezer",
       "github": "elyezer",
       "avatar": "elyezer_rezende.jpg",
-      "time": "14:00"
+      "time": "14:20"
     }
   ], [
     {
@@ -85,7 +85,7 @@
       "twitter": "deshipu",
       "github": "deshipu",
       "avatar": "radomir_dopieralski.jpg",
-      "time": "14:50"
+      "time": "15:10"
     },
     {
       "name": "Valentina Mukhamedzhanova",
@@ -97,14 +97,14 @@
       "twitter": "umirra",
       "github": "megaumi",
       "avatar": "valentina_mukhamedzhanova.png",
-      "time": "14:50"
+      "time": "15:10"
     }
   ], [
     {
       "name": "Jarka Schovancová",
       "track": "Master",
       "title": "Python for particle hunters",
-      "abstract": "",
+      "abstract": "Have you ever wondered how we can use Python to study phenomena on a sub-atomic scale in the coolest place in the Universe known to the mankind? Do you know you can contribute to furthering research in the fundamental physics? Take part!",
       "bio": "",
       "company": "CERN",
       "twitter": "jschovan",
