@@ -3,8 +3,6 @@ extends ../base
 //- render single speaker
 mixin talk(workshop)
   .workshop
-    //- img.avatar(src=avatar(workshop.avatar), alt='Photo of ' + workshop.name)
-
     h3
       = workshop.title
       small 
@@ -22,13 +20,6 @@ mixin talk(workshop)
           .fa.fa-twitter
           
     != md(workshop.abstract)
-    
-    if workshop.requirements
-      .requirements
-        h4 Requirements
-        ul
-          each requirement, index in workshop.requirements
-            li!= md(requirement)
 
 block vars
   - var pageClass = "page-workshops"
@@ -36,70 +27,11 @@ block vars
 
 block viewport
   .container
-    h1 Sprints &amp; Workshops
+    h1 Our speakers
     
-    h2
-      | Breakfast
-      small.workshop-time.
-        8:00
-    p.
-      Good morning, everyone!
-      Let's start with something pleasant. Join us for delicious breakfast before the coding madness begins.
-    
-    h2 Workshops
-    p.
-      There will be six workshops in 3 rooms. One block of
-      workshops before lunch and one after it.
-      
-    p.
-      Please bring a laptop with a working Python interpreter and
-      #[a(href="https://pip.readthedocs.org") pip].
-      Some workshops have additional requirements.
-
     //-  Iterate over workshops object (loaded in gulpfile from data/workshops.json)
     //-  and render mixin talk() (see above)
-    each workshop, index in workshops
-      +talk(workshop)
-      
-    h2
-     | Sprints
-     small.workshop-time.
-       8:30 – 18:00
-    p.
-      Along workshops listed above, there's going to be an ongoing hacking &amp;
-      coding atmosphere. If you don't have your project you want to work on
-      with other developers, you can join some of our pre-announced sprints:
-      
-    h3 Python 3 Porting
-    p.
-      Make your project Python 3 compatible or help a project that you like!
-      Experienced porters can help you on your way, with guidance through porting
-      strategies, best practices, libraries and automation. They can even
-      give you advice how to convince the management/upstream that supporting
-      Python 3 is a good idea.
-
-    h3 The Docs Sprint
-    p.
-      The Doc-tors will focus mainly on Django, DjangoGirls, or Python
-      documentation, but any open-source project is fair game.
-      Come sprint with us – you can make your first open-source contribution,
-      improve the docs of your successful library, or anything in between!
-
-    h3 Your Sprint Here
-    p.
-      Additional sprints will be announced after lightning talks on Saturday.
-
-    h2
-      | Closing
-      small.workshop-time.
-        18:00
-    p.
-      It was a looong weekend and it's time to go home. #[br]
-      The first PyCon CZ is over. See you next year!
-
-    hr
-    a.anchor#directions
-    h2 The venue
-    
-    p.lead.
-      Spaces for sprints and workshops are provided by #[a(href="http://www.hubbrno.cz/en/") Impact Hub Brno]. 
+    each speaker, index in speakers
+      +talk(speaker[0])
+      +talk(speaker[1])
+  
