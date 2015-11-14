@@ -1,0 +1,76 @@
+extends ../base
+
+block vars
+  - var pageClass = "page-pycontest"
+
+block viewport
+  .container
+    h1 #PyConTest
+    
+    .row
+        img.col-sm-6(src=pageUrl("/static/images/pycontest/prizes.jpg"), alt="#PyConTest prizes")
+        img.col-sm-6(src=pageUrl("/static/images/pycontest/prizes-2.jpg"), alt="#PyConTest prizes")
+
+    ul
+        li 1st challenge  10:00 CET
+        li 2nd challenge 11:00 CET
+        li 3rd challenge: 12:00 CET
+        li 4th challenge: 13:00 CET
+        li 5th challenge: 14:00 CET
+        li 
+            strong End of Challenge - 17:00 CET
+
+    h2 What is #PyConTest?
+    
+    p.
+        PYCONTEST is a special programming challenge tailored for pycon.cz audience.
+        The challenge is organized with help from pycon.cz official sponsors (Red Hat,
+        Skypicker and Twisto) and Fedora.
+
+    h2 What challenges can I expect?
+    
+    p. 
+        You will be presented with 5 challenges, 4 of which were created by our sponsors
+        and will consist of solving specific tasks using Python. The 5th challenge will be a special
+        social challenge. Please bear in mind that you can submit only one solution for each
+        challenge, resubmitions are not allowed.
+
+    h2 Where can I find assignments?
+    
+    p.
+        Each challenge along with the description how to submit it will be announced every hour
+        at the official @pyconcz twitter account with hashtag #pycontest,
+        at the official #[a(href="https://cz.pycon.org/2015/") PyCon CZ] website
+        and during the pycon.cz conference starting at 10:00am.
+        Follow #[a(href="https://twitter.com/pyconcz") @pyconcz] now!
+
+    h2 Conditions
+    
+    p.
+        To be eligible for winning you must fullfil the following conditions:
+        
+        ol
+            li you are a registered visitor of pycon.cz conference
+            li you must solve and submit all challenges and they must be correct
+
+    p.
+        Also please note that by submitting your solutions you accept the fact
+        that your code examples will be shared and that you can be contacted (now
+        or in the future) by any of the sponsors (Red Hat, Skypicker, Twisto) for job offers.
+
+    h2 What can I win?
+    
+    p Except for cool job offers you may win the following prizes:
+    
+    ul
+        li Garmin Fenix 3 Sapphire Performer
+        li Nexus 5x Black 32GB
+        li Audio-technica ATH-M50x
+
+    h2 How will winners be chosen?
+    
+    p.
+        Winners will be determined by the results of the 5th challenge (don't be afraid, 
+        it won't be a 'like'ing race) but bear in mind that you still need to have the first 
+        four challenges submitted and and they all must be correct. Winners will be 
+        announced before start of lightning talks.
