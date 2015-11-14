@@ -15,7 +15,7 @@
     "name": "Tomáš Bedřich",
     "avatar": "tobas_bedrich.png",
     "title": "Web scraping",
-    "abstract": "We will try out the process of website scraping including HTML and AJAX inspection; usage of [requests](http://docs.python-requests.org), [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) and [lxml](http://lxml.de/) modules and working with raw data using text manipulations and regular expressions.",
+    "abstract": "We will try out the process of website scraping including HTML and AJAX inspection; usage of [requests](http://docs.python-requests.org) and [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) modules. The workshop will be divided into theoretical section and 4 examples, mainly focused on begginers. The only required knowledge is Python and HTML.",
     "bio": "I am a small entrepreneur from Pilsen, living in Prague. Creating websites, programming mostly in Python, PHP, C(++) and some other languages. In free time geocacher and motocycle rider.",
     "company": "tbedrich.cz",
     "twitter": "tbedrich",
