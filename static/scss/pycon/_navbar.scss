@@ -173,6 +173,10 @@ $brand-size: 45px;
     .tickets {
       margin-right: $brand-placeholder;
 
+      a {
+        color: $brand-secondary;
+      }
+
       // a {
         // padding: 8px 20px;
       //   border: 1px solid $brand-primary;
