@@ -138,7 +138,7 @@
       "time": "17:20"
     },
     {
-      "name": "Věroš Kaplan",
+      "name": "Věroš Kaplan, Pavel Grochal",
       "track": "Practical",
       "title": "So you have an Python app and now what?",
       "abstract": "So you have prepared a new shiny Python/Django application and you want to deploy it to the real world.\n\nTalk about miscellaneous aspects of Python applications from the Ops view. This topic includes reproducible deployment and upgrading, together with related services like Celery, etc. Don't forget relation with config-management tools like Puppet and Ansible, backup operations and possibly others not-so-fancy-but-needed ops tools.",
