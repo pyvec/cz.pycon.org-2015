@@ -133,7 +133,7 @@ $brand-size: 45px;
     top: 0;
 
     // Custom offset for "visual" centering of menu
-    left: 0;
+    left: 45px;
 
     padding: 0;
     // asymetric padding to make navbar items in visual middle
@@ -170,12 +170,8 @@ $brand-size: 45px;
       }
     }
 
-    .tickets {
+    .videos {
       margin-right: $brand-placeholder;
-
-      a {
-        color: $brand-secondary;
-      }
 
       // a {
         // padding: 8px 20px;
@@ -191,8 +187,15 @@ $brand-size: 45px;
       // }
     }
 
-    .talks {
+    .photos {
       margin-left: $brand-placeholder;
+    }
+
+    .videos,
+    .photos {
+      a {
+        color: $brand-secondary;
+      }
     }
   }
 

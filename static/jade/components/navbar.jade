@@ -8,12 +8,15 @@ header#top
         a(href=pageUrl("#")) About
       li.getting-here(class=activePage == "getting-here" ? "active" : "")
         a(href=pageUrl("getting-here/")) Getting here
-      li.tickets
-        a(href=pageUrl("about/pycontest.html"))
-          | #PyConTest
       //- li.tickets
-      //-   a(href=pageUrl("about/tickets.html"))
-      //-     | Tickets
+      //-   a(href=pageUrl("about/pycontest.html"))
+      //-     | #PyConTest
+      li.videos
+        a(href="http://www.superlectures.com/pycon2015/")
+          | Videos
+      li.photos
+        a(href="https://goo.gl/photos/Sdpx5ZACzU9hsD9i8")
+          | Photos
       li.talks(class=activePage == "talks" ? "active" : "")
         a(href=pageUrl("talks/"))
           | Talks
