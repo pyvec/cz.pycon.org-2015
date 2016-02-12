@@ -1,20 +1,20 @@
-[![Circle CI](https://circleci.com/gh/pyvec/cz.pycon.org-2015.svg?style=svg)](https://circleci.com/gh/pyvec/cz.pycon.org-2015)
+<!-- [![Circle CI](https://circleci.com/gh/pyvec/cz.pycon.org-2015.svg?style=svg)](https://circleci.com/gh/pyvec/cz.pycon.org-2015) -->
 
-PyCon CZ 2015 -- early adopters version
+PyCon IL 2016 -- early adopters version
 =======================================
 
-Welcome! It's really going to happen this year. The Czech PyCon, local Python conference for anyone interested in Python programming language.
+<!-- Welcome! It's really going to happen this year. The Czech PyCon, local Python conference for anyone interested in Python programming language. -->
+Welcome! This is the early repository of PyCon IL, the first Israeli PyCon.
 
 Join us
 -------
 
 PyCons are community events. Everybody is welcome, anyone can contribute. You can join us on following channels:
 
-- Google Group -- [pycon-cs@googlegroups.com](https://groups.google.com/forum/#!forum/pycon-cs)
-- [Trello](https://trello.com/czechpycon2015)
-- [Slack](https://pyconcz.slack.com) -- request invite at tomas.ehrlich@gmail.com
+- Google Group -- [pycon-israel@googlegroups.com](https://groups.google.com/forum/#!forum/pycon-israel)
 
-Google Group mailing list is available for everyone. Trello is read-only for public and Slack is private. Send email to tomas.ehrlich@gmail.com if you want access them.
+Google Group mailing list is available for everyone. 
+We also have a private Slack instanec. Send email to edanm@btlms.com if you want access to it.
 
 Contribute
 ----------
@@ -37,29 +37,31 @@ Contribute
     cd static && gulp
     ```
 
-3. Visit http://localhost:3000/2015/
+3. Visit http://localhost:3000/2016/
 
- This is needed because the development version doesn't have the 2015 redirect set up.
+ This is needed because the development version doesn't have the 2016 redirect set up.
 
 4. Commit changes and submit pull-request
 
-Publish to AWS S3 (authorization required)
+5. If you're looking to make content changes, start in the
+   static/jade/ directory (main page is index.jade). 
+
+Publish to AWS S3 (Manual Process)
 ------------------------------------------
 
-`master` branch is published automatically to [][cz.pycon.org] and `dev` branch
-to [][dev.pycon.cz] in CircleCI. If you want to do it manually, you need to:
+Currently, the only way to publish the site to our temporary staging url is
+manually, and can be done by edanm.
 
-1. Copy `aws.json.example` to `aws.json` and provide credentials for your
-   AWS IAM role.
+Send in a pull request, and assuming all is well, he'll deploy it ASAP.
 
-2. Build all static assets and publish them to S3 (domain [][dev.pycon.cz]):
+If you need to get in touch for any reason, feel free to send a message via
+any means you feel like (email is edanm@btlms.com)
 
-    ```
-    gulp publish
-    ```
 
-Running `gulp publish --production` will publish static assets to
-[][cz.pycon.org].
+Attribution 
+------------
+
+This project is gratefully built on PyCon CZ's 2015 website.
 
 License
 -------
