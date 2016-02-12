@@ -203,8 +203,8 @@ files to cache (for speedup of consecutive upload) and report changes.
           debug: Debug
           speakers: JSON.parse fs.readFileSync './data/speakers.json'
           workshops: JSON.parse fs.readFileSync './data/workshops.json'
-          pageUrl: (path) -> "/2015/#{path}"
-          avatar: (filename) -> "/2015/static/images/speakers/#{filename}"
+          pageUrl: (path) -> "/2016#{path}"
+          avatar: (filename) -> "/2016/static/images/speakers/#{filename}"
           md: require("marked")
 
       gulp.src Source.jade, {base: "./jade"}
