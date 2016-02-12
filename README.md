@@ -14,7 +14,7 @@ PyCons are community events. Everybody is welcome, anyone can contribute. You ca
 - Google Group -- [pycon-israel@googlegroups.com](https://groups.google.com/forum/#!forum/pycon-israel)
 
 Google Group mailing list is available for everyone. 
-We also have a private Slack instanec. Send email to edanm@btlms.com if you want access to it.
+We also have a private Slack instance. Send email to edanm@btlms.com if you want access to it.
 
 Contribute
 ----------
