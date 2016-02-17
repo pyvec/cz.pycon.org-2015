@@ -1,4 +1,6 @@
 extends base
+//- Script for ti.to widget
+<script src='https://js.tito.io/v1' async></script>
 
 block vars
   - var pageClass = "home"
@@ -51,15 +53,15 @@ block viewport
           open-source projects together with other Python community members.
     
 .registration
-   h2 Registration
-   p.lead.
+  h2 Registration
+  p.lead.
    . Sign up to be notified when tickets go on sale!
-  
- 
-.sponsors
+  include <tito-widget event="https://ti.to/pycon-israel/pycon-israel-2016"></tito-widget>  
+
+  .sponsors
     h2 Sponsors
-    . Would you like to support PyCon Israel? Send us an email and join us as a sponsor!
-//-    
+    . Would you like to support PyCon Israel? [Send us an email](mailto:info@pycon.org.il) and join us as a sponsor!
+//- 
    .platinum
        h3 Platinum sponsor
          .sponsor
