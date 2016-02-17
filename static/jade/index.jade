@@ -1,4 +1,6 @@
 extends base
+//- Script for ti.to widget
+<script src='https://js.tito.io/v1' async></script>
 
 block vars
   - var pageClass = "home"
@@ -6,37 +8,38 @@ block vars
 block viewport
   .pycon
     img.pycon-logo(
-      alt="PyCon CZ",
-      src='/'+year+"/static/images/pycon-cz-logo-icon.svg",
+      alt="PyCon IL",
+      src='/'+year+"/static/images/pycon-il-logo.png",
       onerror="this.onerror = null; this.src = '/2015/static/images/pycon-cz-logo.png'"
     )
     
     h1
-      | PyCon CZ
+      | PyCon Israel
       span.year= year
 
     .pycon-info
-      p.pycon-location Brno, Czech Republic
-      p.pycon-date November 14-15
+      p.pycon-location Tel Aviv, Israel
+      p.pycon-date May 2-3
 
   .claim
     .container
       p.
-        The very first #[strong PyCon] in the #[strong Czech Republic]. Join us
-        for a fun weekend full of talks, sprints and workshops about Python.
-
-  .container
-    .program
-      .program-item
-        h2 Talks
-        .date Saturday 14th
-        .venue
-          i.fa.fa-map-marker
-          span.
-            #[a(href=pageUrl("talks/#directions")) Faculty of Information Technology,#[br] Božetěchova 1/2]
-        p.
-          #[strong One] day, #[strong two] parallel tracks, #[strong two] keynotes
-          and #[strong ten] awesome talks. Community, web, hardware, science, devops and more.
+        The very first #[strong PyCon] in #[strong Israel]. Join us
+        for a 2-day event with talks, sprints and workshops about Python.
+          
+  //-
+    .container
+      .program
+        .program-item
+          h2 Talks
+          .date Saturday 14th
+          .venue
+            i.fa.fa-map-marker
+            span.
+              #[a(href=pageUrl("talks/#directions")) Faculty of Information Technology,#[br] Božetěchova 1/2]
+          p.
+            #[strong One] day, #[strong two] parallel tracks, #[strong two] keynotes
+            and #[strong ten] awesome talks. Community, web, hardware, science, devops and more.
       
       .program-item
         h2 Sprints &amp; workshops
@@ -49,23 +52,21 @@ block viewport
           #[strong Six] workshops in #[strong two] blocks and sprinting all day long. Hack on
           open-source projects together with other Python community members.
     
-    .registration
-      h2 PyCon CZ 2015 is over
-      p.lead.
-        See you all at the next PyCon CZ!
-    
-      h2 What people think about PyCon CZ?
-      
-      include components/twitter
-  
-    .sponsors
-      h2 Our sponsors
+.registration
+  h2 Registration
+  p.lead.
+   . Sign up to be notified when tickets go on sale!
+  include <tito-widget event="https://ti.to/pycon-israel/pycon-israel-2016"></tito-widget>  
 
-      .platinum
-        h3 Platinum sponsor
-        .sponsor
-          a.sponsor-skypicker(href="https://skypicker.com")
-            img(src=pageUrl("/static/images/sponsors/skypicker.png"))
+  .sponsors
+    h2 Sponsors
+    . Would you like to support PyCon Israel? [Send us an email](mailto:info@pycon.org.il) and join us as a sponsor!
+//- 
+   .platinum
+       h3 Platinum sponsor
+         .sponsor
+           a.sponsor-skypicker(href="https://skypicker.com")
+             img(src=pageUrl("/static/images/sponsors/skypicker.png"))
 
       .gold
         h3 Gold sponsors
