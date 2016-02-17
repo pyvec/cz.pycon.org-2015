@@ -1,11 +1,11 @@
 {
-  "name": "cz.pycon.org",
-  "description": "PyCon CZ 2015 homepage",
+  "name": "il.pycon.org",
+  "description": "PyCon IL 2016 homepage",
   "main": "index.js",
   "scripts": {
     "test": "gulp ci"
   },
-  "author": "Tomáš Ehrlich",
+  "author": "Edan Maor & Mikey Ariel",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.7.1",

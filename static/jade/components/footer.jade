@@ -7,22 +7,20 @@ footer.site-footer
           ul
             li
               a(href=pageUrl("about/team.html")) Team
-            li
+            //-li
               a(href=pageUrl("about/speakers.html")) #[strong Speakers]
-            li
+            //-li
               a(href=pageUrl("about/tickets.html")) Tickets
-            li
-              a(href=pageUrl("about/pycontest.html")) #PyConTest
-            li
+            //- li
               a(href=pageUrl("about/sponsorship.html")) Sponsorship
             li
               a(href=pageUrl("about/code-of-conduct.html")) #[strong Code of Conduct]
-
+  //-
         li.section
           a.nav-title(href=pageUrl("getting-here/")) Getting Here
           ul
             li
-              a(href=pageUrl("getting-here/#travelling")) Travelling
+              a(href=pageUrl("getting-here/#travel")) Travel
             li
               a(href=pageUrl("getting-here/#accommodation")) Accommodation
 
@@ -32,7 +30,7 @@ footer.site-footer
             li
               a(href=pageUrl("talks/")) Schedule
             li
-              a(href=pageUrl("talks/#directions")) Directions
+              a(href=pageUrl("talks/#directions")) Venue
 
         li.section
           a.nav-title(href=pageUrl("workshops/")) Sprints &amp; Workshops
@@ -40,31 +38,39 @@ footer.site-footer
             li
               a(href=pageUrl("workshops/")) Schedule
             li
-              a(href=pageUrl("workshops/#directions")) Directions
+              a(href=pageUrl("workshops/#directions")) Venue
             //- li
             //-   a(href=pageUrl("workshops/registration.html")) #[strong Registration]
 
-    .social-links
-      | Spread the word about #[strong PyCon CZ!]
+
+  .social-links
+      | Spread the word about #[strong PyCon IL!]
       ul
         li
-          a(href='https://twitter.com/pyconcz')
+          a(href='https://twitter.com/pyconil')
             i.fa.fa-twitter
-        li
+        //-li
           a(href='https://www.facebook.com/events/1624916497723396/')
             i.fa.fa-facebook
-        li
+        //-li
           a(href='http://lanyrd.com/2015/pyconcz/')
             i.fa.fa-calendar-check-o
         li
-          a(href='https://github.com/pyvec/cz.pycon.org-2015')
+          a(href='https://github.com/edanm/il.pycon.org-2016')
             i.fa.fa-github
-        li
+        //-li
           a(href='https://pyconcz.slack.com')
             i.fa.fa-slack
         li
-          a(href='mailto:info@pycon.cz')
+          a(href='mailto:info@pycon.org.il')
             i.fa.fa-envelope
+
+    .website-license
+     p
+      :markdown
+        The PyCon IL Website is inspired by and based on the [PyCon CZ](href='https://cz.pycon.org/2015/')
+        Website with the MIT license. Huge thanks to the Czech Python community for sharing their resources
+        the open source way!
 
     .psf-trademark
       p

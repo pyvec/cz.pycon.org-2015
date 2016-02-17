@@ -12,7 +12,7 @@ block viewport
     )
     
     h1
-      | PyCon IL
+      | PyCon Israel
       span.year= year
 
     .pycon-info
@@ -23,20 +23,21 @@ block viewport
     .container
       p.
         The very first #[strong PyCon] in #[strong Israel]. Join us
-        for a fun 2 days full of talks, sprints and workshops about Python.
-
-  .container
-    .program
-      .program-item
-        h2 Talks
-        .date Saturday 14th
-        .venue
-          i.fa.fa-map-marker
-          span.
-            #[a(href=pageUrl("talks/#directions")) Faculty of Information Technology,#[br] Božetěchova 1/2]
-        p.
-          #[strong One] day, #[strong two] parallel tracks, #[strong two] keynotes
-          and #[strong ten] awesome talks. Community, web, hardware, science, devops and more.
+        for a 2-day event with talks, sprints and workshops about Python.
+          
+  //-
+    .container
+      .program
+        .program-item
+          h2 Talks
+          .date Saturday 14th
+          .venue
+            i.fa.fa-map-marker
+            span.
+              #[a(href=pageUrl("talks/#directions")) Faculty of Information Technology,#[br] Božetěchova 1/2]
+          p.
+            #[strong One] day, #[strong two] parallel tracks, #[strong two] keynotes
+            and #[strong ten] awesome talks. Community, web, hardware, science, devops and more.
       
       .program-item
         h2 Sprints &amp; workshops
@@ -49,23 +50,21 @@ block viewport
           #[strong Six] workshops in #[strong two] blocks and sprinting all day long. Hack on
           open-source projects together with other Python community members.
     
-    .registration
-      h2 PyCon CZ 2015 is over
-      p.lead.
-        See you all at the next PyCon CZ!
-    
-      h2 What people think about PyCon CZ?
-      
-      include components/twitter
+.registration
+   h2 Registration
+   p.lead.
+   . Sign up to be notified when tickets go on sale!
   
-    .sponsors
-      h2 Our sponsors
-
-      .platinum
-        h3 Platinum sponsor
-        .sponsor
-          a.sponsor-skypicker(href="https://skypicker.com")
-            img(src=pageUrl("/static/images/sponsors/skypicker.png"))
+ 
+.sponsors
+    h2 Sponsors
+    . Would you like to support PyCon Israel? Send us an email and join us as a sponsor!
+//-    
+   .platinum
+       h3 Platinum sponsor
+         .sponsor
+           a.sponsor-skypicker(href="https://skypicker.com")
+             img(src=pageUrl("/static/images/sponsors/skypicker.png"))
 
       .gold
         h3 Gold sponsors

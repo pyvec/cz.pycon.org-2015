@@ -16,7 +16,7 @@ $ ->
     mapVut.addMarker {
       lat: talks.lat,
       lng: talks.lng,
-      title: 'PyCon CZ 2015 - Talks & Keynotes'
+      title: 'PyCon IL 2016 - Talks & Keynotes'
     }
 
   if $("#map.impact").length
@@ -36,5 +36,5 @@ $ ->
     mapImpact.addMarker {
       lat: workshops.lat,
       lng: workshops.lng,
-      title: 'PyCon CZ 2015 - Sprints & Workshops'
+      title: 'PyCon IL 2016 - Sprints & Workshops'
     }
