@@ -1,3 +1,8 @@
+> ⚠ This repository is archived 🗄
+>
+> [https://cz.pycon.org/2015/](https://cz.pycon.org/2015/) is now served as a static website. Look for it in the [repo for PyCon CZ 2019](https://github.com/pyvec/cz.pycon.org-2019/) (or further years).
+
+
 [![Circle CI](https://circleci.com/gh/pyvec/cz.pycon.org-2015.svg?style=svg)](https://circleci.com/gh/pyvec/cz.pycon.org-2015)
 
 PyCon CZ 2015 -- early adopters version
